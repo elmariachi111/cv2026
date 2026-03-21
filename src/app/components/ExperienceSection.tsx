@@ -51,43 +51,6 @@ export function ExperienceSection() {
       </div>
 
       <div className="relative z-10 max-w-[1800px] mx-auto px-8">
-        <motion.div
-          className="mb-24"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 
-            className="text-8xl md:text-[10rem] mb-6 uppercase tracking-tight leading-none"
-            style={{ 
-              fontFamily: 'var(--font-accent)',
-              color: 'var(--neon-magenta)',
-              textShadow: `
-                0 0 40px var(--neon-magenta),
-                0 0 80px var(--neon-magenta),
-                0 0 120px rgba(255, 0, 255, 0.4)
-              `,
-            }}>
-            25+ YEARS
-          </h2>
-          <p 
-            className="text-2xl uppercase tracking-wider"
-            style={{ 
-              fontFamily: 'var(--font-terminal)',
-              color: 'rgba(255, 255, 255, 0.6)',
-              fontSize: '28px',
-            }}>
-            &gt; SOFTWARE // STARTUPS // SYSTEMIC CHANGE
-          </p>
-        </motion.div>
-
-        <div className="space-y-0">
-          {timeline.map((item, index) => (
-            <TimelinePanel key={item.era} {...item} index={index} />
-          ))}
-        </div>
-
         {/* Current Focus - Full bleed panel */}
         <motion.div
           className="mt-0 p-16 md:p-24 relative overflow-hidden"
@@ -99,14 +62,7 @@ export function ExperienceSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          {/* Intense glow background */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'radial-gradient(circle at 30% 50%, rgba(0, 255, 255, 0.15) 0%, transparent 60%)',
-              boxShadow: 'inset 0 0 100px rgba(0, 255, 255, 0.2)',
-            }}
-          />
+
 
           <div className="relative z-10">
             <Terminal 
@@ -118,11 +74,15 @@ export function ExperienceSection() {
             />
             
             <h3 
-              className="text-6xl md:text-7xl mb-12 uppercase tracking-tight"
+              className="text-7xl md:text-8xl mb-12 uppercase tracking-tight"
               style={{ 
                 fontFamily: 'var(--font-accent)',
                 color: 'var(--neon-cyan)',
-                textShadow: '0 0 40px var(--neon-cyan)',
+                textShadow: `
+                  0 0 40px var(--neon-cyan),
+                  0 0 80px var(--neon-cyan),
+                  0 0 120px rgba(0, 255, 255, 0.4)
+                `,
               }}>
               WHAT I'M DOING NOW
             </h3>
@@ -207,6 +167,45 @@ export function ExperienceSection() {
             </div>
           </div>
         </motion.div>
+
+        <motion.div
+          className="mb-24"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 
+            className="text-8xl md:text-[10rem] mb-6 uppercase tracking-tight leading-none"
+            style={{ 
+              fontFamily: 'var(--font-accent)',
+              color: 'var(--neon-magenta)',
+              textShadow: `
+                0 0 40px var(--neon-magenta),
+                0 0 80px var(--neon-magenta),
+                0 0 120px rgba(255, 0, 255, 0.4)
+              `,
+            }}>
+            25+ YEARS
+          </h2>
+          <p 
+            className="text-2xl uppercase tracking-wider"
+            style={{ 
+              fontFamily: 'var(--font-terminal)',
+              color: 'rgba(255, 255, 255, 0.6)',
+              fontSize: '28px',
+            }}>
+            &gt; SOFTWARE // STARTUPS // SYSTEMIC CHANGE
+          </p>
+        </motion.div>
+
+        <div className="space-y-0">
+          {timeline.map((item, index) => (
+            <TimelinePanel key={item.era} {...item} index={index} />
+          ))}
+        </div>
+
+        
       </div>
     </section>
   );

@@ -24,18 +24,12 @@ export function Footer() {
           }} 
         />
         
-        <p 
-          className="text-sm mb-4 uppercase tracking-widest opacity-60"
-          style={{ fontFamily: 'var(--font-terminal)', fontSize: '16px' }}
-        >
-          BUILT WITH REACT, TAILWIND, AND A WHOLE LOT OF PASSION FOR THE OPEN WEB
-        </p>
-        
+       
         <p 
           className="text-xs mb-4 uppercase tracking-widest opacity-50"
           style={{ fontFamily: 'var(--font-terminal)', fontSize: '14px' }}
         >
-          POWERED BY CLAUDE (ANTHROPIC) • RUNWAY ML • FIGMA
+          TOOLS USED: CLAUDE • RUNWAY ML • FIGMA
         </p>
         
         <p 

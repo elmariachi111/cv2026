@@ -1,5 +1,5 @@
+import { Bot, ChevronDown, Cloud, Code2, Heart, Leaf } from 'lucide-react';
 import { motion } from 'motion/react';
-import { Sparkles, Code2, Heart, Leaf, ChevronDown, Bot, Cloud } from 'lucide-react';
 import hackerImage from '/nb2_hacker.png';
 
 export function HeroSection() {
@@ -101,8 +101,24 @@ export function HeroSection() {
                   `,
                 }}
               >
-                accelerate
+                It only counts
               </div>
+                <div 
+                  className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
+                  style={{ 
+                    fontFamily: 'var(--font-accent)',
+                    color: 'var(--neon-yellow)',
+                    textShadow: `
+                      0 0 40px var(--neon-yellow),
+                      0 0 80px var(--neon-yellow),
+                      0 0 120px rgba(255, 255, 0, 0.5),
+                      2px 2px 0px rgba(255, 0, 255, 0.3),
+                      -2px -2px 0px rgba(0, 255, 255, 0.2)
+                    `,
+                  }}
+                >
+                  if it works
+                </div>
               <div 
                 className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
                 style={{ 
@@ -117,39 +133,23 @@ export function HeroSection() {
                   `,
                 }}
               >
-                technology
-              </div>
-              <div 
-                className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
-                style={{ 
-                  fontFamily: 'var(--font-accent)',
-                  color: 'var(--neon-yellow)',
-                  textShadow: `
-                    0 0 40px var(--neon-yellow),
-                    0 0 80px var(--neon-yellow),
-                    0 0 120px rgba(255, 255, 0, 0.5),
-                    2px 2px 0px rgba(255, 0, 255, 0.3),
-                    -2px -2px 0px rgba(0, 255, 255, 0.2)
-                  `,
-                }}
-              >
-                thoughtfully
+                for humans
               </div>
             </div>
           </motion.h1>
 
           {/* Values pills - now with intense glow */}
           <motion.div
-            className="flex flex-wrap gap-4 mb-12"
+            className="flex flex-wrap gap-4 mb-20"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <ValuePill icon={<Code2 className="w-6 h-6" />} text="REACT/TS EXPERT" color="var(--neon-cyan)" />
-            <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENTIC AI" color="var(--neon-green)" />
-            <ValuePill icon={<Cloud className="w-6 h-6" />} text="CLOUD ARCHITECT" color="var(--neon-magenta)" />
-            <ValuePill icon={<Heart className="w-6 h-6" />} text="EMPATHY-DRIVEN" color="var(--neon-pink)" />
-            <ValuePill icon={<Leaf className="w-6 h-6" />} text="ENVIRONMENTALIST" color="var(--neon-yellow)" />
+            
+            <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENTIC AI" color="var(--neon-yellow)" />
+            <ValuePill icon={<Cloud className="w-6 h-6" />} text="CLOUD ARCHITECT" color="var(--neon-cyan)" />
+            <ValuePill icon={<Heart className="w-6 h-6" />} text="MINDFULNESS" color="var(--neon-pink)" />
+            <ValuePill icon={<Leaf className="w-6 h-6" />} text="ENVIRONMENTALIST" color="var(--neon-green)" />
           </motion.div>
 
           {/* Subtitle */}
@@ -167,7 +167,7 @@ export function HeroSection() {
                 textShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
               }}
             >
-              25+ YEARS // ARCHITECTURE × CLOUD OPS × AI AUTOMATION
+              25+ YEARS EXPERIENCE// CODING × TEAMS × CLOUD OPS × AGENTIC AI
             </p>
             <p 
               className="text-base md:text-xl mb-3 opacity-80 uppercase tracking-wider"
@@ -177,7 +177,7 @@ export function HeroSection() {
                 textShadow: '0 0 15px var(--neon-green)',
               }}
             >
-              TYPESCRIPT • REACT • AGENTIC AI • DEVOPS • CLOUD
+              TYPESCRIPT • SOLIDITY • OPS 
             </p>
             <p 
               className="text-sm md:text-lg opacity-60 uppercase tracking-wider"
