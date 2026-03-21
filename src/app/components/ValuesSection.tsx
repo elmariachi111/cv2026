@@ -1,0 +1,181 @@
+import { motion } from 'motion/react';
+import { Shield, Zap, Globe, Users, Cpu, Lock } from 'lucide-react';
+
+const values = [
+  {
+    icon: Shield,
+    title: 'CYPHERPUNK ETHOS',
+    description: 'BUILDING SYSTEMS THAT EMPOWER INDIVIDUALS THROUGH CRYPTOGRAPHY AND PRIVACY-FIRST DESIGN. CODE IS LAW. ENCRYPTION IS FREEDOM.',
+    color: 'var(--neon-cyan)',
+    bgColor: 'rgba(0, 255, 255, 0.05)',
+  },
+  {
+    icon: Zap,
+    title: 'ACTIVIST MINDSET',
+    description: 'CHALLENGING THE STATUS QUO. BUILDING TOOLS FOR CHANGE. MAKING TECH WORK FOR EVERYONE, NOT JUST THE PRIVILEGED FEW.',
+    color: 'var(--neon-yellow)',
+    bgColor: 'rgba(255, 255, 0, 0.05)',
+  },
+  {
+    icon: Globe,
+    title: 'DECENTRALIZED FUTURE',
+    description: 'NO SINGLE POINTS OF FAILURE. NO GATEKEEPERS. SYSTEMS THAT BELONG TO EVERYONE AND CONTROLLED BY NO ONE.',
+    color: 'var(--neon-green)',
+    bgColor: 'rgba(0, 255, 65, 0.05)',
+  },
+  {
+    icon: Users,
+    title: 'LIBERAL VALUES',
+    description: 'FEMINIST. ANTI-RACIST. CLIMATE CONSCIOUS. BUILDING TECHNOLOGY THAT REFLECTS OUR SHARED HUMANITY AND FUTURE.',
+    color: 'var(--neon-pink)',
+    bgColor: 'rgba(255, 16, 240, 0.05)',
+  },
+  {
+    icon: Cpu,
+    title: 'BUILT TO LAST',
+    description: 'RELIABLE INFRASTRUCTURE. PERSISTENT SYSTEMS. CODE THAT STANDS THE TEST OF TIME. QUALITY OVER QUICK WINS.',
+    color: 'var(--neon-magenta)',
+    bgColor: 'rgba(255, 0, 255, 0.05)',
+  },
+  {
+    icon: Lock,
+    title: 'PERMISSIONLESS',
+    description: 'OPEN PROTOCOLS. COMPOSABLE SYSTEMS. NO ASKING FOR PERMISSION TO BUILD. INNOVATION WITHOUT INTERMEDIARIES.',
+    color: 'var(--neon-blue)',
+    bgColor: 'rgba(0, 212, 255, 0.05)',
+  },
+];
+
+export function ValuesSection() {
+  return (
+    <section className="relative py-32" id="values">
+      {/* Color blend background */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.12) 0%, transparent 60%)',
+            mixBlendMode: 'screen',
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-[1800px] mx-auto px-8">
+        <motion.div
+          className="mb-24"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 
+            className="text-7xl md:text-9xl mb-6 uppercase tracking-tight"
+            style={{ 
+              fontFamily: 'var(--font-accent)',
+              color: 'var(--neon-cyan)',
+              textShadow: `
+                0 0 40px var(--neon-cyan),
+                0 0 80px var(--neon-cyan),
+                0 0 120px rgba(0, 255, 255, 0.4)
+              `,
+            }}>
+            CORE VALUES
+          </h2>
+          <p 
+            className="text-2xl uppercase tracking-wider"
+            style={{ 
+              fontFamily: 'var(--font-terminal)',
+              color: 'rgba(255, 255, 255, 0.6)',
+              fontSize: '28px',
+            }}>
+            &gt; WHAT DRIVES ME BEYOND THE CODE
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+          {values.map((value, index) => (
+            <ValuePanel key={value.title} {...value} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ValuePanel({ 
+  icon: Icon, 
+  title, 
+  description, 
+  color, 
+  bgColor,
+  index 
+}: { 
+  icon: React.ElementType; 
+  title: string; 
+  description: string; 
+  color: string;
+  bgColor: string;
+  index: number;
+}) {
+  return (
+    <motion.div
+      className="relative p-12 md:p-16 overflow-hidden group"
+      style={{ 
+        backgroundColor: bgColor,
+      }}
+      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: index * 0.1 }}
+      whileHover={{ 
+        backgroundColor: `${color}10`,
+      }}
+    >
+      {/* Intense glow on hover */}
+      <motion.div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+        style={{
+          background: `radial-gradient(circle at center, ${color}20 0%, transparent 70%)`,
+          boxShadow: `inset 0 0 100px ${color}40`,
+        }}
+      />
+
+      <div className="relative z-10">
+        <div className="mb-8" style={{ color, filter: `drop-shadow(0 0 20px ${color})` }}>
+          <Icon className="w-16 h-16 md:w-20 md:h-20" strokeWidth={1.5} />
+        </div>
+        
+        <h3 
+          className="text-4xl md:text-5xl mb-6 uppercase tracking-tight leading-tight"
+          style={{ 
+            fontFamily: 'var(--font-accent)', 
+            color,
+            textShadow: `0 0 30px ${color}80`,
+          }}>
+          {title}
+        </h3>
+        
+        <p 
+          className="text-base md:text-lg leading-relaxed uppercase tracking-wide"
+          style={{ 
+            fontFamily: 'var(--font-primary)',
+            color: 'rgba(255, 255, 255, 0.8)',
+          }}>
+          {description}
+        </p>
+      </div>
+
+      {/* Corner number indicator */}
+      <div 
+        className="absolute bottom-6 right-6 text-6xl opacity-10 group-hover:opacity-20 transition-opacity"
+        style={{ 
+          fontFamily: 'var(--font-terminal)',
+          color,
+          fontSize: '80px',
+        }}
+      >
+        {String(index + 1).padStart(2, '0')}
+      </div>
+    </motion.div>
+  );
+}

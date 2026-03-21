@@ -1,0 +1,60 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print styles for PDF export */
+@media print {
+  @page {
+    margin: 0.5in;
+  }
+  
+  body {
+    background: white !important;
+  }
+  
+  /* Hide navigation and grid on print */
+  nav,
+  .retro-grid {
+    display: none !important;
+  }
+  
+  /* Avoid page breaks inside sections */
+  section {
+    page-break-inside: avoid;
+  }
+  
+  /* Ensure readable colors on print */
+  * {
+    color: #000 !important;
+    background: transparent !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 10, 15, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.5);
+}
