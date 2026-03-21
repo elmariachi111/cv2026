@@ -36,7 +36,7 @@ export function BackgroundVideo({ videoRef, volume, muted }: BackgroundVideoProp
       ref={videoRef}
       className="fixed inset-0 w-full h-full object-cover z-0"
       style={{ opacity: 0.15 }}
-      src="/chase.mp4"
+      src="/vitaisse.mp4"
       loop
       playsInline
       autoPlay

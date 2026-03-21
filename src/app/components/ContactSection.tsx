@@ -1,41 +1,55 @@
 import { motion } from 'motion/react';
-import { Mail, Github, Linkedin, Twitter, Send, MessageSquare, ExternalLink } from 'lucide-react';
+import { Mail, Github, Twitter, Send, MessageSquare, ExternalLink, Globe, Hash } from 'lucide-react';
 
 const socialLinks = [
   {
     name: 'EMAIL',
     icon: Mail,
-    href: 'mailto:hello@example.com',
+    href: 'mailto:elmariachi111+cv@proton.me?subject=Found Your CV on the Interwebs, lets chat',
     color: 'var(--neon-cyan)',
-    username: 'HELLO@EXAMPLE.COM',
+    username: 'ELMARIACHI111+CV@PROTON.ME',
   },
   {
     name: 'GITHUB',
     icon: Github,
-    href: 'https://github.com',
+    href: 'https://github.com/elmariachi111',
     color: 'var(--neon-green)',
-    username: '@YOURUSERNAME',
+    username: '@ELMARIACHI111',
   },
   {
-    name: 'LINKEDIN',
-    icon: Linkedin,
-    href: 'https://linkedin.com',
+    name: 'BLUESKY',
+    icon: MessageSquare,
+    href: 'https://bsky.app/profile/stadolf.bsky.social',
     color: 'var(--neon-blue)',
-    username: '/IN/YOURPROFILE',
+    username: '@STADOLF.BSKY.SOCIAL',
   },
   {
-    name: 'TWITTER',
-    icon: Twitter,
-    href: 'https://twitter.com',
+    name: 'FARCASTER',
+    icon: Hash,
+    href: 'https://warpcast.com/elmariachi.eth',
     color: 'var(--neon-magenta)',
-    username: '@YOURHANDLE',
+    username: 'ELMARIACHI.ETH',
   },
   {
     name: 'TELEGRAM',
     icon: Send,
-    href: 'https://t.me/username',
+    href: 'https://t.me/stadolf',
     color: 'var(--neon-yellow)',
-    username: '@USERNAME',
+    username: '@STADOLF',
+  },
+  {
+    name: 'ENS/ETH',
+    icon: Globe,
+    href: 'https://etherscan.io/address/stadolf.eth',
+    color: 'var(--neon-cyan)',
+    username: 'STADOLF.ETH',
+  },
+  {
+    name: 'DISCORD',
+    icon: MessageSquare,
+    href: 'https://discord.com/users/elmariachi#8789',
+    color: 'var(--neon-pink)',
+    username: 'ELMARIACHI#8789',
   },
 ];
 
@@ -137,8 +151,8 @@ export function ContactSection() {
                 fontFamily: 'var(--font-primary)',
                 color: 'rgba(255, 255, 255, 0.85)',
               }}>
-              INTERESTED IN PROJECTS INVOLVING DECENTRALIZED SYSTEMS, AI AGENTS, CLIMATE TECH, 
-              OR TOOLS THAT EMPOWER COMMUNITIES. LET'S BUILD SOMETHING THAT LASTS.
+              INTERESTED IN PROJECTS INVOLVING AGENTIC AI, DECENTRALIZED SYSTEMS, CLOUD ARCHITECTURE, 
+              AND SUSTAINABLE TECHNOLOGY. LET'S BUILD SOMETHING THAT LASTS.
             </p>
           </div>
         </motion.div>

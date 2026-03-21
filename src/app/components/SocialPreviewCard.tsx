@@ -125,7 +125,7 @@ export function InstagramSquareCard() {
       variant="square"
       title="BUILDING THE FUTURE"
       subtitle="25+ years in Software, Startups & Systemic Change"
-      tags={['AI', 'Web3', 'Cloud']}
+      tags={['AI', 'Decentralization', 'Cloud']}
     />
   );
 }
@@ -146,7 +146,7 @@ export function LinkedInCard() {
     <SocialPreviewCard
       variant="landscape"
       title="TECH FOR CHANGE"
-      subtitle="Senior Engineer • Startup Advisor • Climate Activist"
+      subtitle="Senior Engineer • Startup Advisor • Environmentalist"
       tags={['Hiring', 'Open to Collaborate']}
     />
   );

@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { Sparkles, Code2, Heart, Leaf, ChevronDown } from 'lucide-react';
+import { Sparkles, Code2, Heart, Leaf, ChevronDown, Bot, Cloud } from 'lucide-react';
+import hackerImage from '/nb2_hacker.png';
 
 export function HeroSection() {
   return (
@@ -23,9 +24,30 @@ export function HeroSection() {
         />
       </div>
 
+      {/* Stylized hacker image - full size, anchored to top-right */}
+      <motion.div
+        className="absolute right-0 top-0 h-full w-full z-5 overflow-hidden"
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.2, delay: 0.3 }}
+      >
+        <img 
+          src={hackerImage} 
+          alt="Stylized portrait"
+          className="absolute top-0 right-0 h-full w-auto"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 100%)',
+            opacity: 0.6,
+            objectFit: 'contain',
+            objectPosition: 'top right',
+          }}
+        />
+      </motion.div>
+
       <div className="relative z-10 w-full px-8 py-20">
         <motion.div
-          className="max-w-7xl mx-auto"
+          className="max-w-4xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -64,9 +86,9 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div 
-                className="text-8xl md:text-[12rem] lg:text-[16rem] leading-none tracking-tight"
+                className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
                 style={{ 
                   fontFamily: 'var(--font-accent)',
                   color: 'var(--neon-cyan)',
@@ -79,10 +101,10 @@ export function HeroSection() {
                   `,
                 }}
               >
-                BUILD
+                accelerate
               </div>
               <div 
-                className="text-7xl md:text-[10rem] lg:text-[14rem] leading-none tracking-tight"
+                className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
                 style={{ 
                   fontFamily: 'var(--font-accent)',
                   color: 'var(--neon-magenta)',
@@ -95,10 +117,10 @@ export function HeroSection() {
                   `,
                 }}
               >
-                THE
+                technology
               </div>
               <div 
-                className="text-8xl md:text-[12rem] lg:text-[16rem] leading-none tracking-tight"
+                className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
                 style={{ 
                   fontFamily: 'var(--font-accent)',
                   color: 'var(--neon-yellow)',
@@ -111,51 +133,61 @@ export function HeroSection() {
                   `,
                 }}
               >
-                FUTURE
+                thoughtfully
               </div>
             </div>
           </motion.h1>
 
           {/* Values pills - now with intense glow */}
           <motion.div
-            className="flex flex-wrap gap-6 mb-16"
+            className="flex flex-wrap gap-4 mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <ValuePill icon={<Code2 className="w-6 h-6" />} text="CYPHERPUNK" color="var(--neon-green)" />
-            <ValuePill icon={<Heart className="w-6 h-6" />} text="FEMINIST" color="var(--neon-pink)" />
-            <ValuePill icon={<Leaf className="w-6 h-6" />} text="CLIMATE ACTIVIST" color="var(--neon-yellow)" />
-            <ValuePill icon={<Sparkles className="w-6 h-6" />} text="BUILDER" color="var(--neon-cyan)" />
+            <ValuePill icon={<Code2 className="w-6 h-6" />} text="REACT/TS EXPERT" color="var(--neon-cyan)" />
+            <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENTIC AI" color="var(--neon-green)" />
+            <ValuePill icon={<Cloud className="w-6 h-6" />} text="CLOUD ARCHITECT" color="var(--neon-magenta)" />
+            <ValuePill icon={<Heart className="w-6 h-6" />} text="EMPATHY-DRIVEN" color="var(--neon-pink)" />
+            <ValuePill icon={<Leaf className="w-6 h-6" />} text="ENVIRONMENTALIST" color="var(--neon-yellow)" />
           </motion.div>
 
           {/* Subtitle */}
           <motion.div
-            className="max-w-4xl"
+            className="max-w-3xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
             <p 
-              className="text-2xl md:text-4xl mb-8 leading-relaxed uppercase tracking-wide"
+              className="text-lg md:text-2xl mb-6 leading-relaxed uppercase tracking-wide"
               style={{ 
                 fontFamily: 'var(--font-terminal)',
                 color: 'rgba(255, 255, 255, 0.9)',
                 textShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
-                fontSize: '32px',
               }}
             >
-              25+ YEARS // SOFTWARE × STARTUPS × SYSTEMIC CHANGE
+              25+ YEARS // ARCHITECTURE × CLOUD OPS × AI AUTOMATION
             </p>
             <p 
-              className="text-xl md:text-2xl opacity-80 uppercase tracking-wider"
+              className="text-base md:text-xl mb-3 opacity-80 uppercase tracking-wider"
               style={{ 
                 fontFamily: 'var(--font-primary)',
                 color: 'var(--neon-green)',
                 textShadow: '0 0 15px var(--neon-green)',
               }}
             >
-              AGENTIC AI • WEB3 • CLOUD OPS
+              TYPESCRIPT • REACT • AGENTIC AI • DEVOPS • CLOUD
+            </p>
+            <p 
+              className="text-sm md:text-lg opacity-60 uppercase tracking-wider"
+              style={{ 
+                fontFamily: 'var(--font-terminal)',
+                color: 'var(--neon-cyan)',
+                textShadow: '0 0 10px var(--neon-cyan)',
+              }}
+            >
+              📍 BERLIN, GERMANY
             </p>
           </motion.div>
 

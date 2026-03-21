@@ -4,10 +4,10 @@ import { Terminal } from 'lucide-react';
 const timeline = [
   {
     era: '2020S',
-    title: 'AI × WEB3 × CLOUD',
-    role: 'BUILDING THE DECENTRALIZED FUTURE',
-    description: 'LEADING INITIATIVES AT THE INTERSECTION OF AGENTIC AI, CRYPTOGRAPHY, AND CLOUD OPERATIONS. DESIGNING PERMISSIONLESS SYSTEMS THAT SCALE. NO INTERMEDIARIES. NO SINGLE POINT OF FAILURE.',
-    tech: ['AI AGENTS', 'WEB3', 'CRYPTOGRAPHY', 'CLOUD OPS', 'DEVOPS', 'SMART CONTRACTS'],
+    title: 'BLOCKCHAIN × SMART CONTRACTS',
+    role: '6 YEARS BUILDING ON-CHAIN SYSTEMS',
+    description: 'DEEP PROFESSIONAL EXPERIENCE IN BLOCKCHAIN AND SMART CONTRACT DEVELOPMENT. LED WEB3 DEVELOPMENT AT MOLECULE AG, BUILDING IP TOKENIZATION INFRASTRUCTURE (IPNFTS), BONDING CURVE MARKETS (CATALYST), AND DECENTRALIZED CROWDFUNDING PROTOCOLS. SOLIDITY, FOUNDRY, SUBGRAPHS, AND PRODUCTION-GRADE DEFI SYSTEMS.',
+    tech: ['SOLIDITY', 'SMART CONTRACTS', 'FOUNDRY', 'SUBGRAPH', 'ERC-20/721/1155', 'DEFI'],
     color: 'var(--neon-cyan)',
   },
   {
@@ -118,42 +118,92 @@ export function ExperienceSection() {
             />
             
             <h3 
-              className="text-6xl md:text-7xl mb-8 uppercase tracking-tight"
+              className="text-6xl md:text-7xl mb-12 uppercase tracking-tight"
               style={{ 
                 fontFamily: 'var(--font-accent)',
                 color: 'var(--neon-cyan)',
                 textShadow: '0 0 40px var(--neon-cyan)',
               }}>
-              CURRENT FOCUS
+              WHAT I'M DOING NOW
             </h3>
             
-            <p 
-              className="text-xl md:text-2xl mb-10 leading-relaxed max-w-5xl uppercase tracking-wide"
-              style={{ 
-                fontFamily: 'var(--font-primary)',
-                color: 'rgba(255, 255, 255, 0.9)',
-              }}>
-              WORKING ON THE CUTTING EDGE WHERE AUTONOMOUS AI AGENTS MEET DECENTRALIZED INFRASTRUCTURE. 
-              BUILDING SYSTEMS THAT ARE PERSISTENT, TRUSTLESS, AND DESIGNED FOR A FUTURE WHERE NO SINGLE 
-              ENTITY CONTROLS THE FLOW OF INFORMATION.
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              {['AGENTIC AI', 'WEB3 PROTOCOLS', 'CRYPTOGRAPHY', 'CLOUD INFRASTRUCTURE', 'DEVOPS', 'SMART CONTRACTS'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-5 py-3 uppercase tracking-wider"
-                  style={{
-                    fontFamily: 'var(--font-accent)',
-                    fontSize: '14px',
-                    color: 'var(--neon-cyan)',
-                    backgroundColor: 'rgba(0, 255, 255, 0.08)',
-                    boxShadow: '0 0 20px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.1)',
-                  }}
-                >
-                  {tech}
-                </span>
-              ))}
+            {/* Welshare Section */}
+            <div className="mb-16">
+              <h4 
+                className="text-3xl md:text-4xl mb-6 uppercase tracking-tight"
+                style={{ 
+                  fontFamily: 'var(--font-accent)',
+                  color: 'var(--neon-green)',
+                  textShadow: '0 0 20px var(--neon-green)',
+                }}>
+                LEAD TECH @ WELSHARE
+              </h4>
+              <p 
+                className="text-lg md:text-xl mb-6 leading-relaxed max-w-5xl"
+                style={{ 
+                  fontFamily: 'var(--font-primary)',
+                  color: 'rgba(255, 255, 255, 0.85)',
+                }}>
+                RESPONSIBLE FOR ALL DEVELOPMENT AT WELSHARE, BUILDING THE HEALTH PROFILE MATCHING PROTOCOL (HPMP) — 
+                A MATCHING PROTOCOL THAT CONNECTS AGENTIC SCIENTIFIC RESEARCHERS WITH PATIENTS FOR CLINICAL TRIALS. 
+                THE MAGIC: PATIENT HEALTH DATA IS NEVER DISCLOSED. FILTERING, QUERYING, AND MATCHING HAPPEN INSIDE 
+                TRUSTED EXECUTION ENVIRONMENTS (TEEs) AND SECRET COMPUTATION LAYERS POWERED BY NILLION.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {['TYPESCRIPT', 'REACT', 'FHIR', 'NILLION', 'TEE', 'MCP', 'CRYPTOGRAPHY', 'PRIVACY TECH'].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-4 py-2 uppercase tracking-wider text-sm"
+                    style={{
+                      fontFamily: 'var(--font-accent)',
+                      color: 'var(--neon-green)',
+                      backgroundColor: 'rgba(0, 255, 65, 0.08)',
+                      boxShadow: '0 0 15px rgba(0, 255, 65, 0.3), inset 0 0 15px rgba(0, 255, 65, 0.1)',
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Infrastructure Section */}
+            <div>
+              <h4 
+                className="text-3xl md:text-4xl mb-6 uppercase tracking-tight"
+                style={{ 
+                  fontFamily: 'var(--font-accent)',
+                  color: 'var(--neon-magenta)',
+                  textShadow: '0 0 20px var(--neon-magenta)',
+                }}>
+                AGENTIC AI INFRASTRUCTURE AT SCALE
+              </h4>
+              <p 
+                className="text-lg md:text-xl mb-6 leading-relaxed max-w-5xl"
+                style={{ 
+                  fontFamily: 'var(--font-primary)',
+                  color: 'rgba(255, 255, 255, 0.85)',
+                }}>
+                PROVISIONING AND OPERATING INFRASTRUCTURE TO RUN OPENCLAW AGENTS AT SCALE ON AFFORDABLE VPS HOSTS. 
+                LEVERAGING AWS, TERRAFORM, AND OPENCLAW BEST PRACTICES TO BUILD RESILIENT, COST-EFFECTIVE AGENT 
+                DEPLOYMENT PIPELINES. INFRASTRUCTURE AS CODE FOR AI AGENT FLEETS.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {['AWS', 'TERRAFORM', 'OPENCLAW', 'DOCKER', 'VPS', 'DEVOPS', 'AGENT ORCHESTRATION', 'CI/CD'].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-4 py-2 uppercase tracking-wider text-sm"
+                    style={{
+                      fontFamily: 'var(--font-accent)',
+                      color: 'var(--neon-magenta)',
+                      backgroundColor: 'rgba(255, 0, 255, 0.08)',
+                      boxShadow: '0 0 15px rgba(255, 0, 255, 0.3), inset 0 0 15px rgba(255, 0, 255, 0.1)',
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </motion.div>
