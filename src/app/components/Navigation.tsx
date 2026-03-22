@@ -56,7 +56,7 @@ export function Navigation({ volume, muted, onVolumeChange, onToggleMute }: Navi
               color: 'var(--neon-cyan)',
               textShadow: '0 0 15px var(--neon-cyan)',
             }}>
-            PORTFOLIO
+            Stefan Adolf
           </span>
         </a>
 

@@ -4,26 +4,28 @@ import { Terminal } from 'lucide-react';
 const timeline = [
   {
     era: '2020S',
-    title: 'BLOCKCHAIN × SMART CONTRACTS',
+    title: 'DECENTRALIZATION FOCUS',
     role: '6 YEARS BUILDING ON-CHAIN SYSTEMS',
-    description: 'DEEP PROFESSIONAL EXPERIENCE IN BLOCKCHAIN AND SMART CONTRACT DEVELOPMENT. LED WEB3 DEVELOPMENT AT MOLECULE AG, BUILDING IP TOKENIZATION INFRASTRUCTURE (IPNFTS), BONDING CURVE MARKETS (CATALYST), AND DECENTRALIZED CROWDFUNDING PROTOCOLS. SOLIDITY, FOUNDRY, SUBGRAPHS, AND PRODUCTION-GRADE DEFI SYSTEMS.',
-    tech: ['SOLIDITY', 'SMART CONTRACTS', 'FOUNDRY', 'SUBGRAPH', 'ERC-20/721/1155', 'DEFI'],
+    description: 'DEEP EXPERIENCE IN BLOCKCHAIN AND SMART CONTRACT DEVELOPMENT. ETHONLINE 21 FINALIST (SPLICE). DECENTRALIZED EHRS. DID/VC BACKED CERTIFICATION VALIDATORS. LED WEB3 DEVELOPMENT AT MOLECULE AG, BUILDING IP TOKENIZATION INFRASTRUCTURE (IPNFTS), BONDING CURVE MARKETS (CATALYST), AND DECENTRALIZED CROWDFUNDING PROTOCOLS. ',
+    tech: ['SOLIDITY', 'SMART CONTRACTS', 'FOUNDRY', 'SUBGRAPHS', 'ERC-20/721/1155', 'DEFI', 'TOKENIZATION', 'DID/VC'],
+    link: { url: 'https://molecule.to', text: '→ MOLECULE.TO' },
     color: 'var(--neon-cyan)',
   },
   {
     era: '2010S',
-    title: 'STARTUP ECOSYSTEM',
-    role: 'BUILDING & SCALING',
-    description: 'DEEP INVOLVEMENT IN STARTUP CULTURE. BUSINESS MODEL INNOVATION, PRODUCT DEVELOPMENT, AND GROWTH STRATEGIES. LEARNED WHAT IT TAKES TO GO FROM ZERO TO ONE. FAILED FAST, LEARNED FASTER.',
-    tech: ['BUSINESS MODELS', 'PRODUCT STRATEGY', 'GROWTH', 'TEAM BUILDING', 'FUNDRAISING'],
+    title: 'AGENCIES, STARTUPS, CORPORATES',
+    role: 'BUILDING // MIGRATING // SCALING // EDUCATING',
+    description: 'DEEPLY INVOLVED IN INCUBATED STARTUP GROWTH HACKING & SEO (CHECK24). BUSINESS MODEL INNOVATION, MEETUPS & DEVREL (TURBINE KREUZBERG, CODE.TALKS, CODING.EARTH), PRODUCT DEVELOPMENT, REPLATFORMING (SAMSUNG SDS, DISCOUNTO)',
+    tech: ['JAVA EE', 'ORACLE', 'SPRING', 'FREEBSD', 'SYMFONY', 'MONGODB', 'NODEJS', 'VUE', 'REACT'],
+    link: { url: 'https://turbinekreuzberg.com', text: '→ TURBINEKREUZBERG' },
     color: 'var(--neon-magenta)',
   },
   {
     era: '2000S',
-    title: 'SOFTWARE FOUNDATIONS',
+    title: 'ACADEMIC, FOUNDER, BUILDER',
     role: 'MASTERING THE CRAFT',
-    description: 'BUILDING THE TECHNICAL FOUNDATION. LEARNING SYSTEMS THINKING, SOFTWARE ARCHITECTURE, AND THE ART OF SHIPPING RELIABLE CODE. WHERE IT ALL BEGAN. THE FUNDAMENTALS THAT NEVER CHANGE.',
-    tech: ['SOFTWARE ARCHITECTURE', 'SYSTEM DESIGN', 'DATABASES', 'APIS', 'LINUX', 'NETWORKING'],
+    description: 'FINISHED MATH STUDIES. BUILT AT Y2K STARTUPS (CANTO, ASTROMO, ECRYPT). FOUNDED & EXITED AREADIGITAL AG (DIGITAL MEDIA HOUSE). ',
+    tech: ['PHP', 'JAVA', 'C++', 'MATHEMATICA', 'NASTRAN', 'MICROSOFT .NET', 'JAVASCRIPT'],
     color: 'var(--neon-green)',
   },
 ];
@@ -96,7 +98,7 @@ export function ExperienceSection() {
                   color: 'var(--neon-green)',
                   textShadow: '0 0 20px var(--neon-green)',
                 }}>
-                LEAD TECH @ WELSHARE
+                MD / BUILDER @ WELSHARE.HEALTH
               </h4>
               <p 
                 className="text-lg md:text-xl mb-6 leading-relaxed max-w-5xl"
@@ -124,6 +126,21 @@ export function ExperienceSection() {
                     {tech}
                   </span>
                 ))}
+              </div>
+              <div className="mt-6">
+                <a 
+                  href="https://welshare.health" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-lg uppercase tracking-wide hover:underline"
+                  style={{ 
+                    fontFamily: 'var(--font-accent)',
+                    color: 'var(--neon-green)',
+                    textShadow: '0 0 10px var(--neon-green)',
+                  }}
+                >
+                  → WELSHARE.HEALTH
+                </a>
               </div>
             </div>
 
@@ -164,12 +181,40 @@ export function ExperienceSection() {
                   </span>
                 ))}
               </div>
+              <div className="mt-6 gap-12 flex flex-row">
+                <a 
+                  href="https://beach.science" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-lg uppercase tracking-wide hover:underline"
+                  style={{ 
+                    fontFamily: 'var(--font-accent)',
+                    color: 'var(--neon-magenta)',
+                    textShadow: '0 0 10px var(--neon-magenta)',
+                  }}
+                >
+                  → BEACH.SCIENCE
+                </a>
+                <a 
+                  href="https://molecule.to" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-lg uppercase tracking-wide hover:underline"
+                  style={{ 
+                    fontFamily: 'var(--font-accent)',
+                    color: 'var(--neon-magenta)',
+                    textShadow: '0 0 10px var(--neon-magenta)',
+                  }}
+                >
+                  → MOLECULE.TO
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>
 
         <motion.div
-          className="mb-24"
+          className="mt-48 mb-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -186,7 +231,7 @@ export function ExperienceSection() {
                 0 0 120px rgba(255, 0, 255, 0.4)
               `,
             }}>
-            25+ YEARS
+            &gt; 20 YEARS
           </h2>
           <p 
             className="text-2xl uppercase tracking-wider"
@@ -195,7 +240,7 @@ export function ExperienceSection() {
               color: 'rgba(255, 255, 255, 0.6)',
               fontSize: '28px',
             }}>
-            &gt; SOFTWARE // STARTUPS // SYSTEMIC CHANGE
+            &gt; CODING // STARTUPS // MIGRATION // ARCHITECTURE // TECHNOLOGY // EDUCATION
           </p>
         </motion.div>
 
@@ -217,6 +262,7 @@ function TimelinePanel({
   role, 
   description, 
   tech, 
+  link,
   color,
   index 
 }: { 
@@ -225,6 +271,7 @@ function TimelinePanel({
   role: string;
   description: string;
   tech: string[];
+  link?: { url: string; text: string };
   color: string;
   index: number;
 }) {
@@ -303,7 +350,7 @@ function TimelinePanel({
           {description}
         </p>
         
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 justify-start">
           {tech.map((t) => (
             <span 
               key={t} 
@@ -318,6 +365,24 @@ function TimelinePanel({
             </span>
           ))}
         </div>
+        
+        {link && (
+          <div className="mt-6">
+            <a 
+              href={link.url} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-lg uppercase tracking-wide hover:underline"
+              style={{ 
+                fontFamily: 'var(--font-accent)',
+                color: color,
+                textShadow: `0 0 10px ${color}`,
+              }}
+            >
+              {link.text}
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Era number watermark */}

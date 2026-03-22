@@ -124,7 +124,7 @@ export function InstagramSquareCard() {
     <SocialPreviewCard
       variant="square"
       title="BUILDING THE FUTURE"
-      subtitle="25+ years in Software, Startups & Systemic Change"
+      subtitle="20 years in Software, Startups & Technical Environments"
       tags={['AI', 'Decentralization', 'Cloud']}
     />
   );

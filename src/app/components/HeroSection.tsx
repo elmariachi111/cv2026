@@ -167,7 +167,7 @@ export function HeroSection() {
                 textShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
               }}
             >
-              25+ YEARS EXPERIENCE// CODING × TEAMS × CLOUD OPS × AGENTIC AI
+              &gt; 20 YEARS EXPERIENCE// CODING × TEAMS × CLOUD OPS × AGENTIC AI
             </p>
             <p 
               className="text-base md:text-xl mb-3 opacity-80 uppercase tracking-wider"

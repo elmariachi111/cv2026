@@ -10,6 +10,13 @@ const values = [
     bgColor: 'rgba(0, 255, 255, 0.05)',
   },
   {
+    icon: Users,
+    title: 'EMPATHY & HUMANITY',
+    description: 'BUILDING WITH EMPATHY. HUMAN-CENTERED DESIGN. ENVIRONMENTALLY CONSCIOUS. TECHNOLOGY THAT REFLECTS OUR SHARED HUMANITY AND FUTURE.',
+    color: 'var(--neon-pink)',
+    bgColor: 'rgba(255, 16, 240, 0.05)',
+  },
+  {
     icon: Zap,
     title: 'ACTIVIST MINDSET',
     description: 'CHALLENGING THE STATUS QUO. BUILDING TOOLS FOR CHANGE. MAKING TECH WORK FOR EVERYONE, NOT JUST THE PRIVILEGED FEW.',
@@ -22,13 +29,6 @@ const values = [
     description: 'NO SINGLE POINTS OF FAILURE. NO GATEKEEPERS. SYSTEMS THAT BELONG TO EVERYONE AND CONTROLLED BY NO ONE.',
     color: 'var(--neon-green)',
     bgColor: 'rgba(0, 255, 65, 0.05)',
-  },
-  {
-    icon: Users,
-    title: 'EMPATHY & HUMANITY',
-    description: 'BUILDING WITH EMPATHY. HUMAN-CENTERED DESIGN. ENVIRONMENTALLY CONSCIOUS. TECHNOLOGY THAT REFLECTS OUR SHARED HUMANITY AND FUTURE.',
-    color: 'var(--neon-pink)',
-    bgColor: 'rgba(255, 16, 240, 0.05)',
   },
   {
     icon: Cpu,
