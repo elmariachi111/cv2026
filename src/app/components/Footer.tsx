@@ -2,7 +2,7 @@ import { Terminal } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="relative py-16 px-8 overflow-hidden" 
+    <footer className="relative py-16 px-2 md:px-8 overflow-hidden" 
             style={{ 
               backgroundColor: 'rgba(0, 255, 255, 0.02)',
             }}>

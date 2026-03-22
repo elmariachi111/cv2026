@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Mail, Github, Twitter, Send, MessageSquare, ExternalLink, Globe, Hash, Linkedin } from 'lucide-react';
+import { useIsMobile } from './ui/use-mobile';
 
 const socialLinks = [
   {
@@ -61,6 +62,8 @@ const socialLinks = [
 ];
 
 export function ContactSection() {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="relative py-32" id="contact">
       {/* Massive color blend */}
@@ -74,11 +77,12 @@ export function ContactSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1800px] mx-auto px-8">
+      <div className="relative z-10 max-w-[1800px] mx-auto px-2 md:px-8">
         <motion.div
           className="mb-24"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 30 }}
+          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
@@ -109,7 +113,7 @@ export function ContactSection() {
         {/* Social links - full bleed panels */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 mb-0">
           {socialLinks.map((link, index) => (
-            <SocialPanel key={link.name} {...link} index={index} />
+            <SocialPanel key={link.name} {...link} index={index} isMobile={isMobile} />
           ))}
         </div>
 
@@ -125,7 +129,8 @@ function SocialPanel({
   href, 
   color, 
   username, 
-  index 
+  index,
+  isMobile 
 }: { 
   name: string;
   icon: React.ElementType;
@@ -133,21 +138,23 @@ function SocialPanel({
   color: string;
   username: string;
   index: number;
+  isMobile: boolean | undefined;
 }) {
   return (
     <motion.a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative p-12 md:p-16 overflow-hidden group block"
+      className="relative p-6 md:p-12 lg:p-16 overflow-hidden group block"
       style={{ 
         backgroundColor: `${color}05`,
       }}
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={isMobile ? false : { opacity: 0, scale: 0.95 }}
+      animate={isMobile ? undefined : { opacity: 1, scale: 1 }}
+      whileInView={isMobile ? undefined : { opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      whileHover={{
+      whileHover={isMobile ? undefined : {
         backgroundColor: `${color}10`,
       }}
     >

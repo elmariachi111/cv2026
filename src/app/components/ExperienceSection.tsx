@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Terminal } from 'lucide-react';
+import { useIsMobile } from './ui/use-mobile';
 
 const timeline = [
   {
@@ -31,6 +32,8 @@ const timeline = [
 ];
 
 export function ExperienceSection() {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="relative py-32" id="experience">
       {/* Massive color blend */}
@@ -52,15 +55,16 @@ export function ExperienceSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1800px] mx-auto px-8">
+      <div className="relative z-10 max-w-[1800px] mx-auto px-2 md:px-8">
         {/* Current Focus - Full bleed panel */}
         <motion.div
-          className="mt-0 p-16 md:p-24 relative overflow-hidden"
+          className="mt-0 p-6 md:p-16 lg:p-24 relative overflow-hidden"
           style={{ 
             backgroundColor: 'rgba(0, 255, 255, 0.05)',
           }}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 30 }}
+          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
@@ -76,7 +80,7 @@ export function ExperienceSection() {
             />
             
             <h3 
-              className="text-7xl md:text-8xl mb-12 uppercase tracking-tight"
+              className="text-4xl md:text-7xl lg:text-8xl mb-8 md:mb-12 uppercase tracking-tight leading-tight"
               style={{ 
                 fontFamily: 'var(--font-accent)',
                 color: 'var(--neon-cyan)',
@@ -215,13 +219,13 @@ export function ExperienceSection() {
 
         <motion.div
           className="mt-48 mb-24"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile === false ? { opacity: 0, y: 30 } : {}}
+          whileInView={isMobile === false ? { opacity: 1, y: 0 } : {}}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
           <h2 
-            className="text-8xl md:text-[10rem] mb-6 uppercase tracking-tight leading-none"
+            className="text-5xl md:text-8xl lg:text-[10rem] mb-4 md:mb-6 uppercase tracking-tight leading-none"
             style={{ 
               fontFamily: 'var(--font-accent)',
               color: 'var(--neon-magenta)',
@@ -234,11 +238,11 @@ export function ExperienceSection() {
             &gt; 20 YEARS
           </h2>
           <p 
-            className="text-2xl uppercase tracking-wider"
+            className="text-lg md:text-2xl uppercase tracking-wider"
             style={{ 
               fontFamily: 'var(--font-terminal)',
               color: 'rgba(255, 255, 255, 0.6)',
-              fontSize: '28px',
+              fontSize: 'clamp(16px, 4vw, 28px)',
             }}>
             &gt; CODING // BOOTSTRAPPING // MIGRATING // ARCHITECTURING // IDEATING // EDUCATING
           </p>
@@ -246,7 +250,7 @@ export function ExperienceSection() {
 
         <div className="space-y-0">
           {timeline.map((item, index) => (
-            <TimelinePanel key={item.era} {...item} index={index} />
+            <TimelinePanel key={item.era} {...item} index={index} isMobile={isMobile} />
           ))}
         </div>
 
@@ -264,7 +268,8 @@ function TimelinePanel({
   tech, 
   link,
   color,
-  index 
+  index,
+  isMobile 
 }: { 
   era: string;
   title: string;
@@ -274,18 +279,20 @@ function TimelinePanel({
   link?: { url: string; text: string };
   color: string;
   index: number;
+  isMobile: boolean | undefined;
 }) {
   return (
     <motion.div
-      className="relative p-12 md:p-20 overflow-hidden group"
+      className="relative p-6 md:p-12 lg:p-20 overflow-hidden group"
       style={{ 
         backgroundColor: `${color}05`,
       }}
-      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={isMobile ? false : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+      animate={isMobile ? undefined : { opacity: 1, x: 0 }}
+      whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: index * 0.15 }}
-      whileHover={{
+      whileHover={isMobile ? undefined : {
         backgroundColor: `${color}10`,
       }}
     >

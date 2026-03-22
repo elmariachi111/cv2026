@@ -3,8 +3,13 @@ import { useRef, useEffect, useState } from 'react';
 
 export function CRTEffect() {
   const [totalHeight, setTotalHeight] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
+  
   useEffect(() => {
-    const update = () => setTotalHeight(document.body.scrollHeight);
+    const update = () => {
+      setTotalHeight(document.body.scrollHeight);
+      setIsMobile(window.innerWidth < 768);
+    };
     update();
     window.addEventListener('resize', update);
     return () => window.removeEventListener('resize', update);
@@ -12,14 +17,15 @@ export function CRTEffect() {
 
   const { scrollY } = useScroll();
   const crtFade = totalHeight * 0.15;
-  const crtOpacity = useTransform(scrollY, [crtFade - 100, crtFade], [1, 0]);
+  const crtOpacity = useTransform(scrollY, [crtFade - 100, crtFade], [isMobile ? 0.3 : 1, 0]);
 
   return (
     <motion.div className="fixed inset-0 pointer-events-none overflow-hidden z-50" style={{ opacity: crtOpacity }}>
       {/* Scanlines - horizontal lines */}
       <div 
-        className="absolute inset-0 opacity-[0.08]"
+        className="absolute inset-0"
         style={{
+          opacity: isMobile ? 0.03 : 0.08,
           backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 255, 0.8) 2px, rgba(0, 255, 255, 0.8) 3px)',
           animation: 'scanlines 8s linear infinite',
         }}
@@ -84,9 +90,13 @@ export function CRTEffect() {
 // Laser lightshow — 8 beams from projector below viewport, sweep top→bottom, whiteout at center
 export function LaserBeams() {
   const [totalHeight, setTotalHeight] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const update = () => setTotalHeight(document.body.scrollHeight);
+    const update = () => {
+      setTotalHeight(document.body.scrollHeight);
+      setIsMobile(window.innerWidth < 768);
+    };
     update();
     window.addEventListener('resize', update);
     return () => window.removeEventListener('resize', update);
@@ -99,11 +109,11 @@ export function LaserBeams() {
   const hit   = totalHeight * 0.52;
   const end   = totalHeight * 0.70;
 
-  // Master beam visibility
+  // Master beam visibility (disabled on mobile)
   const rawBeamOpacity = useTransform(
     scrollY,
     [start - 50, start, start + 100, end - 200, end],
-    [0, 0.5, 1, 0.6, 0]
+    isMobile ? [0, 0, 0, 0, 0] : [0, 0.5, 1, 0.6, 0]
   );
   const beamOpacity = useSpring(rawBeamOpacity, { stiffness: 60, damping: 22 });
 
@@ -116,18 +126,18 @@ export function LaserBeams() {
     [15, 0, -15]
   );
 
-  // ── Whiteout sequence ──
+  // ── Whiteout sequence (disabled on mobile) ──
   const colorTint = useTransform(
     scrollY,
     [hit - 400, hit - 150, hit, hit + 200, hit + 500],
-    [0, 0.25, 0.15, 0.25, 0]
+    isMobile ? [0, 0, 0, 0, 0] : [0, 0.25, 0.15, 0.25, 0]
   );
   const colorTintSpring = useSpring(colorTint, { stiffness: 50, damping: 20 });
 
   const whiteout = useTransform(
     scrollY,
     [hit - 120, hit, hit + 100, hit + 600],
-    [0, 0.92, 0.7, 0]
+    isMobile ? [0, 0, 0, 0] : [0, 0.92, 0.7, 0]
   );
   const whiteoutSpring = useSpring(whiteout, { stiffness: 40, damping: 16 });
 

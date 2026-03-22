@@ -1,8 +1,11 @@
 import { Bike, Bot, ChevronDown, Cloud, Code2, Heart, Leaf, Wrench } from 'lucide-react';
 import { motion } from 'motion/react';
 import hackerImage from '/nb2_hacker.png';
+import { useIsMobile } from './ui/use-mobile';
 
 export function HeroSection() {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Massive color blend background */}
@@ -27,8 +30,8 @@ export function HeroSection() {
       {/* Stylized hacker image - full size, anchored to top-right */}
       <motion.div
         className="absolute right-0 top-0 h-full w-full z-5 overflow-hidden"
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={isMobile === false ? { opacity: 0, x: 100 } : {}}
+        animate={isMobile === false ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1.2, delay: 0.3 }}
       >
         <img 
@@ -45,18 +48,18 @@ export function HeroSection() {
         />
       </motion.div>
 
-      <div className="relative z-10 w-full px-8 py-20">
+      <div className="relative z-10 w-full px-2 md:px-8 py-20">
         <motion.div
           className="max-w-4xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={isMobile === false ? { opacity: 0 } : {}}
+          animate={isMobile === false ? { opacity: 1 } : {}}
           transition={{ duration: 1 }}
         >
           {/* Terminal prompt style */}
           <motion.div
             className="mb-8"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={isMobile === false ? { opacity: 0, x: -20 } : {}}
+            animate={isMobile === false ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="flex items-center gap-3 mb-6">
@@ -82,8 +85,8 @@ export function HeroSection() {
           {/* Main headline - MASSIVE */}
           <motion.h1 
             className="mb-12"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile === false ? { opacity: 0, y: 50 } : {}}
+            animate={isMobile === false ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.4 }}
           >
             <div className="space-y-3">
@@ -141,23 +144,23 @@ export function HeroSection() {
           {/* Values pills - now with intense glow */}
           <motion.div
             className="flex flex-wrap gap-4 mb-20"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile === false ? { opacity: 0, y: 30 } : {}}
+            animate={isMobile === false ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             
-            <ValuePill icon={<Wrench className="w-6 h-6" />} text="BUILDER" color="var(--neon-cyan)" />
-            <ValuePill icon={<Heart className="w-6 h-6" />} text="CARETAKER" color="var(--neon-pink)" />
-            <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENTIC AI" color="var(--neon-yellow)" />
-            <ValuePill icon={<Leaf className="w-6 h-6" />} text="ENVIRONMENTALIST" color="var(--neon-green)" />
-            <ValuePill icon={<Bike className="w-6 h-6" />} text="CYCLEPUNK" color="var(--neon-pink)" />
+            <ValuePill icon={<Wrench className="w-6 h-6" />} text="BUILDER" color="var(--neon-cyan)" isMobile={isMobile} />
+            <ValuePill icon={<Heart className="w-6 h-6" />} text="CARETAKER" color="var(--neon-pink)" isMobile={isMobile} />
+            <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENTIC AI" color="var(--neon-yellow)" isMobile={isMobile} />
+            <ValuePill icon={<Leaf className="w-6 h-6" />} text="ENVIRONMENTALIST" color="var(--neon-green)" isMobile={isMobile} />
+            <ValuePill icon={<Bike className="w-6 h-6" />} text="CYCLEPUNK" color="var(--neon-pink)" isMobile={isMobile} />
           </motion.div>
 
           {/* Subtitle */}
           <motion.div
             className="max-w-3xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={isMobile === false ? { opacity: 0 } : {}}
+            animate={isMobile === false ? { opacity: 1 } : {}}
             transition={{ duration: 1, delay: 1 }}
           >
             <p 
@@ -195,7 +198,7 @@ export function HeroSection() {
           {/* Scroll indicator */}
           <motion.div
             className="absolute bottom-12 left-1/2 -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
+            animate={isMobile ? undefined : { y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             <ChevronDown 
@@ -212,10 +215,10 @@ export function HeroSection() {
   );
 }
 
-function ValuePill({ icon, text, color }: { icon: React.ReactNode; text: string; color: string }) {
+function ValuePill({ icon, text, color, isMobile }: { icon: React.ReactNode; text: string; color: string; isMobile: boolean | undefined }) {
   return (
     <motion.div 
-      className="flex items-center gap-3 px-6 py-3 backdrop-blur-sm uppercase tracking-wider"
+      className="flex items-center gap-3 px-4 md:px-6 py-2 md:py-3 backdrop-blur-sm uppercase tracking-wider"
       style={{ 
         backgroundColor: `${color}08`,
         boxShadow: `
@@ -224,7 +227,7 @@ function ValuePill({ icon, text, color }: { icon: React.ReactNode; text: string;
           0 0 60px ${color}40
         `,
       }}
-      whileHover={{
+      whileHover={isMobile ? undefined : {
         scale: 1.05,
         boxShadow: `
           0 0 40px ${color}80,

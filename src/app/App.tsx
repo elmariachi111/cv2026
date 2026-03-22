@@ -18,10 +18,11 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen"
+    <div className="relative min-h-screen overflow-x-hidden"
          style={{
            backgroundColor: '#0a0a0f',
            color: 'rgba(255, 255, 255, 0.95)',
+           maxWidth: '100vw',
          }}>
       {/* Background video */}
       <BackgroundVideo videoRef={videoRef} volume={volume} muted={muted} />

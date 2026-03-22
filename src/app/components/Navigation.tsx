@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Menu, X, Square } from 'lucide-react';
 import { useState } from 'react';
 import { VolumeControl } from './VolumeControl';
+import { useIsMobile } from './ui/use-mobile';
 
 const navLinks = [
   { name: 'VALUES', href: '#values' },
@@ -18,16 +19,17 @@ interface NavigationProps {
 
 export function Navigation({ volume, muted, onVolumeChange, onToggleMute }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 px-8 py-6 backdrop-blur-md"
+      className="fixed top-0 left-0 right-0 z-50 px-2 md:px-8 py-6 backdrop-blur-md"
       style={{ 
         backgroundColor: 'rgba(10, 10, 15, 0.85)',
         boxShadow: '0 0 40px rgba(0, 255, 255, 0.1)',
       }}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+      initial={isMobile ? false : { y: -100 }}
+      animate={isMobile ? undefined : { y: 0 }}
       transition={{ duration: 0.6, delay: 0.5 }}
     >
       <div className="max-w-[1800px] mx-auto flex items-center justify-between">

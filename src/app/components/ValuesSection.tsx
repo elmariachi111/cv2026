@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Shield, Zap, Globe, Users, Cpu, Lock } from 'lucide-react';
+import { useIsMobile } from './ui/use-mobile';
 
 const values = [
   {
@@ -47,6 +48,8 @@ const values = [
 ];
 
 export function ValuesSection() {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="relative py-32" id="values">
       {/* Color blend background */}
@@ -60,11 +63,12 @@ export function ValuesSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1800px] mx-auto px-8">
+      <div className="relative z-10 max-w-[1800px] mx-auto px-2 md:px-8">
         <motion.div
           className="mb-24"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 30 }}
+          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
@@ -94,7 +98,7 @@ export function ValuesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {values.map((value, index) => (
-            <ValuePanel key={value.title} {...value} index={index} />
+            <ValuePanel key={value.title} {...value} index={index} isMobile={isMobile} />
           ))}
         </div>
       </div>
@@ -108,7 +112,8 @@ function ValuePanel({
   description, 
   color, 
   bgColor,
-  index 
+  index,
+  isMobile 
 }: { 
   icon: React.ElementType; 
   title: string; 
@@ -116,18 +121,20 @@ function ValuePanel({
   color: string;
   bgColor: string;
   index: number;
+  isMobile: boolean | undefined;
 }) {
   return (
     <motion.div
-      className="relative p-12 md:p-16 overflow-hidden group"
+      className="relative p-6 md:p-12 lg:p-16 overflow-hidden group"
       style={{ 
         backgroundColor: bgColor,
       }}
-      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={isMobile ? false : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+      animate={isMobile ? undefined : { opacity: 1, x: 0 }}
+      whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
-      whileHover={{ 
+      whileHover={isMobile ? undefined : { 
         backgroundColor: `${color}10`,
       }}
     >
