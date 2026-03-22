@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { CRTEffect, LaserBeams } from './components/CRTEffect';
 import { Navigation } from './components/Navigation';
 import { HeroSection } from './components/HeroSection';
+import { NowSection } from './components/NowSection';
 import { ValuesSection } from './components/ValuesSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { ContactSection } from './components/ContactSection';
@@ -42,6 +43,7 @@ export default function App() {
 
       <div className="relative z-10">
         <HeroSection />
+        <NowSection />
         <ValuesSection />
         <ExperienceSection />
         <ContactSection />

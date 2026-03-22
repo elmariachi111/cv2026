@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Shield, Zap, Globe, Users, Cpu, Lock } from 'lucide-react';
+import { Shield, Zap, Globe, Users, Cpu, Lock, VenetianMask } from 'lucide-react';
 import { useIsMobile } from './ui/use-mobile';
 
 const values = [
@@ -18,23 +18,23 @@ const values = [
     bgColor: 'rgba(255, 16, 240, 0.05)',
   },
   {
-    icon: Zap,
-    title: 'ACTIVIST MINDSET',
-    description: 'CHALLENGING THE STATUS QUO. BUILDING TOOLS FOR CHANGE. MAKING TECH WORK FOR EVERYONE, NOT JUST THE PRIVILEGED FEW.',
+    icon: VenetianMask,
+    title: 'PRIVACY',
+    description: 'DATA BELONGS TO HUMANS. KNOW WHAT YOU SHARE, KNOW WHAT YOU KEEP. CRYPTOGRAPHY IS NOT A CRIME.',
     color: 'var(--neon-yellow)',
     bgColor: 'rgba(255, 255, 0, 0.05)',
   },
   {
     icon: Globe,
-    title: 'DECENTRALIZED FUTURE',
-    description: 'NO SINGLE POINTS OF FAILURE. NO GATEKEEPERS. SYSTEMS THAT BELONG TO EVERYONE AND CONTROLLED BY NO ONE.',
+    title: 'DECENTRALIZATION',
+    description: 'NO SINGLE POINTS OF FAILURE. NO GATEKEEPERS. CENSORSHIP RESISTANCE. TECHNOLOGY MUST BE AVAILABLE TO AND ACCESSIBLE FOR EVERYONE.',
     color: 'var(--neon-green)',
     bgColor: 'rgba(0, 255, 65, 0.05)',
   },
   {
     icon: Cpu,
     title: 'BUILT TO LAST',
-    description: 'RELIABLE INFRASTRUCTURE. PERSISTENT SYSTEMS. CODE THAT STANDS THE TEST OF TIME. QUALITY OVER QUICK WINS.',
+    description: 'RELIABILITY, OBSERVABILITY, MAINTAINABILITY MATTERS. MAKE SYSTEMS THAT SURVIVE COMPANIES. QUALITY WINS OVER QUICK.',
     color: 'var(--neon-magenta)',
     bgColor: 'rgba(255, 0, 255, 0.05)',
   },

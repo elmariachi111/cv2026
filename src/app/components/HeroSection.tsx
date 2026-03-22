@@ -104,7 +104,7 @@ export function HeroSection() {
                   `,
                 }}
               >
-                It only counts
+                Builder
               </div>
                 <div 
                   className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
@@ -120,7 +120,7 @@ export function HeroSection() {
                     `,
                   }}
                 >
-                  if it helps
+                  with an
                 </div>
               <div 
                 className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
@@ -136,7 +136,7 @@ export function HeroSection() {
                   `,
                 }}
               >
-                a human
+                attitude
               </div>
             </div>
           </motion.h1>
@@ -149,9 +149,9 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             
-            <ValuePill icon={<Wrench className="w-6 h-6" />} text="BUILDER" color="var(--neon-cyan)" isMobile={isMobile} />
+            <ValuePill icon={<Wrench className="w-6 h-6" />} text="DEV" color="var(--neon-cyan)" isMobile={isMobile} />
             <ValuePill icon={<Heart className="w-6 h-6" />} text="CARETAKER" color="var(--neon-pink)" isMobile={isMobile} />
-            <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENTIC AI" color="var(--neon-yellow)" isMobile={isMobile} />
+            <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENT CHARMER" color="var(--neon-yellow)" isMobile={isMobile} />
             <ValuePill icon={<Leaf className="w-6 h-6" />} text="ENVIRONMENTALIST" color="var(--neon-green)" isMobile={isMobile} />
             <ValuePill icon={<Bike className="w-6 h-6" />} text="CYCLEPUNK" color="var(--neon-pink)" isMobile={isMobile} />
           </motion.div>
@@ -163,16 +163,6 @@ export function HeroSection() {
             animate={isMobile === false ? { opacity: 1 } : {}}
             transition={{ duration: 1, delay: 1 }}
           >
-            <p 
-              className="text-lg md:text-2xl mb-6 leading-relaxed uppercase tracking-wide"
-              style={{ 
-                fontFamily: 'var(--font-terminal)',
-                color: 'rgba(255, 255, 255, 0.9)',
-                textShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
-              }}
-            >
-              &gt; BUIDLING SINCE Y2K
-            </p>
             <p 
               className="text-base md:text-xl mb-3 opacity-80 uppercase tracking-wider"
               style={{ 
