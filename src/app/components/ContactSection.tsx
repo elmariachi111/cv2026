@@ -102,7 +102,7 @@ export function ContactSection() {
               color: 'rgba(255, 255, 255, 0.6)',
               fontSize: '28px',
             }}>
-            &gt; HAPPY TO GRAB A COFFEE, HAVE A WALK, A SOCIAL RIDE
+            &gt; HAPPY TO GRAB A COFFEE, HAVE A WALK, A SOCIAL BIKE RIDE
           </p>
         </motion.div>
 

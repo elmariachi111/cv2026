@@ -1,4 +1,4 @@
-import { Bot, ChevronDown, Cloud, Code2, Heart, Leaf } from 'lucide-react';
+import { Bike, Bot, ChevronDown, Cloud, Code2, Heart, Leaf, Wrench } from 'lucide-react';
 import { motion } from 'motion/react';
 import hackerImage from '/nb2_hacker.png';
 
@@ -117,7 +117,7 @@ export function HeroSection() {
                     `,
                   }}
                 >
-                  if it works
+                  if it helps
                 </div>
               <div 
                 className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
@@ -133,7 +133,7 @@ export function HeroSection() {
                   `,
                 }}
               >
-                for humans
+                a human
               </div>
             </div>
           </motion.h1>
@@ -146,10 +146,11 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             
+            <ValuePill icon={<Wrench className="w-6 h-6" />} text="BUILDER" color="var(--neon-cyan)" />
+            <ValuePill icon={<Heart className="w-6 h-6" />} text="CARETAKER" color="var(--neon-pink)" />
             <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENTIC AI" color="var(--neon-yellow)" />
-            <ValuePill icon={<Cloud className="w-6 h-6" />} text="CLOUD ARCHITECT" color="var(--neon-cyan)" />
-            <ValuePill icon={<Heart className="w-6 h-6" />} text="MINDFULNESS" color="var(--neon-pink)" />
             <ValuePill icon={<Leaf className="w-6 h-6" />} text="ENVIRONMENTALIST" color="var(--neon-green)" />
+            <ValuePill icon={<Bike className="w-6 h-6" />} text="CYCLEPUNK" color="var(--neon-pink)" />
           </motion.div>
 
           {/* Subtitle */}
@@ -167,7 +168,7 @@ export function HeroSection() {
                 textShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
               }}
             >
-              &gt; 20 YEARS EXPERIENCE// CODING × TEAMS × CLOUD OPS × AGENTIC AI
+              &gt; BUIDLING SINCE Y2K
             </p>
             <p 
               className="text-base md:text-xl mb-3 opacity-80 uppercase tracking-wider"
@@ -177,7 +178,7 @@ export function HeroSection() {
                 textShadow: '0 0 15px var(--neon-green)',
               }}
             >
-              TYPESCRIPT • SOLIDITY • OPS 
+              WEB STACK DEV • P2P • CRYPTOGRAPHY • ONCHAIN • DONT TRUST, VERIFY
             </p>
             <p 
               className="text-sm md:text-lg opacity-60 uppercase tracking-wider"
