@@ -29,7 +29,7 @@ export function HeroSection() {
 
       {/* Stylized hacker image - full size, anchored to top-right */}
       <motion.div
-        className="absolute right-0 top-0 h-full w-full z-5 overflow-hidden"
+        className="absolute right-0 top-[4.5rem] md:top-0 h-full w-full z-5 overflow-hidden"
         initial={isMobile === false ? { opacity: 0, x: 100 } : {}}
         animate={isMobile === false ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1.2, delay: 0.3 }}
@@ -77,7 +77,7 @@ export function HeroSection() {
                   fontSize: '20px',
                 }}
               >
-                &gt; SYSTEM.INIT_PORTFOLIO
+                &gt; SYSTEM.INIT_CV
               </span>
             </div>
           </motion.div>
@@ -215,7 +215,7 @@ export function HeroSection() {
   );
 }
 
-function ValuePill({ icon, text, color, isMobile }: { icon: React.ReactNode; text: string; color: string; isMobile: boolean | undefined }) {
+function ValuePill({ icon, text, color, isMobile }: { icon: React.ReactNode; text: string; color: string; isMobile: boolean }) {
   return (
     <motion.div 
       className="flex items-center gap-3 px-4 md:px-6 py-2 md:py-3 backdrop-blur-sm uppercase tracking-wider"

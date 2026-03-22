@@ -5,9 +5,10 @@ interface VolumeControlProps {
   muted: boolean;
   onVolumeChange: (v: number) => void;
   onToggleMute: () => void;
+  compact?: boolean;
 }
 
-export function VolumeControl({ volume, muted, onVolumeChange, onToggleMute }: VolumeControlProps) {
+export function VolumeControl({ volume, muted, onVolumeChange, onToggleMute, compact }: VolumeControlProps) {
   const Icon = muted || volume === 0 ? VolumeX : volume < 0.5 ? Volume1 : Volume2;
 
   return (
@@ -23,19 +24,21 @@ export function VolumeControl({ volume, muted, onVolumeChange, onToggleMute }: V
       >
         <Icon className="w-5 h-5" />
       </button>
-      <input
-        type="range"
-        min={0}
-        max={1}
-        step={0.01}
-        value={muted ? 0 : volume}
-        onChange={(e) => onVolumeChange(parseFloat(e.target.value))}
-        className="w-16 h-1 appearance-none rounded-full cursor-pointer"
-        style={{
-          accentColor: 'var(--neon-cyan)',
-          background: `linear-gradient(to right, var(--neon-cyan) 0%, var(--neon-cyan) ${(muted ? 0 : volume) * 100}%, rgba(255,255,255,0.2) ${(muted ? 0 : volume) * 100}%, rgba(255,255,255,0.2) 100%)`,
-        }}
-      />
+      {!compact && (
+        <input
+          type="range"
+          min={0}
+          max={1}
+          step={0.01}
+          value={muted ? 0 : volume}
+          onChange={(e) => onVolumeChange(parseFloat(e.target.value))}
+          className="w-16 h-1 appearance-none rounded-full cursor-pointer"
+          style={{
+            accentColor: 'var(--neon-cyan)',
+            background: `linear-gradient(to right, var(--neon-cyan) 0%, var(--neon-cyan) ${(muted ? 0 : volume) * 100}%, rgba(255,255,255,0.2) ${(muted ? 0 : volume) * 100}%, rgba(255,255,255,0.2) 100%)`,
+          }}
+        />
+      )}
     </div>
   );
 }

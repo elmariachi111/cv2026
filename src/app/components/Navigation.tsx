@@ -101,6 +101,7 @@ export function Navigation({ volume, muted, onVolumeChange, onToggleMute }: Navi
             muted={muted}
             onVolumeChange={onVolumeChange}
             onToggleMute={onToggleMute}
+            compact
           />
           <button
             onClick={() => setIsOpen(!isOpen)}

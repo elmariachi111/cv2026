@@ -138,7 +138,7 @@ function SocialPanel({
   color: string;
   username: string;
   index: number;
-  isMobile: boolean | undefined;
+  isMobile: boolean;
 }) {
   return (
     <motion.a

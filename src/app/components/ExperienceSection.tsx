@@ -279,7 +279,7 @@ function TimelinePanel({
   link?: { url: string; text: string };
   color: string;
   index: number;
-  isMobile: boolean | undefined;
+  isMobile: boolean;
 }) {
   return (
     <motion.div

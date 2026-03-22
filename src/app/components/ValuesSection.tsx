@@ -121,7 +121,7 @@ function ValuePanel({
   color: string;
   bgColor: string;
   index: number;
-  isMobile: boolean | undefined;
+  isMobile: boolean;
 }) {
   return (
     <motion.div
