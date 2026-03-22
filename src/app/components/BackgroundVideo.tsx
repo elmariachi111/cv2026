@@ -15,7 +15,7 @@ export function BackgroundVideo({ videoRef, volume, muted }: BackgroundVideoProp
 
     // Try unmuted autoplay first
     el.play().catch(() => {
-      // Browser blocked unmuted autoplay — start muted, then unmute on first interaction
+      // Browser blocked unmuted autoplay - start muted, then unmute on first interaction
       el.muted = true;
       el.play().catch(() => {});
 

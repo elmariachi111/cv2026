@@ -62,7 +62,7 @@ export function CRTEffect() {
         }}
       />
 
-      {/* CRT scanline bar — continuous top-to-bottom sweep */}
+      {/* CRT scanline bar - continuous top-to-bottom sweep */}
       <div
         className="absolute left-0 right-0"
         style={{
@@ -87,7 +87,7 @@ export function CRTEffect() {
   );
 }
 
-// Laser lightshow — 8 beams from projector below viewport, sweep top→bottom, whiteout at center
+// Laser lightshow - 8 beams from projector below viewport, sweep top→bottom, whiteout at center
 export function LaserBeams() {
   const [totalHeight, setTotalHeight] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
