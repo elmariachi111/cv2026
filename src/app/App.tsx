@@ -6,6 +6,7 @@ import { NowSection } from './components/NowSection';
 import { ValuesSection } from './components/ValuesSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { ContactSection } from './components/ContactSection';
+import { PhotoSlideshow } from './components/PhotoSlideshow';
 import { Footer } from './components/Footer';
 import { BackgroundVideo } from './components/BackgroundVideo';
 import { useBackgroundAudio } from './hooks/useBackgroundAudio';
@@ -47,6 +48,7 @@ export default function App() {
         <ValuesSection />
         <ExperienceSection />
         <ContactSection />
+        <PhotoSlideshow />
         <Footer />
       </div>
     </div>
