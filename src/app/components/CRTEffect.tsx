@@ -117,13 +117,20 @@ export function LaserBeams() {
   );
   const beamOpacity = useSpring(rawBeamOpacity, { stiffness: 60, damping: 22 });
 
-  // Sweep rotation: the entire fan rotates so beams sweep top→bottom
-  // At start the fan is tilted so beams point more upward (+15°),
-  // at end they point more downward (-15°)
-  const sweepRotation = useTransform(
+  // Fan spread: starts very narrow (beams nearly vertical = pointing at ceiling),
+  // opens to full width at hit (beams fanned out at eye level)
+  const rawFanSpread = useTransform(
     scrollY,
     [start, hit, end],
-    [15, 0, -15]
+    [0.15, 1, 1.05]
+  );
+  const fanSpread = useSpring(rawFanSpread, { stiffness: 50, damping: 18 });
+
+  // Origin rises from far below to just under viewport as beams tilt toward viewer
+  const originBottom = useTransform(
+    scrollY,
+    [start, hit, end],
+    [-500, -160, -140]
   );
 
   // ── Whiteout sequence (disabled on mobile) ──
@@ -136,7 +143,7 @@ export function LaserBeams() {
 
   const whiteout = useTransform(
     scrollY,
-    [hit - 120, hit, hit + 100, hit + 600],
+    [hit - 80, hit, hit + 80, hit + 350],
     isMobile ? [0, 0, 0, 0] : [0, 0.92, 0.7, 0]
   );
   const whiteoutSpring = useSpring(whiteout, { stiffness: 40, damping: 16 });
@@ -167,10 +174,10 @@ export function LaserBeams() {
         <motion.div
           className="absolute left-1/2"
           style={{
-            bottom: -60,
+            bottom: originBottom,
             width: 0,
             height: 0,
-            rotate: sweepRotation,
+            scaleX: fanSpread,
           }}
         >
           {beams.map((beam, i) => (
