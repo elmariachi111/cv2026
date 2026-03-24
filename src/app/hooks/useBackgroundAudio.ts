@@ -25,6 +25,21 @@ export function useBackgroundAudio() {
     el.muted = muted;
   }, [volume, muted]);
 
+  // Pause when tab is hidden, resume when visible
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      const el = videoRef.current;
+      if (!el) return;
+      if (document.visibilityState === 'hidden') {
+        el.pause();
+      } else {
+        el.play().catch(() => {});
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, []);
+
   // Global keyboard listener: "m" toggles mute
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
