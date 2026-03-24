@@ -63,11 +63,6 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500" style={{ boxShadow: '0 0 10px #ff0000' }} />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" style={{ boxShadow: '0 0 10px #ffff00' }} />
-                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: 'var(--neon-green)', boxShadow: '0 0 10px var(--neon-green)' }} />
-              </div>
               <span 
                 className="text-sm tracking-wider"
                 style={{ 
@@ -77,7 +72,7 @@ export function HeroSection() {
                   fontSize: '20px',
                 }}
               >
-                &gt; SYSTEM.INIT_CV
+                &tilde;/work/cv26 $ system --init cv
               </span>
             </div>
           </motion.div>
@@ -104,7 +99,7 @@ export function HeroSection() {
                   `,
                 }}
               >
-                Builder
+                Building
               </div>
                 <div 
                   className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
@@ -143,14 +138,13 @@ export function HeroSection() {
 
           {/* Values pills - now with intense glow */}
           <motion.div
-            className="flex flex-wrap gap-4 mb-20"
+            className="flex flex-wrap gap-1 mb-20"
             initial={isMobile === false ? { opacity: 0, y: 30 } : {}}
             animate={isMobile === false ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             
             <ValuePill icon={<Wrench className="w-6 h-6" />} text="DEV" color="var(--neon-cyan)" isMobile={isMobile} />
-            <ValuePill icon={<Heart className="w-6 h-6" />} text="CARETAKER" color="var(--neon-pink)" isMobile={isMobile} />
             <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENT CHARMER" color="var(--neon-yellow)" isMobile={isMobile} />
             <ValuePill icon={<Leaf className="w-6 h-6" />} text="ENVIRONMENTALIST" color="var(--neon-green)" isMobile={isMobile} />
             <ValuePill icon={<Bike className="w-6 h-6" />} text="CYCLEPUNK" color="var(--neon-pink)" isMobile={isMobile} />
@@ -171,7 +165,7 @@ export function HeroSection() {
                 textShadow: '0 0 15px var(--neon-green)',
               }}
             >
-              WEB STACK DEV • P2P • CRYPTOGRAPHY • ONCHAIN • DONT TRUST, VERIFY
+              The only thing that matters: does it work on your machine?
             </p>
             <p 
               className="text-sm md:text-lg opacity-60 uppercase tracking-wider"

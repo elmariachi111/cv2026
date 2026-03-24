@@ -39,13 +39,10 @@ export function NowSection() {
                   fontFamily: 'var(--font-primary)',
                   color: 'rgba(255, 255, 255, 0.85)',
                 }}>
-                BUILDING THE HEALTH PROFILE MATCHING PROTOCOL (HPMP) -
-                IT CONNECTS AGENTIC SCIENTISTS WITH PATIENTS FOR CLINICAL TRIALS WHILE RETAINING USER DATA AT A SAFE PLACE.
-                PATIENT HEALTH DATA IS NEVER DISCLOSED TO CLIENTS; FILTERING, QUERYING, AND MATCHING HAPPENS INSIDE
-                TRUSTED EXECUTION ENVIRONMENTS (TEEs) AND A PRIVATE COMPUTE TIER (POWERED BY <a href="https://nillion.com" target="_blank" rel="noopener noreferrer">NILLION</a>).
+The Health Profile Matching Protocol (<a href="https://welshare.health/#hpmp" rel="no-opener no-referer" style={{color:"var(--neon-cyan)",textShadow:"0 0 10px var(--neon-cyan)"}}>HPMP</a>) connects agentic scientists and patients to assemble cohorts of suitable candidates for clinical trials. We're focusing on wearable health data and real world evidence initially. Patient data is never disclosed to agents directly; the matching code runs in side trusted execution environment (TEEs) on a private compute tier provided by our acclaimed partner <a href="https://nillion.com" target="_blank" rel="noopener noreferrer" style={{color:"var(--neon-cyan)",textShadow:"0 0 10px var(--neon-cyan)"}}>Nillion</a>. 
               </p>
               <div className="flex flex-wrap gap-3">
-                {['TYPESCRIPT', 'REACT', 'FHIR', 'NILLION', 'TEE', 'MCP', 'CRYPTOGRAPHY', 'PRIVACY TECH'].map((tech) => (
+                {['TYPESCRIPT', 'REACT', 'FHIR HL7', 'NILLION', 'TEE', 'MCP', 'CRYPTOGRAPHY', 'PRIVACY TECH'].map((tech) => (
                   <span
                     key={tech}
                     className="px-4 py-2 uppercase tracking-wider text-sm"
@@ -94,9 +91,8 @@ export function NowSection() {
                   fontFamily: 'var(--font-primary)',
                   color: 'rgba(255, 255, 255, 0.85)',
                 }}>
-                I PROVISION, SHAPE AND OPERATE CLOUD INFRASTRUCTURE AND BARE METAL TO RUN OPENCLAW / HERMES AGENTS AT SCALE ON AFFORDABLE VPS HOSTS.
-                LEVERAGING AWS, TERRAFORM, AND OPENCLAW BEST PRACTICES TO BUILD RESILIENT, COST-EFFECTIVE AGENT
-                DEPLOYMENT PIPELINES.
+                  Beach.Science allows agentic researchers to share, collaborate and evaluate new biomedical science hypothesis. I'm building a self service tier to run agent harnesses (e.g. openclaw, hermes) at scale on
+                  affordable VPS hosts / EC2 instances. 
               </p>
               <div className="flex flex-wrap gap-3">
                 {['AWS', 'TERRAFORM', 'OPENCLAW', 'DOCKER', 'VPS', 'DEVOPS', 'AGENT ORCHESTRATION', 'CI/CD'].map((tech) => (

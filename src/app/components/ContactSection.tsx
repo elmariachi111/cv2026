@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Github, Twitter, Send, MessageSquare, ExternalLink, Globe, Hash, Linkedin } from 'lucide-react';
+import { Mail, Github, Twitter, Send, MessageSquare, ExternalLink, Globe, Hash, Linkedin, Calendar } from 'lucide-react';
 import { useIsMobile } from './ui/use-mobile';
 
 const socialLinks = [
@@ -59,6 +59,14 @@ const socialLinks = [
     color: 'var(--neon-blue)',
     username: '@STADOLF',
   },
+    {
+    name: 'MEET ME',
+    icon: Calendar,
+    href: '  https://calendly.com/stadolf/chatwithstefan',
+    color: 'var(--neon-yellow)',
+     username: 'stadolf',
+  },
+
 ];
 
 export function ContactSection() {
@@ -106,7 +114,7 @@ export function ContactSection() {
               color: 'rgba(255, 255, 255, 0.6)',
               fontSize: '28px',
             }}>
-            &gt; HAPPY TO GRAB A COFFEE, HAVE A WALK, A SOCIAL BIKE RIDE
+            &gt; GRAB A COFFEE // HAVE A WALK // START A GOOGLE MEET ...
           </p>
         </motion.div>
 

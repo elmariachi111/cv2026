@@ -36,7 +36,7 @@ export function Footer() {
           className="text-xs uppercase tracking-widest opacity-40 mb-6"
           style={{ fontFamily: 'var(--font-accent)' }}
         >
-          © 2026 • DECENTRALIZED • PERMISSIONLESS • BUILT TO LAST
+          © 2026 • THE STRUGGLE IS REAL
         </p>
         
         {/* Terminal-style ASCII art */}

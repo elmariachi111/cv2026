@@ -6,7 +6,7 @@ const timeline = [
     era: '2020S',
     title: 'FOCUS ON DECENTRALIZATION',
     role: 'BUILDING ON-CHAIN SYSTEMS',
-    description: 'DEEP EXPERIENCE IN BLOCKCHAIN AND SMART CONTRACT DEVELOPMENT. ETHONLINE 21 FINALIST (<a href="https://ethglobal.com/showcase/splice-dzc68" target="_blank"  rel="noopener noreferrer" style="color:var(--link-color);text-shadow:0 0 10px var(--link-color)">SPLICE</a>). DECENTRALIZED EHRS. DID/VC/VP BASED CERTIFICATE VALIDATORS. PIONEERED WEB3 DEVELOPMENT AT <a href="https://molecule.to" target="_blank" rel="noopener noreferrer" style="color:var(--link-color);text-shadow:0 0 10px var(--link-color)">MOLECULE</a>, BUILDING IP TOKENIZATION INFRASTRUCTURE (IPNFTS), BONDING CURVE MARKETS (CATALYST), AND DECENTRALIZED CROWDFUNDING PROTOCOLS. ',
+    description: '2022-2025 Deep focus on blockchain and smart contract development. Pioneered ip tokenization infrastructure (<a href="https://github.com/moleculeprotocol/IPNFT" target="_blank"  rel="noopener noreferrer" style="color:var(--link-color);text-shadow:0 0 10px var(--link-color)">IPNFTs</a>) at <a href="https://molecule.to" target="_blank"  rel="noopener noreferrer" style="color:var(--link-color);text-shadow:0 0 10px var(--link-color)">Molecule</a>, developed smart contracts for crowdfunding protocols (bio.xyz, IPT crowdsales) and bonding curve based markets (<a href="https://basescan.org/address/0x20893fdd12E5F968B2231821Fc65Dd0e4eAB797C#readProxyContract" target="_blank"  rel="noopener noreferrer" style="color:var(--link-color);text-shadow:0 0 10px var(--link-color)">Catalyst</a>). <br /><br />2021 ETHOnline 21 finalist (<a href="https://ethglobal.com/showcase/splice-dzc68" target="_blank"  rel="noopener noreferrer" style="color:var(--link-color);text-shadow:0 0 10px var(--link-color)">SPLICE</a>). <br /><br /> 2020 Decentralized EHRs. DID/VC/VP based certificate validators.',
     tech: ['SOLIDITY', 'SMART CONTRACTS', 'FOUNDRY', 'SUBGRAPHS', 'ERC-20/721/1155', 'DEFI', 'TOKENIZATION', 'DID/VC'],
     link: { url: 'https://molecule.to', text: '→ MOLECULE.TO' },
     color: 'var(--neon-cyan)',
@@ -15,7 +15,7 @@ const timeline = [
     era: '2010S',
     title: 'AGENCIES, STARTUPS, CORPORATES',
     role: 'BUILDING // MIGRATING // SCALING // EDUCATING',
-    description: 'DEEPLY INVOLVED IN INCUBATED STARTUP GROWTH HACKING & SEO (CHECK24). BUSINESS MODEL INNOVATION, MEETUPS & DEVREL (TURBINE KREUZBERG, CODE.TALKS, CODING.EARTH), PRODUCT DEVELOPMENT, REPLATFORMING (SAMSUNG SDS, DISCOUNTO)',
+    description: '2018-2022: developer "Ambassador" at <a href="https://turbinekreuzberg.com/en/agency" target="_blank"  rel="noopener noreferrer" style="color:var(--link-color);text-shadow:0 0 10px var(--link-color)">Turbine Kreuzberg</a>, regular meetup organizer for coding.earth (across Germany, Portugal), head curator of <a href="https://codetalks.com/" target="_blank"  rel="noopener noreferrer" style="color:var(--link-color);text-shadow:0 0 10px var(--link-color)">code.talks 2022</a>, helped with business model innovation, communication, press releases, internal education, technical presales. <br /><br />2015-2018: Built comparison portals at several Check24\'s incubator startups (engines, backends, tools, CI/CD, tests, growth hacking, SEO). <br /><br />2010-2015: product development, replatforming legacy code (samsung sds, discounto)',
     tech: ['JAVA EE', 'ORACLE', 'SPRING', 'FREEBSD', 'SYMFONY', 'MONGODB', 'NODEJS', 'VUE', 'REACT'],
     link: { url: 'https://turbinekreuzberg.com', text: '→ TURBINEKREUZBERG' },
     color: 'var(--neon-magenta)',
@@ -23,9 +23,10 @@ const timeline = [
   {
     era: '2000S',
     title: 'ACADEMIC, FOUNDER, BUILDER',
-    role: 'THE EARLY YEARS',
-    description: 'FINISHED MATH STUDIES. BUILT AT Y2K STARTUPS (CANTO, ASTROMO, ECRYPT). FOUNDED & EXITED AREADIGITAL AG (DIGITAL MEDIA HOUSE). ',
+    role: 'Student, Editor in Chief, CTO',
+    description: '2002 - 2008 founded, grew and exited AreaDigital ag (Digital Media House, up to 30 employees, 4 publications, homegrown digital service business and data APIs, publishing partners like IDG). <br /><br />1999-2002 built at y2k startups (canto, astromo, ecrypt, microtool). <br /><br />1998-2002 Diploma (~ M.Sc.) of Mathematics at TFH Berlin.',
     tech: ['PHP', 'JAVA', 'C++', 'MATHEMATICA', 'NASTRAN', 'MICROSOFT .NET', 'JAVASCRIPT'],
+    link: { url: 'https://web.archive.org/web/20070111181057/http://www.areamobile.de/news/6583.html', text: '→ iPhone Announcement'},
     color: 'var(--neon-green)',
   },
 ];
@@ -87,7 +88,7 @@ export function ExperienceSection() {
               color: 'rgba(255, 255, 255, 0.6)',
               fontSize: 'clamp(16px, 4vw, 28px)',
             }}>
-            &gt; CODING // BOOTSTRAPPING // MIGRATING // ARCHITECTURING // IDEATING // EDUCATING
+            &gt; CODING // IDEATING // MIGRATING // ARCHITECTURING // BOOTSTRAPPING // EDUCATING
           </p>
         </motion.div>
 
@@ -180,19 +181,10 @@ function TimelinePanel({
           }}>
           {title}
         </h3>
-        
-        <p 
-          className="text-xl md:text-2xl mb-6 uppercase tracking-wide"
-          style={{ 
-            fontFamily: 'var(--font-terminal)',
-            color: 'rgba(255, 255, 255, 0.7)',
-            fontSize: '24px',
-          }}>
-          {role}
-        </p>
+      
         
         <p
-          className="text-base md:text-lg mb-8 leading-relaxed max-w-4xl uppercase tracking-wide [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:opacity-80"
+          className="text-base md:text-lg mb-8 leading-relaxed max-w-4xl tracking-wide [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:opacity-80"
           style={{
             fontFamily: 'var(--font-primary)',
             color: 'rgba(255, 255, 255, 0.8)',

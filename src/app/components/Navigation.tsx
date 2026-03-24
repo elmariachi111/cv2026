@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { VolumeControl } from './VolumeControl';
 import { useIsMobile } from './ui/use-mobile';
+import { NameMorpher } from './NameMorpher';
 
 const navLinks = [
   { name: 'VALUES', href: '#values' },
@@ -35,16 +36,8 @@ export function Navigation({ volume, muted, onVolumeChange, onToggleMute }: Navi
       <div className="max-w-[1800px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
-          <PolyLogo />
-          <span
-            className="text-xl uppercase tracking-widest"
-            style={{
-              fontFamily: 'var(--font-accent)',
-              color: 'var(--neon-cyan)',
-              textShadow: '0 0 15px var(--neon-cyan)',
-            }}>
-            Stefan Adolf
-          </span>
+          <CoolCatLogo />
+          <NameMorpher />
         </a>
 
         {/* Desktop Navigation */}
@@ -175,6 +168,10 @@ const layers = [
   { sides: 5, r: 14, color: 'var(--neon-yellow)',   duration: 10, dir:  1 },
   { sides: 6, r: 17, color: 'var(--neon-green)',    duration: 15, dir: -1 },
 ];
+
+function CoolCatLogo() {
+  return <img src="/coolcat_4506.png" className="w-8 h-8" />
+}
 
 function PolyLogo() {
   return (
