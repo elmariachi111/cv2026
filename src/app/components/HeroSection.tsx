@@ -99,39 +99,39 @@ export function HeroSection() {
                   `,
                 }}
               >
-                Building
+                Prinicipal
               </div>
                 <div 
                   className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
                   style={{ 
                     fontFamily: 'var(--font-accent)',
-                    color: 'var(--neon-yellow)',
+                    color: 'var(--neon-cyan)',
                     textShadow: `
-                      0 0 40px var(--neon-yellow),
-                      0 0 80px var(--neon-yellow),
+                      0 0 40px var(--neon-cyan),
+                      0 0 80px var(--neon-cyan),
                       0 0 120px rgba(255, 255, 0, 0.5),
                       2px 2px 0px rgba(255, 0, 255, 0.3),
                       -2px -2px 0px rgba(0, 255, 255, 0.2)
                     `,
                   }}
                 >
-                  with an
+                  With
                 </div>
               <div 
                 className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
                 style={{ 
                   fontFamily: 'var(--font-accent)',
-                  color: 'var(--neon-magenta)',
+                  color: 'var(--neon-cyan)',
                   textShadow: `
-                    0 0 40px var(--neon-magenta),
-                    0 0 80px var(--neon-magenta),
+                    0 0 40px var(--neon-cyan),
+                    0 0 80px var(--neon-cyan),
                     0 0 120px rgba(255, 0, 255, 0.5),
                     2px 2px 0px rgba(0, 255, 255, 0.3),
                     -2px -2px 0px rgba(255, 255, 0, 0.2)
                   `,
                 }}
               >
-                attitude
+                Principles
               </div>
             </div>
           </motion.h1>
@@ -144,10 +144,10 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             
-            <ValuePill icon={<Wrench className="w-6 h-6" />} text="DEV" color="var(--neon-cyan)" isMobile={isMobile} />
-            <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENT CHARMER" color="var(--neon-yellow)" isMobile={isMobile} />
+            <ValuePill icon={<Wrench className="w-6 h-6" />} text="DEV" color="var(--neon-green)" isMobile={isMobile} />
+            <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENT CHARMER" color="var(--neon-green)" isMobile={isMobile} />
             <ValuePill icon={<Leaf className="w-6 h-6" />} text="ENVIRONMENTALIST" color="var(--neon-green)" isMobile={isMobile} />
-            <ValuePill icon={<Bike className="w-6 h-6" />} text="CYCLEPUNK" color="var(--neon-pink)" isMobile={isMobile} />
+            <ValuePill icon={<Bike className="w-6 h-6" />} text="CYCLEPUNK" color="var(--neon-green)" isMobile={isMobile} />
           </motion.div>
 
           {/* Subtitle */}
@@ -157,16 +157,7 @@ export function HeroSection() {
             animate={isMobile === false ? { opacity: 1 } : {}}
             transition={{ duration: 1, delay: 1 }}
           >
-            <p 
-              className="text-base md:text-xl mb-3 opacity-80 uppercase tracking-wider"
-              style={{ 
-                fontFamily: 'var(--font-primary)',
-                color: 'var(--neon-green)',
-                textShadow: '0 0 15px var(--neon-green)',
-              }}
-            >
-              The only thing that matters: does it work on your machine?
-            </p>
+           
             <p 
               className="text-sm md:text-lg opacity-60 uppercase tracking-wider"
               style={{ 

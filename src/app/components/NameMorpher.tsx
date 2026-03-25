@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const PHASES = [
   { text: 'Stefan Adolf', color: 'var(--neon-cyan)' },
-  { text: 'elmariachi', color: 'var(--neon-pink)' },
+  { text: 'elmariachi', color: 'var(--neon-green)' },
 ] as const;
 
 const MAX_LEN = Math.max(...PHASES.map(p => p.text.length));
