@@ -1,6 +1,6 @@
 import { Bike, Bot, ChevronDown, Cloud, Code2, Heart, Leaf, Wrench } from 'lucide-react';
 import { motion } from 'motion/react';
-import hackerImage from '/billi.jpeg';
+import hackerImage from '/desk.jpg';
 import { useIsMobile } from './ui/use-mobile';
 
 export function HeroSection() {
@@ -30,6 +30,7 @@ export function HeroSection() {
       {/* Stylized hacker image - full size, anchored to top-right */}
       <motion.div
         className="absolute right-0 top-[4.5rem] md:top-0 h-full w-full z-5 overflow-hidden"
+        style={isMobile ? { maskImage: 'linear-gradient(to right, transparent 0%, black 30%)' } : undefined}
         initial={isMobile === false ? { opacity: 0, x: 100 } : {}}
         animate={isMobile === false ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1.2, delay: 0.3 }}
@@ -39,14 +40,12 @@ export function HeroSection() {
           alt="Stylized portrait"
           className="absolute top-0 right-0 h-full w-full md:w-auto"
           style={{
-            maskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 100%)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 100%)',
-            opacity: 0.6,
+            maskImage: isMobile ? 'linear-gradient(to right, transparent 20%, black 70%)': 'linear-gradient(to right, transparent 0%, black 70%)',
+            opacity: 0.8,
             objectFit: isMobile ? 'cover' : 'contain',
-            objectPosition: 'top right',
+            objectPosition: '70% -67px',
             ...(isMobile && {
-              transform: 'scale(0.75) translateX(20%)',
-              transformOrigin: 'top right',
+              transform: 'translateX(5%)',
             }),
           }}
         />
