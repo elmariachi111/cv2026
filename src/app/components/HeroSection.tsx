@@ -34,16 +34,20 @@ export function HeroSection() {
         animate={isMobile === false ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1.2, delay: 0.3 }}
       >
-        <img 
-          src={hackerImage} 
+        <img
+          src={hackerImage}
           alt="Stylized portrait"
-          className="absolute top-0 right-0 h-full w-auto"
+          className="absolute top-0 right-0 h-full w-full md:w-auto"
           style={{
             maskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 100%)',
             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 100%)',
             opacity: 0.6,
-            objectFit: 'contain',
+            objectFit: isMobile ? 'cover' : 'contain',
             objectPosition: 'top right',
+            ...(isMobile && {
+              transform: 'scale(0.75) translateX(20%)',
+              transformOrigin: 'top right',
+            }),
           }}
         />
       </motion.div>
@@ -85,9 +89,9 @@ export function HeroSection() {
             transition={{ duration: 1, delay: 0.4 }}
           >
             <div className="space-y-3">
-              <div 
-                className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
-                style={{ 
+              <div
+                className="text-5xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
+                style={{
                   fontFamily: 'var(--font-accent)',
                   color: 'var(--neon-cyan)',
                   textShadow: `
@@ -101,9 +105,9 @@ export function HeroSection() {
               >
                 Prinicipal
               </div>
-                <div 
-                  className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
-                  style={{ 
+                <div
+                  className="text-5xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
+                  style={{
                     fontFamily: 'var(--font-accent)',
                     color: 'var(--neon-cyan)',
                     textShadow: `
@@ -117,9 +121,9 @@ export function HeroSection() {
                 >
                   With
                 </div>
-              <div 
-                className="text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
-                style={{ 
+              <div
+                className="text-5xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight"
+                style={{
                   fontFamily: 'var(--font-accent)',
                   color: 'var(--neon-cyan)',
                   textShadow: `
@@ -144,10 +148,10 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             
-            <ValuePill icon={<Wrench className="w-6 h-6" />} text="DEV" color="var(--neon-green)" isMobile={isMobile} />
-            <ValuePill icon={<Bot className="w-6 h-6" />} text="AGENT CHARMER" color="var(--neon-green)" isMobile={isMobile} />
-            <ValuePill icon={<Leaf className="w-6 h-6" />} text="ENVIRONMENTALIST" color="var(--neon-green)" isMobile={isMobile} />
-            <ValuePill icon={<Bike className="w-6 h-6" />} text="CYCLEPUNK" color="var(--neon-green)" isMobile={isMobile} />
+            <ValuePill icon={<Wrench className="w-4 h-4 md:w-6 md:h-6" />} text="DEV" color="var(--neon-green)" isMobile={isMobile} />
+            <ValuePill icon={<Bot className="w-4 h-4 md:w-6 md:h-6" />} text="AGENT CHARMER" color="var(--neon-green)" isMobile={isMobile} />
+            <ValuePill icon={<Leaf className="w-4 h-4 md:w-6 md:h-6" />} text="ENVIRONMENTALIST" color="var(--neon-green)" isMobile={isMobile} />
+            <ValuePill icon={<Bike className="w-4 h-4 md:w-6 md:h-6" />} text="CYCLEPUNK" color="var(--neon-green)" isMobile={isMobile} />
           </motion.div>
 
           {/* Subtitle */}
@@ -215,10 +219,10 @@ function ValuePill({ icon, text, color, isMobile }: { icon: React.ReactNode; tex
       <span 
         className="font-bold"
         style={{ 
-          fontFamily: 'var(--font-accent)', 
+          fontFamily: 'var(--font-accent)',
           color,
           textShadow: `0 0 20px ${color}`,
-          fontSize: '18px',
+          fontSize: isMobile ? '12px' : '18px',
         }}>
         {text}
       </span>

@@ -69,7 +69,7 @@ export function ExperienceSection() {
           transition={{ duration: 0.8 }}
         >
           <h2 
-            className="text-5xl md:text-8xl lg:text-[10rem] mb-4 md:mb-6 uppercase tracking-tight leading-none"
+            className="text-5xl whitespace-nowrap md:text-8xl lg:text-[10rem] mb-4 md:mb-6 uppercase tracking-tight leading-none"
             style={{ 
               fontFamily: 'var(--font-accent)',
               color: 'var(--neon-magenta)',
@@ -88,7 +88,7 @@ export function ExperienceSection() {
               color: 'rgba(255, 255, 255, 0.6)',
               fontSize: 'clamp(16px, 4vw, 28px)',
             }}>
-            &gt; CODING // IDEATING // MIGRATING // ARCHITECTURING // BOOTSTRAPPING // EDUCATING
+            CODING // IDEATING // MIGRATING // ARCHITECTURING // BOOTSTRAPPING // EDUCATING
           </p>
         </motion.div>
 

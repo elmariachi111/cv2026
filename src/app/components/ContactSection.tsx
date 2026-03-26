@@ -95,7 +95,7 @@ export function ContactSection() {
           transition={{ duration: 0.8 }}
         >
           <h2 
-            className="text-8xl md:text-[12rem] mb-6 uppercase tracking-tight leading-none"
+            className="text-5xl whitespace-nowrap md:text-8xl lg:text-[10rem] mb-4 md:mb-6 uppercase tracking-tight leading-none"
             style={{ 
               fontFamily: 'var(--font-accent)',
               color: 'var(--neon-green)',
@@ -108,13 +108,13 @@ export function ContactSection() {
             REACH OUT
           </h2>
           <p 
-            className="text-2xl uppercase tracking-wider max-w-3xl"
+            className="text-lg md:text-2xl uppercase tracking-wider px-1"
             style={{ 
               fontFamily: 'var(--font-terminal)',
               color: 'rgba(255, 255, 255, 0.6)',
-              fontSize: '28px',
+              fontSize: 'clamp(16px, 4vw, 28px)',
             }}>
-            &gt; GRAB A COFFEE // HAVE A WALK // START A GOOGLE MEET ...
+            GRAB A COFFEE // HAVE A WALK // START A GOOGLE MEET ...
           </p>
         </motion.div>
 
@@ -185,36 +185,41 @@ function SocialPanel({
         }}
       />
 
-      <div className="relative z-10">
-        <div className="mb-6" style={{ color, filter: `drop-shadow(0 0 20px ${color})` }}>
+      <div className={`relative z-10 ${isMobile ? 'flex items-center gap-4' : ''}`}>
+        <div
+          className={isMobile ? 'shrink-0' : 'mb-6'}
+          style={{ color, filter: `drop-shadow(0 0 20px ${color})` }}
+        >
           <Icon className="w-12 h-12" strokeWidth={1.5} />
         </div>
-        
-        <div className="text-sm mb-2 opacity-60 uppercase tracking-widest" 
-             style={{ fontFamily: 'var(--font-primary)' }}>
-          {name}
-        </div>
-        
-        <div 
-          className="text-xl md:text-2xl mb-4 uppercase tracking-wide"
-          style={{ 
-            fontFamily: 'var(--font-terminal)', 
-            color,
-            textShadow: `0 0 20px ${color}80`,
-            fontSize: '28px',
-          }}>
-          {username}
-        </div>
 
-        <motion.div
-          className="flex items-center gap-2 opacity-60 group-hover:opacity-100 transition-opacity"
-          style={{ color }}
-        >
-          <span className="text-sm uppercase tracking-wider" style={{ fontFamily: 'var(--font-primary)' }}>
-            CONNECT
-          </span>
-          <ExternalLink className="w-4 h-4" />
-        </motion.div>
+        <div>
+          <div className="text-sm  opacity-60 uppercase tracking-widest"
+               style={{ fontFamily: 'var(--font-primary)' }}>
+            {name}
+          </div>
+
+          <div
+            className="text-xl md:text-2xl mb-2 uppercase tracking-normal"
+            style={{
+              fontFamily: 'var(--font-terminal)',
+              color,
+              textShadow: `0 0 20px ${color}80`,
+              fontSize: isMobile ? '28px' : '28px',
+            }}>
+            {username}
+          </div>
+
+          <motion.div
+            className="flex items-center gap-2 opacity-60 group-hover:opacity-100 transition-opacity"
+            style={{ color }}
+          >
+            <span className="text-sm uppercase tracking-wider" style={{ fontFamily: 'var(--font-primary)' }}>
+              CONNECT
+            </span>
+            <ExternalLink className="w-4 h-4" />
+          </motion.div>
+        </div>
       </div>
     </motion.a>
   );

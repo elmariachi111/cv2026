@@ -73,7 +73,7 @@ export function ValuesSection() {
           transition={{ duration: 0.8 }}
         >
           <h2 
-            className="text-7xl md:text-9xl mb-20 uppercase tracking-tight px-2 md:px-8"
+            className="text-7xl md:text-9xl px-2 md:px-8 uppercase tracking-tight "
             style={{ 
               fontFamily: 'var(--font-accent)',
               color: 'var(--neon-cyan)',
@@ -139,12 +139,14 @@ function ValuePanel({
       />
 
       <div className="relative z-10">
-        <div className="mb-8" style={{ color, filter: `drop-shadow(0 0 20px ${color})` }}>
-          <Icon className="w-16 h-16 md:w-20 md:h-20" strokeWidth={1.5} />
-        </div>
+        {!isMobile && (
+          <div className="mb-8" style={{ color, filter: `drop-shadow(0 0 20px ${color})` }}>
+            <Icon className="w-16 h-16 md:w-20 md:h-20" strokeWidth={1.5} />
+          </div>
+        )}
         
         <h3 
-          className="text-4xl md:text-5xl mb-6 uppercase tracking-tight leading-tight"
+          className="text-3xl md:text-5xl mb-6 uppercase tracking-tight leading-tight"
           style={{ 
             fontFamily: 'var(--font-accent)', 
             color,

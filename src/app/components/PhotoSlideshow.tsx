@@ -93,7 +93,7 @@ export function PhotoSlideshow() {
   }, [advance]);
 
   return (
-    <section className="relative w-full  flex justify-center">
+    <section className="relative w-full flex justify-center pt-16 md:pt-0">
       {/* Outer bezel — rounded TV corners */}
       <div
         style={{
@@ -179,24 +179,21 @@ export function PhotoSlideshow() {
           }}
         />
 
-        {/* Slide title */}
-        <SlideTitle title={slides[current].title} />
+        {/* Slide title — tracks the incoming slide immediately */}
+        <SlideTitle title={slides[incoming ?? current].title} />
 
         {/* Prev / Next buttons */}
         <button
           onClick={() =>
             goTo((current - 1 + slides.length) % slides.length, -1)
           }
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-30"
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-30 w-7 h-7 text-xl md:w-16 md:h-16 md:text-5xl"
           style={{
             background: "rgba(0,0,0,0.4)",
             border: "1px solid rgba(255,255,255,0.15)",
             color: "rgba(255,255,255,0.8)",
-            width: "4rem",
-            height: "4rem",
             borderRadius: "2px",
             cursor: "pointer",
-            fontSize: "3rem",
             lineHeight: 1,
           }}
           aria-label="Previous slide"
@@ -205,16 +202,13 @@ export function PhotoSlideshow() {
         </button>
         <button
           onClick={() => goTo((current + 1) % slides.length, 1)}
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-30"
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-30 w-7 h-7 text-xl md:w-16 md:h-16 md:text-5xl"
           style={{
             background: "rgba(0,0,0,0.4)",
             border: "1px solid rgba(255,255,255,0.15)",
             color: "rgba(255,255,255,0.8)",
-            width: "4rem",
-            height: "4rem",
             borderRadius: "2px",
             cursor: "pointer",
-            fontSize: "3rem",
             lineHeight: 1,
           }}
           aria-label="Next slide"
