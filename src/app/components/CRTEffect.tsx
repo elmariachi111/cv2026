@@ -105,8 +105,8 @@ export function LaserBeams() {
   const { scrollY } = useScroll();
 
   // ── Scroll zones ──
-  const start = totalHeight * 0.30;
-  const hit   = totalHeight * 0.52;
+  const start = totalHeight * 0.45;
+  const hit   = totalHeight * 0.62;
   const end   = totalHeight * 0.70;
 
   // Master beam visibility (disabled on mobile)

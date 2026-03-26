@@ -73,7 +73,7 @@ export function ValuesSection() {
           transition={{ duration: 0.8 }}
         >
           <h2 
-            className="text-7xl md:text-9xl mb-6 uppercase tracking-tight"
+            className="text-7xl md:text-9xl mb-20 uppercase tracking-tight px-2 md:px-8"
             style={{ 
               fontFamily: 'var(--font-accent)',
               color: 'var(--neon-cyan)',
@@ -83,17 +83,8 @@ export function ValuesSection() {
                 0 0 120px rgba(0, 255, 255, 0.4)
               `,
             }}>
-            CORE VALUES
+            VALUES
           </h2>
-          <p 
-            className="text-2xl uppercase tracking-wider"
-            style={{ 
-              fontFamily: 'var(--font-terminal)',
-              color: 'rgba(255, 255, 255, 0.6)',
-              fontSize: '28px',
-            }}>
-            &gt; WHAT DRIVES ME BEYOND THE CODE
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">

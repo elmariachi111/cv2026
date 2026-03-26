@@ -7,9 +7,11 @@ export function NowSection() {
 
   return (
     <section className="relative py-0" id="now">
-      <div className="relative z-10 max-w-[1800px] mx-auto px-2 md:px-8">
+      
+      <div className="relative z-10 max-w-[1800px] mx-auto px-2 md:px-2">
+        
         <motion.div
-          className="mt-0 p-6 md:p-16 lg:p-24 relative overflow-hidden"
+          className="mt-0 p-6 md:p-20  relative overflow-hidden"
           style={{
             backgroundColor: 'rgba(0, 255, 255, 0.05)',
           }}
@@ -19,9 +21,20 @@ export function NowSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
+          <h2 
+            className="text-7xl md:text-9xl mb-20 uppercase tracking-tight"
+            style={{ 
+              fontFamily: 'var(--font-accent)',
+              color: 'var(--neon-cyan)',
+              textShadow: `
+                0 0 40px var(--neon-cyan),
+                0 0 80px var(--neon-cyan),
+                0 0 120px rgba(0, 255, 255, 0.4)
+              `,
+            }}>
+            Now
+          </h2>
           <div className="relative z-10">
-            
-
             {/* Welshare Section */}
             <div className="mb-16">
               <h4
@@ -49,8 +62,7 @@ The Health Profile Matching Protocol (<a href="https://welshare.health/#hpmp" re
                     style={{
                       fontFamily: 'var(--font-accent)',
                       color: 'var(--neon-cyan)',
-                      backgroundColor: 'rgba(0, 65, 255, 0.08)',
-                      boxShadow: '0 0 15px rgba(0, 255, 65, 0.3), inset 0 0 15px rgba(0, 255, 65, 0.1)',
+                      
                     }}
                   >
                     {tech}
@@ -80,8 +92,8 @@ The Health Profile Matching Protocol (<a href="https://welshare.health/#hpmp" re
                 className="text-3xl md:text-4xl mb-6 uppercase tracking-tight"
                 style={{
                   fontFamily: 'var(--font-accent)',
-                  color: 'var(--neon-magenta)',
-                  textShadow: '0 0 20px var(--neon-magenta)',
+                  color: 'var(--neon-green)',
+                  textShadow: '0 0 20px var(--neon-green)',
                 }}>
                 BEACH.SCIENCE: AI SCIENTIST ZOOKEEPER
               </h4>
@@ -101,9 +113,8 @@ The Health Profile Matching Protocol (<a href="https://welshare.health/#hpmp" re
                     className="px-4 py-2 uppercase tracking-wider text-sm"
                     style={{
                       fontFamily: 'var(--font-accent)',
-                      color: 'var(--neon-magenta)',
-                      backgroundColor: 'rgba(255, 0, 255, 0.08)',
-                      boxShadow: '0 0 15px rgba(255, 0, 255, 0.3), inset 0 0 15px rgba(255, 0, 255, 0.1)',
+                      color: 'var(--neon-green)',
+                      
                     }}
                   >
                     {tech}
@@ -118,8 +129,8 @@ The Health Profile Matching Protocol (<a href="https://welshare.health/#hpmp" re
                   className="text-lg uppercase tracking-wide hover:underline"
                   style={{
                     fontFamily: 'var(--font-accent)',
-                    color: 'var(--neon-magenta)',
-                    textShadow: '0 0 10px var(--neon-magenta)',
+                    color: 'var(--neon-green)',
+                    textShadow: '0 0 10px var(--neon-green)',
                   }}
                 >
                   → BEACH.SCIENCE
@@ -131,8 +142,8 @@ The Health Profile Matching Protocol (<a href="https://welshare.health/#hpmp" re
                   className="text-lg uppercase tracking-wide hover:underline"
                   style={{
                     fontFamily: 'var(--font-accent)',
-                    color: 'var(--neon-magenta)',
-                    textShadow: '0 0 10px var(--neon-magenta)',
+                    color: 'var(--neon-green)',
+                    textShadow: '0 0 10px var(--neon-green)',
                   }}
                 >
                   → MOLECULE.TO
