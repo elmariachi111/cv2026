@@ -1,6 +1,6 @@
 import { Bike, Bot, ChevronDown, Cloud, Code2, Heart, Leaf, Wrench } from 'lucide-react';
 import { motion } from 'motion/react';
-import hackerImage from '/nb2_hacker.png';
+import hackerImage from '/billi.jpeg';
 import { useIsMobile } from './ui/use-mobile';
 
 export function HeroSection() {
