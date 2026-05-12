@@ -20,6 +20,8 @@ export interface HistoryEntry {
   desc: string;
   tech: string[];
   label: string;
+  image?: string;
+  imagePosition?: string;
 }
 
 export interface QualEntry {
@@ -136,6 +138,7 @@ export const CV = {
       desc: 'Co-founded welshare.health. Designed and built the Health Profile Matching Protocol (HPMP) — connects agentic researchers and patients to assemble cohorts for clinical trials on wearable and real-world health data. Matching runs inside trusted execution environments via Nillion; patient data is never disclosed to agents.',
       tech: ['TypeScript', 'React', 'FHIR HL7', 'Nillion', 'TEE', 'MCP', 'Cryptography'],
       label: 'welshare.health · HPMP dashboard',
+      image: '/assets/optimized/welshare_gang.jpg',
     },
     {
       from: '2024', to: 'now', dur: '~ present',
@@ -144,6 +147,8 @@ export const CV = {
       desc: 'Building beach.science — a platform for agentic researchers to share, collaborate and evaluate biomedical science hypotheses. Self-service tier to run agent harnesses (openclaw, hermes) at scale on affordable VPS hosts and EC2.',
       tech: ['AWS', 'Terraform', 'Docker', 'OpenClaw', 'CI/CD'],
       label: 'beach.science · agent harness console',
+      image: '/assets/optimized/cambridge.jpg',
+      imagePosition: 'center 90%',
     },
     {
       from: '2022', to: '2024', dur: '2 yrs',
@@ -152,6 +157,8 @@ export const CV = {
       desc: 'Pioneered IP tokenization infrastructure (IPNFTs). Built smart contracts for crowdfunding protocols (bio.xyz, IPT crowdsales) and bonding-curve markets (Catalyst). Production Solidity, audited, deployed on mainnet and Base.',
       tech: ['Solidity', 'Foundry', 'Subgraphs', 'ERC-20/721/1155', 'DeFi', 'Tokenization'],
       label: 'molecule.to · IPNFT minter',
+      imagePosition: 'center 30%',
+      image: '/assets/optimized/desci_berlin_23.jpg',
     },
     {
       from: '2018', to: '2022', dur: '4 yrs',
@@ -160,6 +167,8 @@ export const CV = {
       desc: "Developer ambassador at one of Berlin's most respected dev shops. Organized meetups for coding.earth across Germany and Portugal. Head curator of code.talks 2022. Pre-sales, internal education, technical writing, conference keynotes.",
       tech: ['Node.js', 'Vue', 'React', 'GraphQL', 'AWS'],
       label: 'code.talks 2022 · curator track',
+      imagePosition: 'center 60%',
+      image: '/assets/optimized/meetup.jpg',
     },
     {
       from: '2020', to: '2022', dur: '~ side',
@@ -168,6 +177,8 @@ export const CV = {
       desc: 'ETHOnline 2021 finalist (SPLICE — generative on-chain art splitting royalties to NFT communities). Earlier: decentralized EHRs, DID/VC/VP-based certificate validators.',
       tech: ['Solidity', 'DID/VC', 'IPFS', 'React'],
       label: 'splice · finalist demo',
+      imagePosition: 'center 60%',
+      image: '/assets/optimized/hack_eb2.jpg',
     },
     {
       from: '2015', to: '2018', dur: '3 yrs',
@@ -178,12 +189,22 @@ export const CV = {
       label: 'check24 incubator · portal',
     },
     {
-      from: '2010', to: '2015', dur: '5 yrs',
-      logo: 'SDS', company: 'Samsung SDS / Discounto',
+      from: '2012', to: '2015', dur: '3 yrs',
+      logo: 'D', company: 'Discounto',
       role: 'Senior Engineer',
-      desc: 'Product development and re-platforming legacy code across enterprise and consumer products at Samsung SDS and Discounto.',
-      tech: ['Java EE', 'Spring', 'Oracle', 'FreeBSD'],
-      label: 'enterprise replatform',
+      desc: 'Full-stack work on a product offer search engine — PHP/Symfony2, performance tuning, build pipelines (Phing), CI setup, backend migration, and frontend templating. End-to-end ownership of a platform with real scaling ambitions.',
+      tech: ['PHP', 'Symfony2', 'JavaScript', 'Phing', 'CI/CD', 'FreeBSD'],
+      label: 'discounto · search engine',
+    },
+    {
+      from: '2010', to: '2012', dur: '2 yrs',
+      logo: 'SDS', company: 'Samsung SDS',
+      role: 'Team Lead · Java Engineering',
+      desc: 'Led a team of 8 engineers building Java EE eCommerce applications. Backend work on Oracle SQL, Spring, and iBATIS.',
+      tech: ['Java EE', 'Spring', 'Oracle SQL', 'iBATIS'],
+      label: 'samsung sds · ecommerce platform',
+      imagePosition: 'center 60%',
+      image: '/assets/optimized/sds.png',
     },
     {
       from: '2002', to: '2008', dur: '6 yrs',
@@ -192,6 +213,8 @@ export const CV = {
       desc: 'Founded, grew and exited AreaDigital AG — a digital media house up to 30 employees, 4 publications, homegrown digital service business and data APIs. Publishing partners including IDG.',
       tech: ['PHP', 'Java', 'MySQL', '.NET', 'JavaScript'],
       label: 'areamobile.de · 2007 archive',
+      image: '/assets/areamobile_founding_furniture.jpg',
+      imagePosition: 'center 60%',
     },
     {
       from: '1999', to: '2002', dur: '3 yrs',

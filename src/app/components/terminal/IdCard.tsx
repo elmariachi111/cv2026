@@ -28,7 +28,6 @@ export function IdCard() {
       <div className="portrait">
         <img src="/portrait.png" alt="Stefan Adolf" />
       </div>
-      <div className="ascii">{ASCII}</div>
       <NeoRow k="user"   v={CV.handle} />
       <NeoRow k="host"   v="berlin.de" />
       <NeoRow k="role"   v="principal eng." />

@@ -13,21 +13,21 @@ export function ContactSection() {
       />
       <div className="t-contact">
         <div className="t-contact-with-card">
-          <IdCard />
           <div className="t-contact-grid">
             {CV.contacts.map((c) => (
               <a
-                key={c.k}
-                className="t-c-cell"
-                href={c.href}
-                target="_blank"
-                rel="noreferrer"
+              key={c.k}
+              className="t-c-cell"
+              href={c.href}
+              target="_blank"
+              rel="noreferrer"
               >
                 <span className="k">{c.k}</span>
                 <span className="v">{c.v}</span>
               </a>
             ))}
           </div>
+            <IdCard />
         </div>
       </div>
     </section>

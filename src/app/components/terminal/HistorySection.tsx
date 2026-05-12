@@ -1,7 +1,7 @@
 import { CV, type HistoryEntry } from '../../../data/cv';
 import { SecHead } from './SecHead';
 
-const HISTORY_HUES = ['green', 'green', 'amber', 'cyan', 'magenta', 'violet', 'amber', 'magenta', 'cyan'] as const;
+const HISTORY_HUES = ['green', 'green', 'amber', 'cyan', 'magenta', 'violet', 'amber', 'cyan', 'magenta', 'cyan'] as const;
 
 function HistoryRow({ h, idx }: { h: HistoryEntry; idx: number }) {
   const hue = HISTORY_HUES[idx] ?? 'green';
@@ -40,7 +40,10 @@ function HistoryRow({ h, idx }: { h: HistoryEntry; idx: number }) {
           </span>
         </div>
         <div className="t-scr-body">
-          <span className="t-scr-label">{h.label}</span>
+          {h.image
+            ? <img src={h.image} alt={h.label} className="t-scr-img" style={h.imagePosition ? { objectPosition: h.imagePosition } : undefined} />
+            : <span className="t-scr-label">{h.label}</span>
+          }
         </div>
       </div>
     </div>

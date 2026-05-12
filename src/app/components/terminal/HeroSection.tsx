@@ -4,7 +4,7 @@ export function HeroSection() {
   return (
     <section className="t-section t-hero-sec">
       <div className="t-hero-banner" aria-hidden="true">
-        <img src="/desk-banner.png" alt="" />
+        <img src="/assets/desci2.png" alt="" />
       </div>
       <div className="t-hero">
         <div>
