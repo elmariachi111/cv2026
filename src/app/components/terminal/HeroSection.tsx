@@ -17,17 +17,17 @@ export function HeroSection() {
           </div>
 
           <h1>
-            <span>Stefan </span><span className="accent">Adolf</span>
+            <span >Stefan Adolf</span>
             <br />
-            <span className="sub">// software engineer</span>
+            <span className="sub">// cto in residence</span>
           </h1>
 
           <p className="t-tagline">
-            Principal engineer with <span className="acc">two decades</span> of building
+            Principal engineer with two decades experience of building
             production systems across web, backends, distributed protocols and on-chain
             infrastructure. Currently focused on{' '}
-            <span className="amb">privacy-preserving compute</span>, agentic systems, and
-            biomedical data.
+            <span className="amb">privacy-preserving compute</span>, <span className="acc">agentic system ops</span>, and
+            biomedical data utilization.
           </p>
 
           <div className="t-roles">

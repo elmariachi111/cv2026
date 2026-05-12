@@ -7,7 +7,7 @@ const CV = {
   location: 'Berlin, DE',
   email: 'elmariachi111+cv@proton.me',
   site: 'stadolf.de',
-  roles: ['dev', 'agent charmer', 'environmentalist', 'cyclepunk'],
+  roles: ['developer', 'agent charmer', 'environmentalist', 'cyclepunk'],
 
   now: [
     { name: 'welshare.health', role: 'Tech Co-founder', href: 'https://welshare.health' },

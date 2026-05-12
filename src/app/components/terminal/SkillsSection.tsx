@@ -8,7 +8,7 @@ export function SkillsSection() {
         num="00"
         marker="//"
         title="cat stadolf.stack"
-        hint="a selection "
+        hint="selected tools of my stack "
       />
       <TechLogoGrid />
     </section>

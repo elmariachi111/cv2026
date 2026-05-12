@@ -47,7 +47,7 @@ export const CV = {
   handle: 'elmariachi',
   blurb:
     'Principal engineer with two decades of building production systems across web, backends, distributed protocols and on-chain infrastructure. Currently focused on privacy-preserving compute, agentic systems, and biomedical data.',
-  roles: ['dev', 'agent charmer', 'environmentalist', 'cyclepunk'],
+  roles: ['developer', 'agent charmer', 'environmentalist', 'cyclepunk'],
 
   now: [
     { name: 'welshare.health', role: 'Tech Co-founder', href: 'https://welshare.health' },
@@ -233,9 +233,9 @@ export const CV = {
   ] as QualEntry[],
 
   speaking: [
-    { yr: 'ongoing', ttl: 'Conference speaker on web3, privacy, agents', where: 'EU / DE circuit' },
-    { yr: 'ongoing', ttl: 'Meetup organizer · coding.earth', where: 'Berlin / Porto' },
-    { yr: '2022', ttl: 'Press, panels & technical pre-sales', where: 'Turbine Kreuzberg' },
+    { yr: '2017-2022', ttl: 'Conference speaker on web3, privacy, agents', where: 'EU / DE' },
+    { yr: '2017-2020', ttl: 'Meetup organizer · coding.earth', where: 'Germany / Portugal' },
+    { yr: '2018-2022', ttl: 'Press, panels & technical pre-sales', where: 'Turbine Kreuzberg' },
   ] as QualEntry[],
 
   contacts: [
