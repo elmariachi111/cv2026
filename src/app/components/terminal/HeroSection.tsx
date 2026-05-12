@@ -1,23 +1,12 @@
 import { CV } from '../../../data/cv';
-import { useClock, pad, ageNow, uptimeFrom, BIRTH_YEAR, CODING_SINCE } from './hooks';
-
-function NeoRow({ k, v }: { k: string; v: React.ReactNode }) {
-  return (
-    <div className="t-neo-row">
-      <span className="k">{k}</span>
-      <span className="v">{v}</span>
-    </div>
-  );
-}
 
 export function HeroSection() {
-  const t = useClock();
-  const time = `${pad(t.getHours())}:${pad(t.getMinutes())}:${pad(t.getSeconds())}`;
-
   return (
-    <section className="t-section">
+    <section className="t-section t-hero-sec">
+      <div className="t-hero-banner" aria-hidden="true">
+        <img src="/desk-banner.png" alt="" />
+      </div>
       <div className="t-hero">
-        {/* Left: headline */}
         <div>
           <div className="t-prompt">
             <span className="who">{CV.handle}</span>
@@ -28,12 +17,18 @@ export function HeroSection() {
           </div>
 
           <h1>
-            <span>{CV.name}</span>
+            <span>Stefan </span><span className="accent">Adolf</span>
             <br />
             <span className="sub">// software engineer</span>
           </h1>
 
-          <p className="t-tagline">{CV.blurb}</p>
+          <p className="t-tagline">
+            Principal engineer with <span className="acc">two decades</span> of building
+            production systems across web, backends, distributed protocols and on-chain
+            infrastructure. Currently focused on{' '}
+            <span className="amb">privacy-preserving compute</span>, agentic systems, and
+            biomedical data.
+          </p>
 
           <div className="t-roles">
             {CV.roles.map((r) => (
@@ -43,23 +38,6 @@ export function HeroSection() {
             ))}
           </div>
         </div>
-
-        {/* Right: neofetch panel */}
-        <aside className="t-neofetch">
-          <div className="portrait" data-filename="portrait.jpg">
-            <span className="portrait-placeholder">[ drop photo ]</span>
-          </div>
-          <NeoRow k="user"   v={CV.handle} />
-          <NeoRow k="host"   v="berlin.de" />
-          <NeoRow k="role"   v="principal eng." />
-          <NeoRow k="shell"  v="zsh + tmux" />
-          <hr />
-          <NeoRow k="age"    v={`${ageNow()}y`} />
-          <NeoRow k="born"   v={`${BIRTH_YEAR}.01 · DE`} />
-          <NeoRow k="uptime" v={`${uptimeFrom(CODING_SINCE)} yrs coding`} />
-          <NeoRow k="status" v={<span style={{ color: 'var(--t-accent)' }}>available</span>} />
-          <NeoRow k="clock"  v={time} />
-        </aside>
       </div>
     </section>
   );
