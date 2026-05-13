@@ -1,6 +1,16 @@
 import { CV, type HistoryEntry } from '../../../data/cv';
 import { SecHead } from './SecHead';
 
+function renderDesc(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    return m
+      ? <a key={i} href={m[2]} target="_blank" rel="noopener noreferrer" className="t-desc-link">{m[1]}</a>
+      : part;
+  });
+}
+
 const HISTORY_HUES = ['green', 'green', 'amber', 'cyan', 'magenta', 'violet', 'amber', 'cyan', 'magenta', 'cyan'] as const;
 
 function HistoryRow({ h, idx }: { h: HistoryEntry; idx: number }) {
@@ -16,13 +26,17 @@ function HistoryRow({ h, idx }: { h: HistoryEntry; idx: number }) {
 
       <div>
         <div className="t-company">
-          <div className="t-logo">{h.logo}</div>
+          <div className="t-logo">
+            {h.logoImage
+              ? <img src={h.logoImage} alt={h.company} className="t-logo-img-co" />
+              : h.logo}
+          </div>
           <div>
             <div className="t-co-name">{h.company}</div>
             <div className="t-co-role">{h.role}</div>
           </div>
         </div>
-        <p className="t-desc">{h.desc}</p>
+        <p className="t-desc">{renderDesc(h.desc)}</p>
         <div className="t-tech">
           {h.tech.map((t) => (
             <span key={t} className="t-tech-tag">{t}</span>

@@ -547,6 +547,7 @@
   text-shadow: 0 0 10px color-mix(in oklch, var(--t-row-hue, var(--t-accent)), transparent 60%);
   box-shadow: inset 0 0 12px color-mix(in oklch, var(--t-row-hue, var(--t-accent)), transparent 92%);
 }
+.t-logo-img-co { width: 100%; height: 100%; object-fit: cover; display: block; }
 .t-co-name { font-size: 18px; color: var(--t-fg); font-weight: 600; }
 .t-co-role { font-size: 13px; color: var(--t-fg-dim); margin-bottom: 12px; }
 .t-desc { font-size: 13px; line-height: 1.65; color: var(--t-fg-dim); max-width: 640px; }
