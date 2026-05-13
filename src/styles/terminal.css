@@ -359,6 +359,7 @@
   flex-direction: column;
   gap: 16px;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .t-logo-track-wrap {
@@ -383,10 +384,6 @@
   animation: marquee-rev 36s linear infinite;
 }
 
-.t-logo-track:hover,
-.t-logo-track-wrap:hover .t-logo-track {
-  animation-play-state: paused;
-}
 
 .t-logo-tile {
   display: flex;
@@ -781,3 +778,25 @@
 .t-root ::-webkit-scrollbar-track { background: var(--t-bg); }
 .t-root ::-webkit-scrollbar-thumb { background: var(--t-line-strong); }
 .t-root ::-webkit-scrollbar-thumb:hover { background: var(--t-accent-dim); }
+
+/* ── Mobile: reclaim horizontal real estate ────────────────────────── */
+
+@media (max-width: 640px) {
+  .t-cv { padding: 20px 10px 64px; }
+  .t-topbar { padding: 10px 12px; }
+  .t-sec-head { padding: 12px 12px; gap: 8px; }
+  .t-hero { padding: 28px 14px 24px; gap: 24px; }
+  .t-values-strip { padding: 12px 14px; }
+  .t-now-strip { padding: 16px 14px; gap: 14px; }
+  .t-history-row { padding: 22px 14px 22px 18px; gap: 14px; }
+  .t-history-row::after { right: 4px; font-size: 80px; }
+  .t-quals { padding: 20px 14px; gap: 20px; }
+  .t-contact { padding: 20px 14px; }
+  .t-c-cell { padding: 14px 14px; }
+  .t-foot { padding: 20px 14px; }
+  .t-neofetch { padding: 14px 14px 16px; }
+
+  /* Hide secondary chrome on small screens */
+  .t-values-strip { display: none; }
+  .t-sec-head .hint { display: none; }
+}
