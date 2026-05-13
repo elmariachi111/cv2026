@@ -1,4 +1,4 @@
-import { CV } from '../../../data/cv';
+import { CV } from "../../../data/cv";
 
 export function HeroSection() {
   return (
@@ -10,30 +10,31 @@ export function HeroSection() {
         <div>
           <div className="t-prompt">
             <span className="who">{CV.handle}</span>
-            <span style={{ color: 'var(--t-fg-dim)' }}>@</span>
+            <span style={{ color: "var(--t-fg-dim)" }}>@</span>
             <span className="host">berlin</span>
-            <span style={{ color: 'var(--t-fg-dim)' }}>:~$</span>
+            <span style={{ color: "var(--t-fg-dim)" }}>:~$</span>
             <span className="cmd t-cursor"> whoami</span>
           </div>
 
           <h1>
-            <span >Stefan Adolf</span>
+            <span>Stefan Adolf</span>
             <br />
-            <span className="sub">// cto in residence</span>
+            <span className="sub">// make it work engineer</span>
           </h1>
 
           <p className="t-tagline">
-            Principal engineer with two decades experience of building
-            production systems across web, backends, distributed protocols and on-chain
-            infrastructure. Currently focused on{' '}
-            <span className="amb">privacy-preserving compute</span>, <span className="acc">agentic system ops</span>, and
-            biomedical data utilization.
+            principal engineer with two decades experience of shipping
+            production systems across web, apps, apis, distributed protocols and
+            on-chain infrastructure. Currently focused on{" "}
+            <span className="amb">privacy-preserving compute</span>,{" "}
+            <span className="acc">agentic system ops</span>, and biomedical research on DeSci rails.
           </p>
 
           <div className="t-roles">
             {CV.roles.map((r) => (
               <span className="t-role-tag" key={r}>
-                <span className="pre">─</span>{r}
+                <span className="pre">─</span>
+                {r}
               </span>
             ))}
           </div>

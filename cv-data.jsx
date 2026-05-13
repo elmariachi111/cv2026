@@ -11,8 +11,8 @@ const CV = {
 
   now: [
     { name: 'welshare.health', role: 'Tech Co-founder', href: 'https://welshare.health' },
-    { name: 'beach.science', role: 'Builder', href: 'https://beach.science' },
-    { name: 'molecule.to', role: 'Contributor', href: 'https://molecule.to' },
+    { name: 'PeptAI', role: 'Agent Ops', href: 'https://peptai.xyz/' },
+    { name: 'molecule.xyz', role: 'Contributor', href: 'https://molecule.xyz' },
   ],
 
   skills: [
@@ -101,7 +101,7 @@ const CV = {
     },
     {
       from: '2024', to: 'now', dur: '~ present',
-      logo: 'β', company: 'beach.science',
+      logo: 'π', company: 'PeptAI',
       role: 'Builder · Agent Infrastructure',
       desc: 'Building beach.science — a platform for agentic researchers to share, collaborate and evaluate biomedical science hypotheses. Self-service tier to run agent harnesses (openclaw, hermes) at scale on affordable VPS hosts and EC2.',
       tech: ['AWS', 'Terraform', 'Docker', 'OpenClaw', 'CI/CD'],

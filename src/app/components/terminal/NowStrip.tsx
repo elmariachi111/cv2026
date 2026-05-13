@@ -3,10 +3,10 @@ import { CV } from '../../../data/cv';
 const VALUES = [
   { hue: 'var(--t-accent)',   txt: 'cypherpunk' },
   { hue: 'var(--t-magenta)', txt: 'privacy' },
-  { hue: 'var(--t-amber)',   txt: 'decentralization' },
-  { hue: 'var(--t-cyan)',    txt: 'permissionless' },
-  { hue: 'var(--t-violet)',  txt: 'built-to-last' },
   { hue: 'var(--t-accent)',  txt: 'empathy' },
+  { hue: 'var(--t-cyan)',    txt: 'permissionless access' },
+  { hue: 'var(--t-violet)',  txt: 'sustainability' },
+  { hue: 'var(--t-amber)',   txt: 'censorship resistance' },
 ];
 
 export function NowStrip() {

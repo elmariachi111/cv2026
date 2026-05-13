@@ -50,9 +50,9 @@ export const CV = {
   roles: ['developer', 'agent charmer', 'environmentalist', 'cyclepunk'],
 
   now: [
+    { name: 'PeptAI', role: 'Agent Ops', href: 'https://peptai.xyz/' },
     { name: 'welshare.health', role: 'Tech Co-founder', href: 'https://welshare.health' },
-    { name: 'beach.science', role: 'Builder', href: 'https://beach.science' },
-    { name: 'molecule.to', role: 'Contributor', href: 'https://molecule.to' },
+    { name: 'molecule.xyz', role: 'Contributor', href: 'https://molecule.xyz' },
   ] as NowEntry[],
 
   skills: [
@@ -64,7 +64,7 @@ export const CV = {
         { name: 'Solidity', level: 4, yrs: '5+' },
         { name: 'Java', level: 4, yrs: '12+' },
         { name: 'PHP', level: 3, yrs: '10+' },
-        { name: 'Python', level: 3, yrs: '8+' },
+        { name: 'Python', level: 2, yrs: '3+' },
         { name: 'Bash / Shell', level: 4, yrs: '20+' },
       ],
     },
@@ -132,23 +132,23 @@ export const CV = {
 
   history: [
     {
-      from: '2024', to: 'now', dur: 'present',
+      from: '2026', to: 'now', dur: '~ present',
+      logo: 'π', company: 'PeptAI',
+      role: 'DevOps · Agent Infrastructure',
+      desc: 'Agent Fleet Setup - PeptAI runs biomedical research using fleets of computational enabled AI agents, that collaborate and evaluate biomedical science hypotheses. Self-service tier to run agent harnesses (openclaw, hermes) at scale on project owned VPS hosts, virtual macOS devices and AWS EC2.',
+      tech: ['AWS', 'Terraform', 'Docker', 'OpenClaw', 'tart'],
+      label: 'peptai.xyz · agent harness rollout',
+      image: '/assets/optimized/cambridge.jpg',
+      imagePosition: 'center 90%',
+    },
+    {
+      from: '2025', to: 'now', dur: 'present',
       logo: 'W', company: 'welshare.health',
       role: 'Tech Co-founder',
-      desc: 'Co-founded welshare.health. Designed and built the Health Profile Matching Protocol (HPMP) — connects agentic researchers and patients to assemble cohorts for clinical trials on wearable and real-world health data. Matching runs inside trusted execution environments via Nillion; patient data is never disclosed to agents.',
+      desc: 'Co-founded welshare.health. Designed and built the Health Profile Matching Protocol (HPMP) - connects agentic researchers and patients to assemble cohorts for clinical trials on wearable and real-world health data. Matching runs inside trusted execution environments via Nillion; patient data is never disclosed to agents.',
       tech: ['TypeScript', 'React', 'FHIR HL7', 'Nillion', 'TEE', 'MCP', 'Cryptography'],
       label: 'welshare.health · HPMP dashboard',
       image: '/assets/optimized/welshare_gang.jpg',
-    },
-    {
-      from: '2024', to: 'now', dur: '~ present',
-      logo: 'β', company: 'beach.science',
-      role: 'Builder · Agent Infrastructure',
-      desc: 'Building beach.science — a platform for agentic researchers to share, collaborate and evaluate biomedical science hypotheses. Self-service tier to run agent harnesses (openclaw, hermes) at scale on affordable VPS hosts and EC2.',
-      tech: ['AWS', 'Terraform', 'Docker', 'OpenClaw', 'CI/CD'],
-      label: 'beach.science · agent harness console',
-      image: '/assets/optimized/cambridge.jpg',
-      imagePosition: 'center 90%',
     },
     {
       from: '2022', to: '2024', dur: '2 yrs',
@@ -174,7 +174,7 @@ export const CV = {
       from: '2020', to: '2022', dur: '~ side',
       logo: 'S', company: 'Splice / ETHGlobal',
       role: 'Hackathon Builder',
-      desc: 'ETHOnline 2021 finalist (SPLICE — generative on-chain art splitting royalties to NFT communities). Earlier: decentralized EHRs, DID/VC/VP-based certificate validators.',
+      desc: 'ETHOnline 2021 finalist (SPLICE - generative on-chain art splitting royalties to NFT communities). Earlier: decentralized EHRs, DID/VC/VP-based certificate validators.',
       tech: ['Solidity', 'DID/VC', 'IPFS', 'React'],
       label: 'splice · finalist demo',
       imagePosition: 'center 60%',
@@ -192,7 +192,7 @@ export const CV = {
       from: '2012', to: '2015', dur: '3 yrs',
       logo: 'D', company: 'Discounto',
       role: 'Senior Engineer',
-      desc: 'Full-stack work on a product offer search engine — PHP/Symfony2, performance tuning, build pipelines (Phing), CI setup, backend migration, and frontend templating. End-to-end ownership of a platform with real scaling ambitions.',
+      desc: 'Full-stack work on a product offer search engine - PHP/Symfony2, performance tuning, build pipelines (Phing), CI setup, backend migration, and frontend templating. End-to-end ownership of a platform with real scaling ambitions.',
       tech: ['PHP', 'Symfony2', 'JavaScript', 'Phing', 'CI/CD', 'FreeBSD'],
       label: 'discounto · search engine',
     },
@@ -210,7 +210,7 @@ export const CV = {
       from: '2002', to: '2008', dur: '6 yrs',
       logo: 'AD', company: 'AreaDigital AG',
       role: 'Founder · CTO · Editor in Chief',
-      desc: 'Founded, grew and exited AreaDigital AG — a digital media house up to 30 employees, 4 publications, homegrown digital service business and data APIs. Publishing partners including IDG.',
+      desc: 'Founded, grew and exited AreaDigital AG - a digital media house up to 30 employees, 4 publications, homegrown digital service business and data APIs. Publishing partners including IDG.',
       tech: ['PHP', 'Java', 'MySQL', '.NET', 'JavaScript'],
       label: 'areamobile.de · 2007 archive',
       image: '/assets/areamobile_founding_furniture.jpg',
@@ -220,7 +220,7 @@ export const CV = {
       from: '1999', to: '2002', dur: '3 yrs',
       logo: 'Y2K', company: 'Y2K Startups',
       role: 'Engineer',
-      desc: 'Built early-web products at canto, astromo, ecrypt, microtool. Y2K-era startup engineering — when the web was wild.',
+      desc: 'Built early-web products at canto, astromo, ecrypt, microtool. Y2K-era startup engineering - when the web was wild.',
       tech: ['Java', 'C++', 'JavaScript', 'PHP'],
       label: '1999 · build pipeline',
     },
@@ -228,7 +228,7 @@ export const CV = {
 
   education: [
     { yr: '1998–2002', ttl: 'Diploma in Mathematics (~ M.Sc.)', where: 'TFH Berlin' },
-    { yr: '2021', ttl: 'ETHOnline Finalist — SPLICE', where: 'ETHGlobal' },
+    { yr: '2021', ttl: 'ETHOnline Finalist - SPLICE', where: 'ETHGlobal' },
     { yr: '2022', ttl: 'Head Curator · code.talks', where: 'Hamburg, DE' },
   ] as QualEntry[],
 

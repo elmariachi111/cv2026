@@ -10,8 +10,8 @@ function HistoryRow({ h, idx }: { h: HistoryEntry; idx: number }) {
     <div className="t-history-row" data-hue={hue} data-era={era}>
       <div className="t-when">
         <span className="yr">{h.from} → {h.to}</span>
-        <span className="dur">{h.dur}</span>
-        {idx === 0 && <span className="badge">CURRENT</span>}
+        
+        {idx === 0 ? <span className="badge">CURRENT</span> : <span className="dur">{h.dur}</span>}
       </div>
 
       <div>
