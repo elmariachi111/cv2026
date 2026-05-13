@@ -29,6 +29,7 @@ export interface QualEntry {
   yr: string;
   ttl: string;
   where: string;
+  href?: string;
 }
 
 export interface ContactEntry {
@@ -233,6 +234,14 @@ export const CV = {
     { yr: '1998–2002', ttl: 'Diploma in Mathematics (~ M.Sc.)', where: 'TFH Berlin' },
     { yr: '2021', ttl: 'ETHOnline Finalist - SPLICE', where: 'ETHGlobal' },
     { yr: '2022', ttl: 'Head Curator · code.talks', where: 'Hamburg, DE' },
+  ] as QualEntry[],
+
+  publications: [
+    { yr: '2019', ttl: 'Pump up the JAM with Gatsby', where: 'YouTube', href: 'https://www.youtube.com/watch?v=fwTxNylQhn8' },
+    { yr: '2020', ttl: 'After the Meltdown: rethinking event management platforms', where: 'Medium', href: 'https://medium.com/t14g/decentralized-event-management-platforms-d1fce0748a26' },
+    { yr: '2021', ttl: 'The Last Introduction to Web3 / Ethereum For Developers', where: 'Medium', href: 'https://medium.com/t14g/the-last-introduction-to-web3-ethereum-for-developers-47cc6578a9b8' },
+    { yr: '2021', ttl: 'Enabling NFT Royalties With EIP-2981', where: 'HackerNoon', href: 'https://hackernoon.com/enabling-nft-royalties-with-eip-2981' },
+    { yr: '2024', ttl: 'What Is a Proof and Why Do You Need One?', where: 'laconic.com', href: 'https://laconic.com/blog/what-is-a-proof' },
   ] as QualEntry[],
 
   speaking: [

@@ -552,7 +552,8 @@
 .t-co-role { font-size: 13px; color: var(--t-fg-dim); margin-bottom: 12px; }
 .t-desc { font-size: 13px; line-height: 1.65; color: var(--t-fg-dim); max-width: 640px; }
 .t-desc strong { color: var(--t-fg); font-weight: 500; }
-.t-desc a { color: var(--t-row-hue, var(--t-accent)); }
+.t-desc a, .t-desc-link { color: var(--t-row-hue, var(--t-accent)); text-decoration: none; }
+.t-desc-link:hover { text-decoration: underline; }
 
 .t-tech { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
 .t-tech-tag {
