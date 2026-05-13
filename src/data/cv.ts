@@ -137,7 +137,7 @@ export const CV = {
       from: '2026', to: 'now', dur: '~ present',
       logo: 'π', logoImage: '/assets/logos/company/peptai_icon.png', company: 'PeptAI',
       role: 'DevOps · Agent Infrastructure',
-      desc: 'Agent Fleet Setup - PeptAI runs biomedical research using fleets of computational enabled AI agents, that collaborate and evaluate biomedical science hypotheses. Self-service tier to run agent harnesses (openclaw, hermes) at scale on project owned VPS hosts, virtual macOS devices and AWS EC2.',
+      desc: 'Agent Fleet Setup - PeptAI runs biomedical research using fleets of computational enabled AI agents that collaborate and evaluate biomedical science hypotheses. Self-service provisioning tier that spins up agent harnesses (openclaw, hermes) on demand on owned VPS hosts, virtual macOS devices and cloud resources.',
       tech: ['AWS', 'Terraform', 'Docker', 'OpenClaw', 'tart'],
       label: 'peptai.xyz · agent harness rollout',
       image: '/assets/optimized/cambridge.jpg',
@@ -156,11 +156,21 @@ export const CV = {
       from: '2022', to: '2024', dur: '2 yrs',
       logo: 'M', logoImage: '/assets/logos/company/molecule_protocol_logo.jpeg', company: 'Molecule',
       role: 'Principal Engineer · On-chain Systems',
-      desc: 'Pioneered IP tokenization infrastructure (IPNFTs). Built smart contracts for crowdfunding protocols (bio.xyz, IPT crowdsales) and bonding-curve markets (Catalyst). Production Solidity, audited, deployed on mainnet and Base.',
+      desc: 'Pioneered IP tokenization infrastructure (IPNFTs). Built smart contracts for crowdfunding protocols (bio.xyz, IPT crowdsales) and bonding-curve markets (Catalyst). Production grade Solidity, audited, deployed on mainnet and Base.',
       tech: ['Solidity', 'Foundry', 'Subgraphs', 'ERC-20/721/1155', 'DeFi', 'Tokenization'],
       label: 'molecule.xyz · IPNFT minter',
       imagePosition: 'center 30%',
       image: '/assets/optimized/desci_berlin_23.jpg',
+    },
+    {
+      from: '2020', to: '2022', dur: '~ side',
+      logo: 'S', logoImage: '/assets/logos/company/splice_logo.png', company: 'Splice / ETHGlobal',
+      role: 'Hackathon Builder',
+      desc: 'ETHOnline 2021 finalist ([SPLICE](https://ethglobal.com/showcase/splice-dzc68) - generative on-chain art splitting royalties to NFT communities). Earlier: decentralized EHRs, DID/VC/VP-based certificate validators.',
+      tech: ['Solidity', 'DID/VC', 'IPFS', 'React'],
+      label: 'splice · finalist demo',
+      imagePosition: 'center 60%',
+      image: '/assets/optimized/hack_eb2.jpg',
     },
     {
       from: '2018', to: '2022', dur: '4 yrs',
@@ -171,16 +181,6 @@ export const CV = {
       label: 'code.talks 2022 · curator track',
       imagePosition: 'center 60%',
       image: '/assets/optimized/meetup.jpg',
-    },
-    {
-      from: '2020', to: '2022', dur: '~ side',
-      logo: 'S', logoImage: '/assets/logos/company/splice_logo.png', company: 'Splice / ETHGlobal',
-      role: 'Hackathon Builder',
-      desc: 'ETHOnline 2021 finalist (SPLICE - generative on-chain art splitting royalties to NFT communities). Earlier: decentralized EHRs, DID/VC/VP-based certificate validators.',
-      tech: ['Solidity', 'DID/VC', 'IPFS', 'React'],
-      label: 'splice · finalist demo',
-      imagePosition: 'center 60%',
-      image: '/assets/optimized/hack_eb2.jpg',
     },
     {
       from: '2015', to: '2018', dur: '3 yrs',
@@ -203,9 +203,9 @@ export const CV = {
     {
       from: '2010', to: '2012', dur: '2 yrs',
       logo: 'SDS', logoImage: '/assets/logos/company/samsung_sds_logo.jpeg', company: 'Samsung SDS',
-      role: 'Team Lead · Java Engineering',
-      desc: 'Led a team of 8 engineers building Java EE eCommerce applications. Backend work on Oracle SQL, Spring, and iBATIS. Bonus: built a bada restarurant finder app in C++.',
-      tech: ['Java EE', 'Spring', 'Oracle SQL', 'iBATIS'],
+      role: 'Team Lead · Java Enterprise Engineering',
+      desc: 'Led a team of 8 engineers building Java EE eCommerce applications. Backend work on Oracle SQL, Spring, and iBATIS. Bonus: built a bada restarurant finder app in C++ (Samsung mobile OS)',
+      tech: ['Java EE', 'Spring', 'Oracle SQL', 'iBATIS', 'Weblogic'],
       label: 'samsung sds · ecommerce platform',
       imagePosition: 'center 60%',
       image: '/assets/optimized/sds.png',
@@ -222,10 +222,10 @@ export const CV = {
     },
     {
       from: '1999', to: '2002', dur: '3 yrs',
-      logo: 'Y2K', company: 'Y2K Startups',
-      role: 'Engineer',
-      desc: 'Built early-web products at [Canto](https://www.canto.com/), astromo, [ecrypt](https://www.secrypt.de/en/homepage/), [microtool](https://www.microtool.de/). Y2K-era startup engineering - when the web was wild.',
-      tech: ['Java', 'C++', 'JavaScript', 'Visual Basic'],
+      logo: '?', company: 'Y2K Startups',
+      role: 'Student Engineer',
+      desc: 'Several engagements at software companies: [Canto](https://www.canto.com/), astromo (Liberal Energy Markets), [ecrypt](https://www.secrypt.de/en/homepage/), [microtool](https://www.microtool.de/). ',
+      tech: ['Java', 'C++', 'JavaScript', 'Visual Basic', 'Fractal Compression', 'Cryptography'],
       label: '1999 · build pipeline',
     },
   ] as HistoryEntry[],
@@ -245,9 +245,10 @@ export const CV = {
   ] as QualEntry[],
 
   speaking: [
-    { yr: '2017-2022', ttl: 'Conference speaker on web3, privacy, agents', where: 'EU / DE' },
-    { yr: '2017-2020', ttl: 'Meetup organizer · coding.earth', where: 'Germany / Portugal' },
-    { yr: '2018-2022', ttl: 'Press, panels & technical pre-sales', where: 'Turbine Kreuzberg' },
+    { yr: '2017-2022', ttl: 'Conference speaker on web3, decentralization, privacy', where: 'EU / DE' },
+    { yr: '2017-2020', ttl: 'Meetup Group President · coding.earth', where: 'Germany / Portugal' },
+    { yr: '2018-2022', ttl: 'Press relations, panels & presale support', where: 'Turbine Kreuzberg' },
+    { yr: '2017', ttl: 'Best Speaker Award Dev Day 17', where: 'Turbine Kreuzberg'}
   ] as QualEntry[],
 
   contacts: [
@@ -255,11 +256,12 @@ export const CV = {
     { k: 'github',    v: '@elmariachi111',               href: 'https://github.com/elmariachi111' },
     { k: 'linkedin',  v: '@stadolf',                    href: 'https://www.linkedin.com/in/stadolf/' },
     { k: 'bluesky',   v: '@stadolf.bsky.social',        href: 'https://bsky.app/profile/stadolf.bsky.social' },
-    { k: 'farcaster', v: 'elmariachi.eth',              href: 'https://warpcast.com/elmariachi.eth' },
     { k: 'ens',       v: 'stadolf.eth',                 href: 'https://etherscan.io/address/stadolf.eth' },
+    { k: 'signal',  v: '@stadolf.11',                 href: 'https://signal.me/#eu/GcSDEor3MIBOMX16K4F0vVTE8ciOsXldtd4Mcm8zGasVqaSz3xtMvK873CqgNAwe' },
     { k: 'telegram',  v: '@stadolf',                    href: 'https://t.me/stadolf' },
     { k: 'discord',   v: 'elmariachi#8789',             href: 'https://discord.com/users/elmariachi' },
-    { k: 'calendar',  v: 'book a chat',                 href: 'https://calendly.com/stadolf/chatwithstefan' },
+    { k: 'twitter',  v: '@stadolf',                 href: 'https://twitter.com/stadolf' },
+  
   ] as ContactEntry[],
 };
 

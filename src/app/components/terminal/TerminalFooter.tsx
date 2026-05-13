@@ -6,7 +6,7 @@ export function TerminalFooter() {
   return (
     <div className="t-foot">
       <span style={{ letterSpacing: '0.08em' }}>
-        $ exit 0 · session length {uptimeFrom(CODING_SINCE)}y · born {BIRTH_YEAR}
+        $ exit 0 · session length {uptimeFrom(CODING_SINCE)}y 
       </span>
       <span>© 2026 · {CV.handle} · the struggle is real</span>
     </div>

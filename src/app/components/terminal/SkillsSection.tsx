@@ -7,7 +7,7 @@ export function SkillsSection() {
       <SecHead
         num="00"
         marker="//"
-        title="cat stadolf.stack"
+        title="cat stack"
         hint="selected tools of my stack "
       />
       <TechLogoGrid />

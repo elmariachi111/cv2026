@@ -69,8 +69,8 @@ export function HistorySection() {
     <section className="t-section" data-hue="amber">
       <SecHead
         num="01"
-        marker="//"
-        title="history.log"
+        marker="#"
+        title="tail -20 history.log"
         hint={<><span className="acc">{CV.history.length}</span> entries · descending</>}
       />
       <div className="t-history">

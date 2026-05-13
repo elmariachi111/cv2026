@@ -29,14 +29,13 @@ export function IdCard() {
         <img src="/portrait.png" alt="Stefan Adolf" />
       </div>
       <NeoRow k="user"   v={CV.handle} />
-      <NeoRow k="host"   v="berlin.de" />
-      <NeoRow k="role"   v="principal eng." />
+      <NeoRow k="location"   v="berlin neukölln" />
+      <NeoRow k="role"   v="principal engineer" />
       <NeoRow k="shell"  v="zsh + tmux" />
       <hr />
       <NeoRow k="age"    v={`${ageNow()}y`} />
       <NeoRow k="born"   v={`${BIRTH_YEAR}.01 · DE`} />
       <NeoRow k="uptime" v={`${uptimeFrom(CODING_SINCE)} yrs coding`} />
-      <NeoRow k="status" v={<span style={{ color: 'var(--t-accent)' }}>available</span>} />
       <NeoRow k="clock"  v={time} />
     </aside>
   );

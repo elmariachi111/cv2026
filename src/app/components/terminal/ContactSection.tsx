@@ -9,7 +9,7 @@ export function ContactSection() {
         num="03"
         marker="//"
         title="contact.sock"
-        hint={<>open a <span className="acc">connection</span></>}
+        hint={<><span className="acc">&raquo; connect</span></>}
       />
       <div className="t-contact">
         <div className="t-contact-with-card">

@@ -19,7 +19,7 @@ export function HeroSection() {
           <h1>
             <span>Stefan Adolf</span>
             <br />
-            <span className="sub">// make it work engineer</span>
+            <span className="sub">// make it work-engineer</span>
           </h1>
 
           <p className="t-tagline">

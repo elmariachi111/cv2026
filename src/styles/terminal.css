@@ -680,7 +680,7 @@
 }
 .t-c-cell:hover { background: color-mix(in oklch, var(--t-cyan), var(--t-bg-elev) 92%); }
 .t-c-cell:hover::after { color: var(--t-cyan); transform: translate(2px, -2px); }
-.t-c-cell .k { font-size: 10px; letter-spacing: 0.14em; color: var(--t-fg-mute); }
+.t-c-cell .k { font-size: 10px; letter-spacing: 0.14em; color: var(--t-cyan); }
 .t-c-cell .v { font-size: 14px; color: var(--t-fg); word-break: break-all; }
 .t-c-cell:hover .v { color: var(--t-cyan); text-shadow: 0 0 10px color-mix(in oklch, var(--t-cyan), transparent 70%); }
 

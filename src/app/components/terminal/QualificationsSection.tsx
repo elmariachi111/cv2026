@@ -26,8 +26,8 @@ export function QualificationsSection() {
     <section className="t-section" data-hue="magenta">
       <SecHead
         num="02"
-        marker="//"
-        title="qualifications.txt"
+        marker=">>>"
+        title='printf(_qualifications)'
         hint={<>education · talks · <span className="acc">awards</span></>}
       />
       <div className="t-quals">
