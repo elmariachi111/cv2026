@@ -55,7 +55,6 @@ export const CV = {
     { name: 'The Good Climate', role: 'Editor', href: 'https://thegoodclimate.substack.com/' },
     { name: 'Molecule', role: 'Agentic Product Dev', href: 'https://molecule.xyz' },
     { name: 'welshare.health', role: 'Tech Co-founder', href: 'https://welshare.health' },
-    { name: 'molecule.xyz', role: 'Contributor', href: 'https://molecule.xyz' },
   ] as NowEntry[],
 
   skills: [
