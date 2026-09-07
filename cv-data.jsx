@@ -279,4 +279,3 @@ const CV = {
 
 window.CV = CV;
 if (typeof module !== 'undefined' && module.exports) { module.exports = { CV }; }
-export { CV };

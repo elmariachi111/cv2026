@@ -1,7 +1,15 @@
-// Single source of truth for CV content is now root cv-data.jsx.
-// This shim re-exports it with types and app-specific constants,
-// so the standalone CV.html page and the Vite app share ONE data source.
-import { CV as CVData } from '../../cv-data.jsx';
+// Single source of truth for CV content is root cv-data.jsx.
+// This module loads that file's source via Vite's ?raw import and evaluates it
+// in a sandbox, so the standalone CV.html page (classic script + window.CV)
+// and the Vite app share ONE data file that can never drift.
+//
+// Why not `import { CV } from '../../cv-data.jsx'`? babel-standalone on the
+// standalone page transpiles text/babel scripts as CommonJS: an `export {}`
+// statement in the shared file becomes `exports.CV = CV`, which throws
+// "exports is not defined" in classic script scope (verified in a real
+// browser). Keeping cv-data.jsx free of module syntax and evaluating the raw
+// text here is the only shape that works for BOTH consumers.
+import raw from '../../cv-data.jsx?raw';
 
 export interface SkillItem {
   name: string;
@@ -49,6 +57,37 @@ export interface NowEntry {
   href: string;
 }
 
-export const CV = CVData;
-export const BIRTH_YEAR = CVData.birthYear ?? 1911;
-export const CODING_SINCE = CVData.codingSince ?? 1911;
+export interface CVData {
+  name: string;
+  handle: string;
+  tagline: string;
+  blurb: string;
+  location: string;
+  email: string;
+  site: string;
+  birthYear: number;
+  codingSince: number;
+  roles: string[];
+  now: NowEntry[];
+  skills: SkillCategory[];
+  history: HistoryEntry[];
+  education: QualEntry[];
+  publications: QualEntry[];
+  speaking: QualEntry[];
+  contacts: ContactEntry[];
+}
+
+// Evaluate the classic script's source once. It ends with `window.CV = CV`,
+// so we provide a `window` shim and read the assigned object back.
+function loadCV(): CVData {
+  const sandboxWindow: { CV?: CVData } = {};
+  // eslint-disable-next-line no-new-func
+  new Function('window', 'module', raw)(sandboxWindow, undefined);
+  const cv = sandboxWindow.CV;
+  if (!cv) throw new Error('cv-data.jsx did not set window.CV');
+  return cv;
+}
+
+export const CV: CVData = loadCV();
+export const BIRTH_YEAR = CV.birthYear;
+export const CODING_SINCE = CV.codingSince;
