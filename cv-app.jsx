@@ -101,10 +101,10 @@ function Hero() {
           <h1>
             <span>Stefan </span><span className="accent">Adolf</span>
             <br/>
-            <span className="sub">// principal engineer · architect · {CV.location}</span>
+            <span className="sub">// protocol & agent systems · {CV.location}</span>
           </h1>
 
-          <p className="tagline">Principal engineer with <span className="acc">two decades</span> of building production systems across web, backends, distributed protocols and on-chain infrastructure. Currently focused on <span className="amb">privacy-preserving compute</span>, agentic systems, and biomedical data.</p>
+          <p className="tagline"><span className="acc">Twenty years</span> of shipping production systems across web, backends, distributed protocols and on-chain infrastructure. Now building agent orchestration & on-chain settlement for scientific research, agent-run climate media — and <span className="amb">moving into energy-systems software</span>.</p>
 
           <div className="roles">
             {CV.roles.map((r, i) => (
@@ -297,7 +297,7 @@ function IdCard() {
       )}
       <Row k="user"   v={CV.handle} />
       <Row k="host"   v="berlin.de" />
-      <Row k="role"   v="principal eng." />
+      <Row k="role"   v="protocol & agent systems" />
       <Row k="shell"  v="zsh + tmux" />
       <hr/>
       <Row k="age"    v={`${ageNow()}y`} />

@@ -2,9 +2,9 @@
 const CV = {
   name: 'Stefan Adolf',
   handle: 'elmariachi',
-  tagline: 'Software Builder & Architect. Berlin. Building since Y2K.',
+  tagline: 'Protocol & Agent Systems Engineer. Berlin. Building since Y2K.',
   blurb:
-    'Principal engineer with two decades of building production systems across web, backends, distributed protocols and on-chain infrastructure. Building agentic systems for scientific research and climate communications — bounty marketplaces, guardian agent rosters, agent-run newsletters.',
+    'Twenty years of shipping production systems across web, backends, distributed protocols and on-chain infrastructure. Now building agent orchestration and on-chain settlement for scientific research, agent-run climate media — and moving into energy-systems software.',
   location: 'Berlin, DE',
   email: 'elmariachi111+cv@proton.me',
   site: 'stadolf.de',
@@ -45,7 +45,7 @@ const CV = {
     },
     {
       id: '03',
-      title: 'on-chain & crypto',
+      title: 'on-chain engineering',
       items: [
         { name: 'Foundry / Hardhat', level: 5, yrs: '5+' },
         { name: 'ERC-20 / 721 / 1155', level: 5, yrs: '5+' },
@@ -101,7 +101,7 @@ const CV = {
       logo: 'M',
       logoImage: '/assets/logos/company/molecule_protocol_logo.jpeg',
       company: 'Molecule (Return Engagement)',
-      role: 'Senior Web3 Agentic Process Developer',
+      role: 'Senior Engineer · Agent Orchestration & On-Chain Settlement',
       desc:
         'Back at Molecule building a fully fledged product for agentic usage: a bounty marketplace for scientific challenges. Keeps up a diverse roster of guardian agents that reason about submissions and align and consent via on-chain smart contracts. Infrastructure work on automated agent rollout (openclaw, hermes, local macOS clusters, GPU utilization), plus local inference with open-source models (vLLM, llama.cpp).',
       tech: ['OpenClaw', 'Hermes', 'Solidity', 'vLLM', 'llama.cpp', 'macOS virt', 'GPU ops'],
@@ -130,7 +130,7 @@ const CV = {
       logo: 'M',
       logoImage: '/assets/logos/company/molecule_protocol_logo.jpeg',
       company: 'Molecule',
-      role: 'Principal Engineer · On-chain Systems',
+      role: 'Lead Engineer · On-Chain Systems',
       desc:
         'Pioneered IP tokenization infrastructure (IPNFTs). Built smart contracts for crowdfunding protocols (bio.xyz, IPT crowdsales) and bonding-curve markets (Catalyst). Production grade Solidity, audited, deployed on mainnet and Base.',
       tech: ['Solidity', 'Foundry', 'Subgraphs', 'ERC-20/721/1155', 'DeFi', 'Tokenization'],

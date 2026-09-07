@@ -30,7 +30,7 @@ export function IdCard() {
       </div>
       <NeoRow k="user"   v={CV.handle} />
       <NeoRow k="location"   v="berlin neukölln" />
-      <NeoRow k="role"   v="principal engineer" />
+      <NeoRow k="role"   v="protocol & agent systems" />
       <NeoRow k="shell"  v="zsh + tmux" />
       <hr />
       <NeoRow k="age"    v={`${ageNow()}y`} />
