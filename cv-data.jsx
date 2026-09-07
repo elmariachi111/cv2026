@@ -1,7 +1,4 @@
 // Stefan Adolf — content
-const BIRTH_YEAR = 1978;
-const CODING_SINCE = 1998;
-
 const CV = {
   name: 'Stefan Adolf',
   handle: 'elmariachi',
