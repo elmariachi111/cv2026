@@ -10,7 +10,7 @@ const CV = {
   site: 'stadolf.de',
   birthYear: 1978,
   codingSince: 1998,
-  roles: ['developer', 'agent charmer', 'environmentalist', 'cyclepunk'],
+  roles: ['developer', 'agent charmer', 'environmentalist', 'protocol gardener'],
 
   now: [
     { name: 'The Good Climate', role: 'Editor', href: 'https://thegoodclimate.substack.com/' },
@@ -118,8 +118,8 @@ const CV = {
       company: 'welshare.health',
       role: 'Tech Co-founder',
       desc:
-        'Co-founded welshare.health. Designed and built the Health Profile Matching Protocol (HPMP) that connects agentic researchers and patients to assemble cohorts for clinical trials on wearable and real-world health data. Matching runs inside trusted execution environments via [Nillion](https://nillion.com); patient data is never disclosed to agents.',
-      tech: ['TypeScript', 'React', 'FHIR HL7', 'Nillion', 'TEE', 'MCP', 'Cryptography'],
+        'Co-founded welshare.health. Designed and built the Health Profile Matching Protocol (HPMP) that connects agentic researchers and patients to assemble cohorts for clinical trials on wearable and real-world health data. Matching runs inside trusted execution environments via [Nillion](https://nillion.com); patient data is never disclosed to agents. Shipped one of the earliest production MCP servers: a FHIR health-profile endpoint for AI assistants with OAuth-bound profile JWTs, one-time 256-bit download tokens (Redis GETDEL, atomic consume), DID-verified file ownership and AES-256-GCM encryption at rest — adopted MCP within two weeks of its first release.',
+      tech: ['TypeScript', 'React', 'FHIR HL7', 'Nillion', 'TEE', 'MCP', 'AES-256-GCM', 'Cryptography'],
       label: 'welshare.health · HPMP dashboard',
       image: '/assets/optimized/welshare_gang.jpg',
     },
@@ -234,13 +234,14 @@ const CV = {
       company: 'Y2K Startups',
       role: 'Student Engineer',
       desc:
-        'Several engagements at software companies: [Canto](https://www.canto.com/), astromo (Liberal Energy Markets), [ecrypt](https://www.secrypt.de/en/homepage/), [microtool](https://www.microtool.de/). ',
-      tech: ['Java', 'C++', 'JavaScript', 'Visual Basic', 'Fractal Compression', 'Cryptography'],
+        'Systems programming across several engagements: fractal compression algorithms in plain C++ (CodeWarrior, Win32) at [Canto](https://www.canto.com/); COM-based testing infrastructure at [microtool](https://www.microtool.de/); C++ interfaces for a restaurant-finder app on Samsung\'s proprietary bada OS; Java work at astromo (Liberal Energy Markets) and [ecrypt](https://www.secrypt.de/en/homepage/).',
+      tech: ['C++', 'ANSI C', 'Java', 'COM', 'Win32', 'Fractal Compression', 'Cryptography'],
       label: '1999 · build pipeline',
     },
   ],
 
   education: [
+    { yr: '2002', ttl: 'Diploma thesis at Heinrich-Hertz-Institut: OBME motion-estimation demonstrator in ANSI C, integrated into HHI\'s H.264 precursor codec', where: 'HHI Berlin' },
     { yr: '1998–2002', ttl: 'Master of Engineering (M.Eng.), Mathematics & Computer Science', where: 'TFH Berlin' },
     { yr: '2021', ttl: 'ETHOnline Finalist — SPLICE', where: 'ETHGlobal' },
     { yr: '2022', ttl: 'Head Curator · code.talks', where: 'Hamburg, DE' },
