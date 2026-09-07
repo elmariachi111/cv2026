@@ -19,15 +19,15 @@ export function HeroSection() {
           <h1>
             <span>Stefan Adolf</span>
             <br />
-            <span className="sub">// make it work-engineer</span>
+            <span className="sub">// protocol & agent systems engineer</span>
           </h1>
 
           <p className="t-tagline">
-            principal engineer with two decades experience of shipping
-            production systems across web, apps, apis, distributed protocols and
-            on-chain infrastructure. Currently focused on{" "}
-            <span className="amb">privacy-preserving compute</span>,{" "}
-            <span className="acc">agentic system ops</span>, and biomedical research on DeSci rails.
+            twenty years of shipping production systems across web, apps, apis,{" "}
+            <span className="acc">distributed protocols</span> and on-chain
+            infrastructure. Now building agent orchestration & on-chain
+            settlement for scientific research and agent-run climate media —{" "}
+            <span className="amb">moving into energy-systems software</span>.
           </p>
 
           <div className="t-roles">
