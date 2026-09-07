@@ -48,11 +48,12 @@ export const CV = {
   name: 'Stefan Adolf',
   handle: 'elmariachi',
   blurb:
-    'Principal engineer with two decades of building production systems across web, backends, distributed protocols and on-chain infrastructure. Currently focused on privacy-preserving compute, agentic systems, and biomedical data.',
+    'Principal engineer with two decades of building production systems across web, backends, distributed protocols and on-chain infrastructure. Building agentic systems for scientific research and climate communications — bounty marketplaces, guardian agent rosters, agent-run newsletters.',
   roles: ['developer', 'agent charmer', 'environmentalist', 'cyclepunk'],
 
   now: [
-    { name: 'PeptAI', role: 'Agent Ops', href: 'https://peptai.xyz/' },
+    { name: 'The Good Climate', role: 'Editor', href: 'https://thegoodclimate.substack.com/' },
+    { name: 'Molecule', role: 'Agentic Product Dev', href: 'https://molecule.xyz' },
     { name: 'welshare.health', role: 'Tech Co-founder', href: 'https://welshare.health' },
     { name: 'molecule.xyz', role: 'Contributor', href: 'https://molecule.xyz' },
   ] as NowEntry[],
@@ -135,16 +136,16 @@ export const CV = {
   history: [
     {
       from: '2026', to: 'now', dur: '~ present',
-      logo: 'π', logoImage: '/assets/logos/company/peptai_icon.png', company: 'PeptAI',
-      role: 'DevOps · Agent Infrastructure',
-      desc: 'Agent Fleet Setup - PeptAI runs biomedical research using fleets of computational enabled AI agents that collaborate and evaluate biomedical science hypotheses. Self-service provisioning tier that spins up agent harnesses (openclaw, hermes) on demand on owned VPS hosts, virtual macOS devices and cloud resources.',
-      tech: ['AWS', 'Terraform', 'Docker', 'OpenClaw', 'tart'],
-      label: 'peptai.xyz · agent harness rollout',
+      logo: 'M', logoImage: '/assets/logos/company/molecule_protocol_logo.jpeg', company: 'Molecule (Return Engagement)',
+      role: 'Senior Web3 Agentic Process Developer',
+      desc: 'Back at Molecule building a fully fledged product for agentic usage: a bounty marketplace for scientific challenges. Keeps up a diverse roster of guardian agents that reason about submissions and align and consent via on-chain smart contracts. Infrastructure work on automated agent rollout (openclaw, hermes, local macOS clusters, GPU utilization), plus local inference with open-source models (vLLM, llama.cpp).',
+      tech: ['OpenClaw', 'Hermes', 'Solidity', 'vLLM', 'llama.cpp', 'macOS virt', 'GPU ops'],
+      label: 'molecule.xyz · agentic bounty marketplace',
       image: '/assets/optimized/cambridge.jpg',
       imagePosition: 'center 90%',
     },
     {
-      from: '2025', to: 'now', dur: 'present',
+      from: '2025', to: '2026', dur: '1 yr',
       logo: 'W', logoImage: '/assets/logos/company/welshare_logo.jpeg', company: 'welshare.health',
       role: 'Tech Co-founder',
       desc: 'Co-founded welshare.health. Designed and built the Health Profile Matching Protocol (HPMP) that connects agentic researchers and patients to assemble cohorts for clinical trials on wearable and real-world health data. Matching runs inside trusted execution environments via [Nillion](https://nillion.com); patient data is never disclosed to agents.',
@@ -153,7 +154,7 @@ export const CV = {
       image: '/assets/optimized/welshare_gang.jpg',
     },
     {
-      from: '2022', to: '2024', dur: '2 yrs',
+      from: '2022', to: '2025', dur: '~ 2.5 yrs',
       logo: 'M', logoImage: '/assets/logos/company/molecule_protocol_logo.jpeg', company: 'Molecule',
       role: 'Principal Engineer · On-chain Systems',
       desc: 'Pioneered IP tokenization infrastructure (IPNFTs). Built smart contracts for crowdfunding protocols (bio.xyz, IPT crowdsales) and bonding-curve markets (Catalyst). Production grade Solidity, audited, deployed on mainnet and Base.',
@@ -163,9 +164,9 @@ export const CV = {
       image: '/assets/optimized/desci_berlin_23.jpg',
     },
     {
-      from: '2020', to: '2022', dur: '~ side',
+      from: '2022', to: '2022', dur: '9 mo',
       logo: 'S', logoImage: '/assets/logos/company/splice_logo.png', company: 'Splice / ETHGlobal',
-      role: 'Hackathon Builder',
+      role: 'Technical Cofounder',
       desc: 'ETHOnline 2021 finalist ([SPLICE](https://ethglobal.com/showcase/splice-dzc68) - generative on-chain art splitting royalties to NFT communities). Earlier: decentralized EHRs, DID/VC/VP-based certificate validators.',
       tech: ['Solidity', 'DID/VC', 'IPFS', 'React'],
       label: 'splice · finalist demo',
@@ -231,8 +232,8 @@ export const CV = {
   ] as HistoryEntry[],
 
   education: [
-    { yr: '1998–2002', ttl: 'Diploma in Mathematics (~ M.Sc.)', where: 'TFH Berlin' },
-    { yr: '2021', ttl: 'ETHOnline Finalist - SPLICE', where: 'ETHGlobal' },
+    { yr: '1998–2002', ttl: 'Master of Engineering (M.Eng.), Mathematics & Computer Science', where: 'TFH Berlin' },
+    { yr: '2021', ttl: 'ETHOnline Finalist — SPLICE', where: 'ETHGlobal' },
     { yr: '2022', ttl: 'Head Curator · code.talks', where: 'Hamburg, DE' },
   ] as QualEntry[],
 
@@ -242,6 +243,9 @@ export const CV = {
     { yr: '2021', ttl: 'The Last Introduction to Web3 / Ethereum For Developers', where: 'Medium', href: 'https://medium.com/t14g/the-last-introduction-to-web3-ethereum-for-developers-47cc6578a9b8' },
     { yr: '2021', ttl: 'Enabling NFT Royalties With EIP-2981', where: 'HackerNoon', href: 'https://hackernoon.com/enabling-nft-royalties-with-eip-2981' },
     { yr: '2024', ttl: 'What Is a Proof and Why Do You Need One?', where: 'laconic.com', href: 'https://laconic.com/blog/what-is-a-proof' },
+    { yr: '2022', ttl: 'Dezentralität ist die Zukunft', where: 'dotnetpro', href: 'https://www.dotnetpro.de/planung/dezentralitaet-zukunft-2711272.html' },
+    { yr: '2022', ttl: 'Platform Security: Sicherheit braucht starke Authentifizierung', where: 'All About Security', href: 'https://www.all-about-security.de/platform-security-sicherheit-braucht-starke-authentifizierung/' },
+    { yr: '2021', ttl: 'ĐePA: Demystified', where: 'Turbine Kreuzberg', href: 'https://turbinekreuzberg.com/de/themen/depa-digitale-gesundheit-neustart' },
   ] as QualEntry[],
 
   speaking: [
