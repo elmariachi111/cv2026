@@ -8,6 +8,8 @@ const CV = {
   location: 'Berlin, DE',
   email: 'elmariachi111+cv@proton.me',
   site: 'stadolf.de',
+  birthYear: 1978,
+  codingSince: 1998,
   roles: ['developer', 'agent charmer', 'environmentalist', 'cyclepunk'],
 
   now: [
@@ -276,3 +278,5 @@ const CV = {
 };
 
 window.CV = CV;
+if (typeof module !== 'undefined' && module.exports) { module.exports = { CV }; }
+export { CV };
