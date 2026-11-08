@@ -25,51 +25,54 @@ export function NowStrip() {
           </span>
         ))}
       </div>
-      <div className="t-flagship">
-        <div className="f-head">
-          <span className="t-live">
-            <span className="t-pulse" />
-            currently shipping
-          </span>
-        </div>
-        <h3 className="f-title">
-          co-building{' '}
-          <a className="f-link" href={CV.flagship.href} target="_blank" rel="noreferrer">
-            {CV.flagship.project}
-          </a>
-          <span className="f-org"> — {CV.flagship.org}</span>
-        </h3>
-        <p className="f-headline">{CV.flagship.headline}</p>
-        <p className="f-narrative">{CV.flagship.narrative}</p>
-        <div className="f-cols">
-          <div>
-            <div className="f-label">// {CV.flagship.dutiesLabel}</div>
-            <ul className="f-duties">
-              {CV.flagship.duties.map((d) => (
-                <li key={d}>
-                  <span className="pre">─</span>
-                  {d}
-                </li>
-              ))}
-            </ul>
+      {CV.flagships.map((f) => (
+        <div className={`t-flagship${f.tone === 'green' ? ' is-green' : ''}`} key={f.project}>
+          <div className="f-head">
+            <span className="t-live">
+              <span className="t-pulse" />
+              {f.label}
+            </span>
           </div>
-          <div>
-            <div className="f-label">// {CV.flagship.stackLabel}</div>
-            <div className="f-stack">
-              {CV.flagship.stack.map((s) => (
-                <span className="f-chip" key={s}>
-                  {s}
-                </span>
-              ))}
+          <h3 className="f-title">
+            <a className="f-link" href={f.href} target="_blank" rel="noreferrer">
+              {f.project}
+            </a>
+            <span className="f-org"> — {f.org}</span>
+          </h3>
+          <p className="f-headline">{f.headline}</p>
+          <p className="f-narrative">{f.narrative}</p>
+          <div className="f-cols">
+            <div>
+              <div className="f-label">// {f.dutiesLabel}</div>
+              <ul className="f-duties">
+                {f.duties.map((d) => (
+                  <li key={d}>
+                    <span className="pre">─</span>
+                    {d}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <div className="f-label">// {f.stackLabel}</div>
+              <div className="f-stack">
+                {f.stack.map((s) => (
+                  <span className="f-chip" key={s}>
+                    {s}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
+          {f.docsHref && (
+            <div>
+              <a className="f-docs" href={f.docsHref} target="_blank" rel="noreferrer">
+                <span className="arrow">→</span> {f.docsHref.replace('https://', '')}
+              </a>
+            </div>
+          )}
         </div>
-        <div>
-          <a className="f-docs" href={CV.flagship.docsHref} target="_blank" rel="noreferrer">
-            <span className="arrow">→</span> docs.elgora.ai
-          </a>
-        </div>
-      </div>
+      ))}
     </>
   );
 }

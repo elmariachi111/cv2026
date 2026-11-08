@@ -422,6 +422,19 @@
 .t-flagship .f-docs .arrow { margin-right: 6px; }
 .t-flagship .f-docs:hover { text-shadow: 0 0 12px color-mix(in oklch, var(--t-accent), transparent 55%); }
 
+/* Green-toned flagship variant (climate block) — inverted, graded wash */
+.t-flagship.is-green {
+  --t-accent: #00ff41;
+  --t-accent-dim: #0f8c33;
+  background:
+    linear-gradient(115deg,
+      color-mix(in oklch, var(--t-accent), transparent 89%) 0%,
+      transparent 62%),
+    radial-gradient(ellipse at 12% 100%,
+      color-mix(in oklch, var(--t-accent), transparent 85%) 0%,
+      transparent 58%);
+}
+
 /* ── Tech Logo Band ─────────────────────────────────────────────────── */
 
 @keyframes marquee-fwd {

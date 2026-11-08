@@ -58,10 +58,12 @@ export interface NowEntry {
 }
 
 export interface Flagship {
+  tone: 'accent' | 'green';
+  label: string;
   project: string;
   org: string;
   href: string;
-  docsHref: string;
+  docsHref?: string;
   headline: string;
   narrative: string;
   dutiesLabel: string;
@@ -81,7 +83,7 @@ export interface CVData {
   birthYear: number;
   codingSince: number;
   roles: string[];
-  flagship: Flagship;
+  flagships: Flagship[];
   now: NowEntry[];
   skills: SkillCategory[];
   history: HistoryEntry[];

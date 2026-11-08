@@ -12,31 +12,60 @@ const CV = {
   codingSince: 1998,
   roles: ['developer', 'agent charmer', 'environmentalist', 'protocol gardener'],
 
-  flagship: {
-    project: 'elgora.ai',
-    org: 'inside Molecule',
-    href: 'https://elgora.ai',
-    docsHref: 'https://docs.elgora.ai',
-    headline:
-      'Open bounties for AI agents — trust-minimized infrastructure for funding, solving and verifying work.',
-    narrative:
-      "I'm co-building elgora.ai: posters state a challenge as one markdown page and escrow the reward in USDC. Solvers submit encrypted work — keys are time-locked, nothing is readable before the deadline. A pinned roster of independent Guardian agents judges the submissions, and the ElgoraHub settlement contract counts the verdicts: two thirds decide, the contract pays out. The EVM is the consensus layer for Guardians — no operator and no off-chain service can pick a winner or move funds.",
-    dutiesLabel: 'what I own',
-    duties: [
-      'the on-chain components & settlement contract integration',
-      'the infrastructure & automated agent rollout',
-      'skill distribution & fine-tuning for every agent role',
-      'the complete Guardian ops',
-    ],
-    stackLabel: 'stack highlights',
-    stack: [
-      'Hermes agent (NousResearch)',
-      'OMP — Oh My Pi agent harness',
-      'prime-agent (harness alternative)',
-      'EIP-8004 agent identity',
-      'EVM as Guardian consensus layer',
-    ],
-  },
+  flagships: [
+    {
+      tone: 'accent',
+      label: 'currently shipping',
+      project: 'elgora.ai',
+      org: 'inside Molecule',
+      href: 'https://elgora.ai',
+      docsHref: 'https://docs.elgora.ai',
+      headline:
+        'Open bounties for AI agents — trust-minimized infrastructure for funding, solving and verifying work.',
+      narrative:
+        "I'm co-building elgora.ai: posters state a challenge as one markdown page and escrow the reward in USDC. Solvers submit encrypted work — keys are time-locked, nothing is readable before the deadline. A pinned roster of independent Guardian agents judges the submissions, and the ElgoraHub settlement contract counts the verdicts: two thirds decide, the contract pays out. The EVM is the consensus layer for Guardians — no operator and no off-chain service can pick a winner or move funds.",
+      dutiesLabel: 'what I own',
+      duties: [
+        'the on-chain components & settlement contract integration',
+        'the infrastructure & automated agent rollout',
+        'skill distribution & fine-tuning for every agent role',
+        'the complete Guardian ops',
+      ],
+      stackLabel: 'stack highlights',
+      stack: [
+        'Hermes agent (NousResearch)',
+        'OMP — Oh My Pi agent harness',
+        'prime-agent (harness alternative)',
+        'EIP-8004 agent identity',
+        'EVM as Guardian consensus layer',
+      ],
+    },
+    {
+      tone: 'green',
+      label: 'currently curating',
+      project: 'The Good Climate',
+      org: 'personal',
+      href: 'https://thegoodclimate.substack.com/',
+      headline:
+        'A narrative climate & energy letter — dry wit, market facts, no doom.',
+      narrative:
+        "The Good Climate grew out of a personal interest in energy-based systems and my own efforts to transition into that space: a letter on the markets, technologies and geopolitics of the energy transition, written to be simple, short and linked. It runs on an agent pipeline I built for it — and every claim's sources stay checkable, even when the pages move.",
+      dutiesLabel: 'under the hood',
+      duties: [
+        'automated news curation & article previews — 40,000+ stories screened from 220 sources',
+        'climate job board collections — 5,600+ roles indexed across boards & company career pages',
+        'asset analytics — 30 watched climate & energy stocks, price history & alerts, run by a prime agent',
+        "the wacz tool — every cited source sealed into a web archive at citation time",
+      ],
+      stackLabel: 'agents & tools',
+      stack: [
+        'prime agent (asset analytics)',
+        'wacz tool (source sealing)',
+        'SQLite store',
+        'Substack',
+      ],
+    },
+  ],
 
   now: [
     { name: 'The Good Climate', role: 'Editor', href: 'https://thegoodclimate.substack.com/' },
