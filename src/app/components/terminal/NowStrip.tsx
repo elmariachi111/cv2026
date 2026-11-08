@@ -3,7 +3,7 @@ import { CV } from '../../../data/cv';
 const VALUES = [
   
   { hue: 'var(--t-magenta)', txt: 'privacy' },
-  { hue: 'var(--t-accent)',  txt: 'wagmi' },
+  { hue: 'var(--t-accent)',  txt: 'open protocols' },
   
   { hue: 'var(--t-cyan)',    txt: 'permissionless access' },
   { hue: 'var(--t-violet)',  txt: 'sustainability' },
@@ -14,7 +14,7 @@ export function NowStrip() {
   return (
     <>
       <div className="t-values-strip">
-        <span className="lbl">// cypherpunk guardrails</span>
+        <span className="lbl">// operating principles</span>
         {VALUES.map((v, i) => (
           <span key={v.txt} style={{ display: 'contents' }}>
             <span className="val" style={{ '--vhue': v.hue } as React.CSSProperties}>
