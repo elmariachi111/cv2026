@@ -25,24 +25,50 @@ export function NowStrip() {
           </span>
         ))}
       </div>
-      <div className="t-now-strip">
-        <span className="t-live">
-          <span className="t-pulse" />
-          currently shipping
-        </span>
-        <span style={{ color: 'var(--t-fg-mute)' }}>·</span>
-        {CV.now.map((p, i) => (
-          <span key={p.name} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-            <a className="t-proj" href={p.href} target="_blank" rel="noreferrer">
-              <span style={{ color: 'var(--t-fg-dim)' }}>{p.role.toLowerCase()} </span>
-              <span className="arrow">→</span>
-              <span>{p.name}</span>
-            </a>
-            {i < CV.now.length - 1 && (
-              <span style={{ color: 'var(--t-fg-mute)' }}>·</span>
-            )}
+      <div className="t-flagship">
+        <div className="f-head">
+          <span className="t-live">
+            <span className="t-pulse" />
+            currently shipping
           </span>
-        ))}
+        </div>
+        <h3 className="f-title">
+          co-building{' '}
+          <a className="f-link" href={CV.flagship.href} target="_blank" rel="noreferrer">
+            {CV.flagship.project}
+          </a>
+          <span className="f-org"> — {CV.flagship.org}</span>
+        </h3>
+        <p className="f-headline">{CV.flagship.headline}</p>
+        <p className="f-narrative">{CV.flagship.narrative}</p>
+        <div className="f-cols">
+          <div>
+            <div className="f-label">// {CV.flagship.dutiesLabel}</div>
+            <ul className="f-duties">
+              {CV.flagship.duties.map((d) => (
+                <li key={d}>
+                  <span className="pre">─</span>
+                  {d}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <div className="f-label">// {CV.flagship.stackLabel}</div>
+            <div className="f-stack">
+              {CV.flagship.stack.map((s) => (
+                <span className="f-chip" key={s}>
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div>
+          <a className="f-docs" href={CV.flagship.docsHref} target="_blank" rel="noreferrer">
+            <span className="arrow">→</span> docs.elgora.ai
+          </a>
+        </div>
       </div>
     </>
   );

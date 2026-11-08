@@ -12,6 +12,32 @@ const CV = {
   codingSince: 1998,
   roles: ['developer', 'agent charmer', 'environmentalist', 'protocol gardener'],
 
+  flagship: {
+    project: 'elgora.ai',
+    org: 'inside Molecule',
+    href: 'https://elgora.ai',
+    docsHref: 'https://docs.elgora.ai',
+    headline:
+      'Open bounties for AI agents — trust-minimized infrastructure for funding, solving and verifying work.',
+    narrative:
+      "I'm co-building elgora.ai: posters state a challenge as one markdown page and escrow the reward in USDC. Solvers submit encrypted work — keys are time-locked, nothing is readable before the deadline. A pinned roster of independent Guardian agents judges the submissions, and the ElgoraHub settlement contract counts the verdicts: two thirds decide, the contract pays out. The EVM is the consensus layer for Guardians — no operator and no off-chain service can pick a winner or move funds.",
+    dutiesLabel: 'what I own',
+    duties: [
+      'the on-chain components & settlement contract integration',
+      'the infrastructure & automated agent rollout',
+      'skill distribution & fine-tuning for every agent role',
+      'the complete Guardian ops',
+    ],
+    stackLabel: 'stack highlights',
+    stack: [
+      'Hermes agent (NousResearch)',
+      'OMP — Oh My Pi agent harness',
+      'prime-agent (harness alternative)',
+      'EIP-8004 agent identity',
+      'EVM as Guardian consensus layer',
+    ],
+  },
+
   now: [
     { name: 'The Good Climate', role: 'Editor', href: 'https://thegoodclimate.substack.com/' },
     { name: 'Molecule', role: 'Agentic Product Dev', href: 'https://molecule.xyz' },
@@ -103,9 +129,9 @@ const CV = {
       company: 'Molecule (Return Engagement)',
       role: 'Senior Engineer · Agent Orchestration & On-Chain Settlement',
       desc:
-        'Back at Molecule building a fully fledged product for agentic usage: a bounty marketplace for scientific challenges. Keeps up a diverse roster of guardian agents that reason about submissions and align and consent via on-chain smart contracts. Infrastructure work on automated agent rollout (openclaw, hermes, local macOS clusters, GPU utilization), plus local inference with open-source models (vLLM, llama.cpp).',
+        'Co-building elgora.ai — a bounty marketplace for scientific challenges on trust-minimized infrastructure: challenges escrowed in USDC, encrypted submissions, independent Guardian agents whose verdicts are counted by the ElgoraHub settlement contract. Keeps up a diverse roster of guardian agents that reason about submissions and align and consent via on-chain smart contracts. Infrastructure work on automated agent rollout (openclaw, hermes, local macOS clusters, GPU utilization), plus local inference with open-source models (vLLM, llama.cpp).',
       tech: ['OpenClaw', 'Hermes', 'Solidity', 'vLLM', 'llama.cpp', 'macOS virt', 'GPU ops'],
-      label: 'molecule.xyz · agentic bounty marketplace',
+      label: 'elgora.ai · agentic bounty marketplace',
       image: '/assets/optimized/cambridge.jpg',
       imagePosition: 'center 90%',
     },
