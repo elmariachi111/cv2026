@@ -2,9 +2,9 @@
 const CV = {
   name: 'Stefan Adolf',
   handle: 'elmariachi',
-  tagline: 'Protocol & Agent Systems Engineer. Berlin. Building since Y2K.',
+  tagline: 'Agentic Systems Engineer. Berlin. Building since Y2K.',
   blurb:
-    'Twenty years of shipping production systems across web, backends, distributed protocols and on-chain infrastructure. Now building agent orchestration and on-chain settlement for scientific research and agent-run climate media.',
+    'Twenty years of shipping production-grade, resilient and maintainable software. Now building agent orchestration and on-chain settlement for scientific research.',
   location: 'Berlin, DE',
   email: 'elmariachi111+cv@proton.me',
   site: 'stadolf.de',

@@ -19,14 +19,14 @@ export function HeroSection() {
           <h1>
             <span>Stefan Adolf</span>
             <br />
-            <span className="sub">// protocol & agent systems engineer</span>
+            <span className="sub">// agentic systems engineer</span>
           </h1>
 
           <p className="t-tagline">
-            twenty years of shipping production systems across web, apps, apis,{" "}
-            <span className="acc">distributed protocols</span> and on-chain
-            infrastructure. Now building agent orchestration &amp; on-chain
-            settlement for scientific research and agent-run climate media.
+            twenty years of shipping{" "}
+            <span className="acc">production-grade, resilient and maintainable</span>{" "}
+            software. Now building agent orchestration &amp; on-chain
+            settlement for scientific research.
           </p>
 
           <div className="t-roles">
