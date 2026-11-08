@@ -61,6 +61,8 @@ export interface Flagship {
   tone: 'accent' | 'green';
   label: string;
   logo?: string;
+  mark?: string;
+  image?: string;
   project: string;
   org: string;
   href: string;

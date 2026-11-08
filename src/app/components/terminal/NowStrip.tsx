@@ -28,12 +28,16 @@ export function NowStrip() {
       </div>
       {CV.flagships.map((f) => (
         <div className={`t-flagship${f.tone === 'green' ? ' is-green' : ''}`} key={f.project}>
+          {f.image && (
+            <img className="f-photo" src={f.image} alt="" aria-hidden="true" />
+          )}
           <div className="f-head">
             <span className="t-live">
               <span className="t-pulse" />
               {f.label}
             </span>
             {f.logo === 'elgora-wordmark' && <ElgoraWordmark className="f-wordmark" />}
+            {f.mark && <img className="f-mark" src={f.mark} alt={`${f.project} mark`} />}
           </div>
           <h3 className="f-title">
             <a className="f-link" href={f.href} target="_blank" rel="noreferrer">

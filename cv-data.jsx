@@ -44,6 +44,8 @@ const CV = {
     {
       tone: 'green',
       label: 'currently curating',
+      mark: '/assets/logos/good-climate-mark.png',
+      image: '/assets/optimized/good-climate-landscape.jpg',
       project: 'The Good Climate',
       org: 'personal',
       href: 'https://thegoodclimate.substack.com/',
