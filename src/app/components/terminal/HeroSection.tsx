@@ -25,9 +25,8 @@ export function HeroSection() {
           <p className="t-tagline">
             twenty years of shipping production systems across web, apps, apis,{" "}
             <span className="acc">distributed protocols</span> and on-chain
-            infrastructure. Now building agent orchestration & on-chain
-            settlement for scientific research and agent-run climate media —{" "}
-            <span className="amb">moving into energy-systems software</span>.
+            infrastructure. Now building agent orchestration &amp; on-chain
+            settlement for scientific research and agent-run climate media.
           </p>
 
           <div className="t-roles">
