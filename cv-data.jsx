@@ -16,6 +16,7 @@ const CV = {
     {
       tone: 'accent',
       label: 'currently shipping',
+      logo: 'elgora-wordmark',
       project: 'elgora.ai',
       org: 'inside Molecule',
       href: 'https://elgora.ai',

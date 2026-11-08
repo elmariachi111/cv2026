@@ -342,6 +342,9 @@
   pointer-events: none;
 }
 .t-flagship > * { position: relative; }
+.t-flagship .f-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.t-flagship .f-wordmark { height: 20px; width: auto; color: var(--t-accent); opacity: 0.92; }
+.t-flagship .f-wordmark:hover { opacity: 1; text-shadow: 0 0 14px color-mix(in oklch, var(--t-accent), transparent 60%); }
 .t-live { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--t-fg-dim); text-transform: uppercase; letter-spacing: 0.1em; }
 .t-pulse {
   width: 8px; height: 8px; border-radius: 50%;
@@ -883,6 +886,7 @@
   .t-flagship { padding: 20px 14px 24px; }
   .t-flagship::before { inset: 6px; }
   .t-flagship .f-cols { grid-template-columns: 1fr; gap: 18px; }
+  .t-flagship .f-wordmark { height: 14px; opacity: 0.75; }
   .t-history-row { padding: 22px 14px 22px 18px; gap: 14px; }
   .t-history-row::after { right: 4px; font-size: 80px; }
   .t-quals { padding: 20px 14px; gap: 20px; }

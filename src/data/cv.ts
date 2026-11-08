@@ -60,6 +60,7 @@ export interface NowEntry {
 export interface Flagship {
   tone: 'accent' | 'green';
   label: string;
+  logo?: string;
   project: string;
   org: string;
   href: string;

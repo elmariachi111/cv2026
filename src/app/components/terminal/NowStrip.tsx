@@ -1,4 +1,5 @@
 import { CV } from '../../../data/cv';
+import { ElgoraWordmark } from './ElgoraWordmark';
 
 const VALUES = [
   
@@ -32,6 +33,7 @@ export function NowStrip() {
               <span className="t-pulse" />
               {f.label}
             </span>
+            {f.logo === 'elgora-wordmark' && <ElgoraWordmark className="f-wordmark" />}
           </div>
           <h3 className="f-title">
             <a className="f-link" href={f.href} target="_blank" rel="noreferrer">
