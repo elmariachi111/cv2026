@@ -43,7 +43,7 @@ export function NowStrip() {
             <a className="f-link" href={f.href} target="_blank" rel="noreferrer">
               {f.project}
             </a>
-            <span className="f-org"> — {f.org}</span>
+            {f.org && <span className="f-org"> — {f.org}</span>}
           </h3>
           <p className="f-headline">{f.headline}</p>
           <p className="f-narrative">{f.narrative}</p>

@@ -47,12 +47,11 @@ const CV = {
       mark: '/assets/logos/good-climate-mark.png',
       image: '/assets/optimized/good-climate-landscape.jpg',
       project: 'The Good Climate',
-      org: 'personal',
       href: 'https://thegoodclimate.substack.com/',
       headline:
-        'A narrative climate & energy letter — dry wit, market facts, no doom.',
+        'An information initiative on green tech and climate hope. We read news feeds and assemble facts, tell bold stories and write science backgrounders.',
       narrative:
-        "The Good Climate grew out of a personal interest in energy-based systems and my own efforts to transition into that space: a letter on the markets, technologies and geopolitics of the energy transition, written to be simple, short and linked. It runs on an agent pipeline I built for it — and every claim's sources stay checkable, even when the pages move.",
+        "This initiative grew out of a personal interest in energy-based systems and my own efforts to transition into that space. What the dek promises — reading news feeds, assembling facts, telling bold stories, writing science backgrounders — runs on an agent pipeline I built for it, and every claim's sources are sealed into web archives at citation time, so they stay checkable even when the pages move.",
       dutiesLabel: 'under the hood',
       duties: [
         'automated news curation & article previews — 40,000+ stories screened from 220 sources',

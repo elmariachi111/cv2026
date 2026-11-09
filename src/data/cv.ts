@@ -64,7 +64,7 @@ export interface Flagship {
   mark?: string;
   image?: string;
   project: string;
-  org: string;
+  org?: string;
   href: string;
   docsHref?: string;
   headline: string;
