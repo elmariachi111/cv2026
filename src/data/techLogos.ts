@@ -39,7 +39,7 @@ export const TECH_LOGOS: TechLogo[] = [
   { id: 'hermes',       name: 'Hermes Agent', logo: '/assets/logos/hermes-agent.svg'                 },
   { id: 'omp',          name: 'OMP',          logo: '/assets/logos/omp.svg',          colored: true  },
   { id: 'glm',          name: 'GLM',          logo: '/assets/logos/glm.svg'                          },
-  { id: 'primeintellect', name: 'Prime Intellect', abbr: 'PI'                                         },
+  { id: 'primeintellect', name: 'Prime Intellect', logo: '/assets/logos/primeintellect.svg'          },
   { id: 'openrouter',   name: 'OpenRouter',   logo: '/assets/logos/openrouter.svg'                   },
   { id: 'langfuse',     name: 'Langfuse',     logo: '/assets/logos/langfuse.svg',     colored: true  },
   { id: 'openclaw',     name: 'OpenClaw'                                                              },
