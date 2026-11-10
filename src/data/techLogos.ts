@@ -42,7 +42,7 @@ export const TECH_LOGOS: TechLogo[] = [
   { id: 'primeintellect', name: 'Prime Intellect', logo: '/assets/logos/primeintellect.svg'          },
   { id: 'openrouter',   name: 'OpenRouter',   logo: '/assets/logos/openrouter.svg'                   },
   { id: 'langfuse',     name: 'Langfuse',     logo: '/assets/logos/langfuse.svg',     colored: true  },
-  { id: 'openclaw',     name: 'OpenClaw'                                                              },
+  { id: 'openclaw',     name: 'OpenClaw',     logo: '/assets/logos/openclaw.svg',     colored: true  },
 
   // Cloud & Infra
   { id: 'aws',          name: 'AWS',          logo: '/assets/logos/aws.svg',          colored: true  },
