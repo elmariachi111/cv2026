@@ -21,24 +21,16 @@ const CV = {
       org: 'inside Molecule',
       href: 'https://elgora.ai',
       docsHref: 'https://docs.elgora.ai',
-      headline:
-        'Open bounties for AI agents — trust-minimized infrastructure for funding, solving and verifying work.',
       narrative:
-        "I'm co-building elgora.ai: posters state a challenge as one markdown page and escrow the reward in USDC. Solvers submit encrypted work — keys are time-locked, nothing is readable before the deadline. A pinned roster of independent Guardian agents judges the submissions, and the ElgoraHub settlement contract counts the verdicts: two thirds decide, the contract pays out. The EVM is the consensus layer for Guardians — no operator and no off-chain service can pick a winner or move funds.",
-      dutiesLabel: 'what I own',
-      duties: [
-        'the on-chain components & settlement contract integration',
-        'the infrastructure & automated agent rollout',
-        'skill distribution & fine-tuning for every agent role',
-        'the complete Guardian ops',
-      ],
-      stackLabel: 'stack highlights',
+        "Open bounties for AI agents. Rewards sit in USDC escrow, solutions stay time-lock encrypted until the deadline, and a roster of independent Guardian agents judges them on-chain. I own the settlement contracts, the agent infrastructure and the Guardian ops.",
+      stackLabel: 'stack',
       stack: [
-        'Hermes agent (NousResearch)',
-        'OMP — Oh My Pi agent harness',
-        'prime-agent (harness alternative)',
+        'EVM settlement contracts',
+        'time-lock encryption',
         'EIP-8004 agent identity',
-        'EVM as Guardian consensus layer',
+        'Hermes agent',
+        'OMP agent harness',
+        'skill distribution & fine-tuning',
       ],
     },
     {
@@ -48,34 +40,26 @@ const CV = {
       image: '/assets/optimized/good-climate-landscape.jpg',
       project: 'The Good Climate',
       href: 'https://thegoodclimate.substack.com/',
-      headline:
-        'An information initiative on green tech and climate hope. We read news feeds and assemble facts, tell bold stories and write science backgrounders.',
       narrative:
-        "This initiative grew out of a personal interest in energy-based systems and my own efforts to transition into that space. What the dek promises — reading news feeds, assembling facts, telling bold stories, writing science backgrounders — runs on an agent pipeline I built for it, and every claim's sources are sealed into web archives at citation time, so they stay checkable even when the pages move.",
-      dutiesLabel: 'under the hood',
-      duties: [
-        'automated news curation & article previews — 40,000+ stories screened from 220 sources',
-        'climate job board collections — 5,600+ roles indexed across boards & company career pages',
-        'asset analytics — 30 watched climate & energy stocks, price history & alerts, run by a prime agent',
-        "the wacz tool — every cited source sealed into a web archive at citation time",
-      ],
-      stackLabel: 'agents & tools',
+        "Green tech and climate news, run on an agent pipeline I built: 40,000+ stories screened from 220 sources, 5,600+ climate jobs indexed, and every cited source sealed into a web archive.",
+      stackLabel: 'stack',
       stack: [
+        'agentic news curation',
         'prime agent (asset analytics)',
-        'wacz tool (source sealing)',
-        'SQLite store',
+        'WACZ source archiving',
+        'SQLite',
         'Substack',
       ],
     },
     {
       tone: 'neutral',
-      label: 'working on',
+      label: 'side quest',
       mark: '/assets/logos/loop-mark.svg',
       project: 'loop.fun',
       href: 'https://loop.fun',
       docsHref: 'https://loop.fun',
       narrative:
-        "Agents do their best work in loops: observe, decide, act, check, repeat. The loop is also where they fall apart. Contexts bloat, state drifts, costs spin, and agents game weak checks to declare victory early. I'm following a fresh effort to give that cycle proper tooling: a field guide to loops, goals, harnesses and state, and to the shortcomings that keep a human nearby. Elgora's Guardian ops run exactly such loops, so this is the same problem from another angle. Worth watching.",
+        "A field guide to agentic loops: goals, harnesses, state, and the failure modes that still keep a human nearby.",
     },
   ],
 

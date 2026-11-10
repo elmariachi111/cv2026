@@ -48,7 +48,7 @@ export function NowStrip() {
           {f.headline && <p className="f-headline">{f.headline}</p>}
           <p className="f-narrative">{f.narrative}</p>
           {(f.duties?.length || f.stack?.length) && (
-            <div className="f-cols">
+            <div className={`f-cols${f.duties?.length && f.stack?.length ? '' : ' is-single'}`}>
               {f.duties?.length ? (
                 <div>
                   <div className="f-label">// {f.dutiesLabel}</div>
