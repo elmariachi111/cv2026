@@ -31,7 +31,7 @@ export function NowStrip() {
         <SecHead
           marker="//"
           title="ls ~/current-work"
-          hint="what I'm building right now: two projects and a side quest"
+          hint="what I'm building right now"
         />
       {CV.flagships.map((f) => (
         <div className={`t-flagship${f.tone !== 'accent' ? ` is-${f.tone}` : ''}`} key={f.project}>
