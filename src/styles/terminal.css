@@ -457,19 +457,67 @@
       transparent 58%);
 }
 
-/* Compact neutral flagship variant (sidequest block) — quiet, low */
+/* Compact neutral flagship variant — styled per loop.fun's style guide
+   (their tokens: loop red #f35b44, loop blue #519ef6, card fill #191919,
+   Inter body, JetBrains Mono labels, 10px/1.5px step pills, dashed blue
+   = repetition, red = the agent/direction, only slow 9s rotation) */
 .t-flagship.is-neutral {
-  --t-accent: var(--t-cyan);
-  --t-accent-dim: #41637a;
+  --t-accent: #f35b44;
+  --t-accent-dim: #a93e2d;
   padding: 14px 28px 16px;
-  background:
-    linear-gradient(115deg,
-      color-mix(in oklch, var(--t-accent), transparent 96%) 0%,
-      transparent 55%);
+  background: #191919;
+}
+.t-flagship.is-neutral::before {
+  border-radius: 12px;
+  border-color: rgba(179, 179, 179, 0.35);
 }
 .t-flagship.is-neutral .f-title { font-size: 17px; margin: 8px 0 2px; }
-.t-flagship.is-neutral .f-narrative { font-size: 13px; line-height: 1.6; margin-bottom: 10px; }
-.t-flagship.is-neutral .f-docs { margin-top: 0; }
+.t-flagship.is-neutral .f-narrative {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.t-flagship.is-neutral .f-live,
+.t-flagship.is-neutral .f-step,
+.t-flagship.is-neutral .f-docs {
+  font-family: 'JetBrains Mono', var(--font-terminal);
+}
+.t-flagship.is-neutral .f-docs { margin-top: 0; letter-spacing: 0.08em; }
+
+/* loop mark: dashed ring, red dot orbits clockwise at 9s per turn */
+.t-flagship .f-loopmark { height: 34px; width: 34px; flex: none; }
+.t-flagship .f-loopmark .loop-orbit {
+  transform-box: view-box;
+  transform-origin: 20px 20px;
+  animation: f-orbit 9s linear infinite;
+}
+@keyframes f-orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .t-flagship .f-loopmark .loop-orbit { animation: none; }
+}
+
+/* step pills (loop.fun Cycle language): 1.5px border, 10px radius;
+   'repeat' is repetition, so it goes dashed and blue */
+.t-flagship .f-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.t-flagship .f-step {
+  padding: 3px 10px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--t-fg);
+  border: 1.5px solid rgba(179, 179, 179, 0.4);
+  border-radius: 10px;
+}
+.t-flagship .f-step.is-repeat {
+  border-style: dashed;
+  border-color: #519ef6;
+  color: #519ef6;
+}
 
 /* ── Tech Logo Band ─────────────────────────────────────────────────── */
 

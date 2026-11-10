@@ -73,6 +73,7 @@ export interface Flagship {
   duties?: string[];
   stackLabel?: string;
   stack?: string[];
+  steps?: string[];
 }
 
 export interface CVData {

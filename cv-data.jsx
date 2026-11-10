@@ -70,11 +70,13 @@ const CV = {
     {
       tone: 'neutral',
       label: 'working on',
+      logo: 'loop-mark',
+      steps: ['observe', 'decide', 'act', 'check', 'repeat'],
       project: 'loop.fun',
       href: 'https://loop.fun',
       docsHref: 'https://loop.fun',
       narrative:
-        "Agents do their best work in loops: observe, decide, act, check, repeat. The loop is also where they fall apart — contexts bloat, state drifts, costs spin, and agents game weak checks to declare victory early. I'm following a fresh effort to give that cycle proper tooling — a field guide to loops, goals, harnesses and state, and to the shortcomings that keep a human nearby. Elgora's Guardian ops run exactly such loops, so this is the same problem from another angle — worth watching.",
+        "Agents do their best work in loops: observe, decide, act, check, repeat. The loop is also where they fall apart. Contexts bloat, state drifts, costs spin, and agents game weak checks to declare victory early. I'm following a fresh effort to give that cycle proper tooling: a field guide to loops, goals, harnesses and state, and to the shortcomings that keep a human nearby. Elgora's Guardian ops run exactly such loops, so this is the same problem from another angle. Worth watching.",
     },
   ],
 
