@@ -3,6 +3,8 @@ export interface TechLogo {
   name: string;
   logo?: string;
   colored?: boolean;
+  /** text badge when no logo file is available */
+  abbr?: string;
 }
 
 export const TECH_LOGOS: TechLogo[] = [
@@ -22,21 +24,25 @@ export const TECH_LOGOS: TechLogo[] = [
 
   // Blockchain
   { id: 'ethereum',     name: 'Ethereum',     logo: '/assets/logos/ethereum.svg'                     },
-  { id: 'base',         name: 'Base',         logo: '/assets/logos/base.svg'                         },
-  { id: 'openzeppelin', name: 'OpenZeppelin', logo: '/assets/logos/openzeppelin.svg'                 },
+  { id: 'base',         name: 'Base',         logo: '/assets/logos/base.svg',         colored: true  },
+  { id: 'openzeppelin', name: 'OpenZeppelin', logo: '/assets/logos/openzeppelin.svg', colored: true  },
   { id: 'foundry',      name: 'Foundry',      logo: '/assets/logos/foundry.png',      colored: true  },
   { id: 'thegraph',     name: 'The Graph',    logo: '/assets/logos/thegraph.svg',     colored: true  },
   { id: 'uma',          name: 'UMA',          logo: '/assets/logos/uma.svg',          colored: true  },
   { id: 'safe',         name: 'Safe',         logo: '/assets/logos/safe.svg',         colored: true  },
   { id: 'alchemy',      name: 'Alchemy',      logo: '/assets/logos/alchemy.svg'                      },
   { id: 'tenderly',     name: 'Tenderly',     logo: '/assets/logos/tenderly.svg',     colored: true  },
-  { id: 'privy',        name: 'Privy',        logo: '/assets/logos/privy.webp',       colored: true  },
+  { id: 'privy',        name: 'Privy',        logo: '/assets/logos/privy.webp'                       },
 
   // AI / Agents
-  { id: 'anthropic',    name: 'Anthropic',    logo: '/assets/logos/anthropic.svg'                    },
+  { id: 'claude',       name: 'Claude',       logo: '/assets/logos/claude.svg',       colored: true  },
+  { id: 'hermes',       name: 'Hermes Agent', logo: '/assets/logos/hermes-agent.svg'                 },
+  { id: 'omp',          name: 'OMP',          logo: '/assets/logos/omp.svg',          colored: true  },
+  { id: 'glm',          name: 'GLM',          logo: '/assets/logos/glm.svg'                          },
+  { id: 'primeintellect', name: 'Prime Intellect', logo: '/assets/logos/primeintellect.svg'          },
+  { id: 'openrouter',   name: 'OpenRouter',   logo: '/assets/logos/openrouter.svg'                   },
   { id: 'langfuse',     name: 'Langfuse',     logo: '/assets/logos/langfuse.svg',     colored: true  },
-  { id: 'openrouter',   name: 'OpenRouter'                                                            },
-  { id: 'openclaw',     name: 'OpenClaw'                                                              },
+  { id: 'openclaw',     name: 'OpenClaw',     logo: '/assets/logos/openclaw.svg',     colored: true  },
 
   // Cloud & Infra
   { id: 'aws',          name: 'AWS',          logo: '/assets/logos/aws.svg',          colored: true  },
@@ -54,4 +60,7 @@ export const TECH_LOGOS: TechLogo[] = [
   { id: 'nextjs',       name: 'Next.js',      logo: '/assets/logos/nextjs.svg'                       },
   { id: 'spring',       name: 'Spring',       logo: '/assets/logos/spring.svg',       colored: true  },
   { id: 'symfony',      name: 'Symfony',      logo: '/assets/logos/symfony.svg'                      },
+
+  // Tools
+  { id: 'vscode',       name: 'VS Code',      logo: '/assets/logos/vscode.svg',       colored: true  },
 ];

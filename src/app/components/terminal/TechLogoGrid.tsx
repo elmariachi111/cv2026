@@ -12,7 +12,7 @@ function LogoTile({ item }: { item: TechLogo }) {
           />
         ) : (
           <span className="t-logo-abbr">
-            {item.name.slice(0, 2).toUpperCase()}
+            {item.abbr ?? item.name.slice(0, 2).toUpperCase()}
           </span>
         )}
       </div>

@@ -108,6 +108,8 @@
   margin-top: -1px;
   position: relative;
 }
+/* clear gap between the page's sections (hero + values strip stay joined) */
+.t-section:not(.t-hero-sec) { margin-top: 36px; }
 
 /* Per-section hue */
 .t-section[data-hue="green"]   { --t-sec-accent: var(--t-accent); }
@@ -269,18 +271,6 @@
 .t-tagline .acc { color: var(--t-accent); }
 .t-tagline .amb { color: var(--t-amber); }
 
-.t-roles { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; justify-content: flex-end; }
-.t-role-tag {
-  border: 1px solid var(--t-line-strong);
-  padding: 6px 10px;
-  font-size: 12px;
-  color: var(--t-fg-dim);
-  background: var(--t-bg);
-  transition: border-color .15s ease, color .15s ease;
-}
-.t-role-tag:hover { border-color: var(--t-accent-dim); color: var(--t-fg); }
-.t-role-tag .pre { color: var(--t-accent); margin-right: 6px; }
-
 /* ── Values strip ──────────────────────────────────────────────────── */
 
 .t-values-strip {
@@ -319,16 +309,71 @@
 .t-values-strip .val .txt { color: var(--t-fg); }
 .t-values-strip .sep { color: var(--t-fg-mute); }
 
-/* ── Now strip ─────────────────────────────────────────────────────── */
+/* ── Flagship block ──────────────────────────────────────────────────── */
 
-.t-now-strip {
-  padding: 18px 28px;
-  display: flex;
-  align-items: baseline;
-  gap: 18px;
-  flex-wrap: wrap;
+/* The wash is painted by ::after, clipped to the same inset + radius as
+   the ::before frame, so it never bleeds past the rounded box corners.
+   Variants override --f-bg / --f-radius / --f-inset, not `background`. */
+/* the three flagships sit inside a "~/now" section; the section head
+   already draws the top rule */
+.t-now .t-sec-head + .t-flagship { border-top: 0; }
+
+.t-flagship {
+  --f-inset: 10px;
+  --f-radius: 6px;
+  --f-bg:
+    linear-gradient(115deg,
+      color-mix(in oklch, var(--t-accent), transparent 95%) 0%,
+      transparent 60%),
+    radial-gradient(ellipse at 85% 0%,
+      color-mix(in oklch, var(--t-accent), transparent 88%) 0%,
+      transparent 55%);
+  padding: 26px 28px 30px;
   border-top: 1px solid var(--t-line);
+  position: relative;
+  isolation: isolate;
 }
+.t-flagship::before {
+  content: '';
+  position: absolute;
+  inset: var(--f-inset);
+  border: 1px solid color-mix(in oklch, var(--t-accent), transparent 55%);
+  border-radius: var(--f-radius);
+  pointer-events: none;
+  z-index: 2;
+}
+.t-flagship::after {
+  content: '';
+  position: absolute;
+  inset: var(--f-inset);
+  border-radius: var(--f-radius);
+  background: var(--f-bg);
+  pointer-events: none;
+  z-index: -1;
+}
+.t-flagship .f-photo {
+  position: absolute;
+  inset: var(--f-inset);
+  width: calc(100% - 2 * var(--f-inset));
+  height: calc(100% - 2 * var(--f-inset));
+  object-fit: cover;
+  opacity: 0.16;
+  z-index: 0;
+  filter: saturate(1.1);
+  border-radius: var(--f-radius);
+}
+.t-flagship .f-mark {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px var(--t-line-strong), 0 0 18px color-mix(in oklch, var(--t-accent), transparent 75%);
+}
+.t-flagship > * { position: relative; }
+.t-flagship .f-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.t-flagship .f-head > :last-child:not(.t-live) { margin-left: auto; }
+.t-flagship .f-wordmark { height: 20px; width: auto; color: var(--t-accent); opacity: 0.92; }
+.t-flagship .f-wordmark:hover { opacity: 1; text-shadow: 0 0 14px color-mix(in oklch, var(--t-accent), transparent 60%); }
 .t-live { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--t-fg-dim); text-transform: uppercase; letter-spacing: 0.1em; }
 .t-pulse {
   width: 8px; height: 8px; border-radius: 50%;
@@ -337,10 +382,173 @@
   animation: t-pulse 2s ease-in-out infinite;
 }
 @keyframes t-pulse { 0%,100% { opacity: 0.5; transform: scale(0.9); } 50% { opacity: 1; transform: scale(1.1); } }
-.t-now-strip .lbl { color: var(--t-fg-mute); margin-right: 6px; }
-.t-now-strip .t-proj { color: var(--t-fg); border-bottom: 1px dashed var(--t-line-strong); }
-.t-now-strip .t-proj:hover { color: var(--t-accent); border-bottom-color: var(--t-accent-dim); }
-.t-now-strip .t-proj .arrow { color: var(--t-accent); margin: 0 4px; }
+.t-flagship .f-title {
+  margin: 14px 0 4px;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--t-fg);
+}
+.t-flagship .f-title .f-link {
+  color: var(--t-accent);
+  text-decoration: none;
+  text-shadow: 0 0 18px color-mix(in oklch, var(--t-accent), transparent 70%);
+}
+.t-flagship .f-title .f-link:hover { text-decoration: underline; }
+.t-flagship .f-org { font-size: 13px; color: var(--t-fg-mute); letter-spacing: 0.02em; }
+.t-flagship .f-headline {
+  margin: 8px 0 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--t-fg-dim);
+}
+.t-flagship .f-narrative {
+  max-width: 78ch;
+  margin: 0 0 18px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: color-mix(in oklch, var(--t-fg), transparent 12%);
+}
+.t-flagship .f-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px 34px;
+  margin: 0 0 14px;
+}
+.t-flagship .f-cols.is-single { grid-template-columns: minmax(0, 1fr); }
+.t-flagship .f-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--t-fg-mute);
+  margin-bottom: 8px;
+}
+.t-flagship .f-duties {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12.5px;
+  line-height: 1.9;
+  color: var(--t-fg);
+}
+.t-flagship .f-duties .pre { color: var(--t-accent); margin-right: 8px; }
+.t-flagship .f-stack { display: flex; flex-wrap: wrap; gap: 8px; }
+.t-flagship .f-chip {
+  padding: 3px 10px;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--t-fg);
+  border: 1px solid var(--t-line-strong);
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--t-accent), transparent 94%);
+}
+.t-flagship .f-chip:hover { border-color: var(--t-accent-dim); color: var(--t-accent); }
+.t-flagship .f-docs {
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  color: var(--t-accent);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.t-flagship .f-links { display: flex; flex-wrap: wrap; gap: 6px 28px; }
+.t-flagship .f-docs .arrow { margin-right: 6px; }
+.t-flagship .f-docs:hover { text-shadow: 0 0 12px color-mix(in oklch, var(--t-accent), transparent 55%); }
+
+/* Elgora flagship variant: elgora.ai's own "record" palette (live CSS,
+   Nov 2026) on its dark invert surface: olive #353628 / #484938,
+   lime accent #cbd570, beige ink #fff3cc. The site's Babylon gardens
+   hero fades in from the right so the copy sits on solid olive. */
+.t-flagship.is-elgora {
+  --t-accent: #cbd570;
+  --t-accent-dim: #8f9650;
+  --t-fg: #fff3cc;
+  --t-fg-dim: color-mix(in srgb, #fff3cc 70%, transparent);
+  --t-fg-mute: color-mix(in srgb, #fff3cc 50%, transparent);
+  --t-line-strong: color-mix(in srgb, #fff3cc 22%, transparent);
+  --f-bg: linear-gradient(100deg, #353628 0%, #3d3e2f 45%, #484938 100%);
+}
+.t-flagship.is-elgora .f-photo {
+  opacity: 0.6;
+  filter: saturate(0.85);
+  object-position: 50% 70%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 25%, #000 85%);
+  mask-image: linear-gradient(90deg, transparent 25%, #000 85%);
+}
+.t-flagship.is-elgora .f-wordmark { color: #fff3cc; }
+.t-flagship.is-elgora .f-title .f-link { text-shadow: none; }
+.t-flagship.is-elgora .f-chip {
+  background: color-mix(in srgb, #353628 80%, transparent);
+  border-color: color-mix(in srgb, #cbd570 30%, transparent);
+}
+
+/* Elgora + Good Climate have no label row: the logo floats in the
+   top-right corner instead of taking a header row, and padding tightens */
+.t-flagship.is-elgora,
+.t-flagship.is-green { padding: 24px 28px 22px; }
+.t-flagship.is-elgora .f-head,
+.t-flagship.is-green .f-head { position: absolute; top: 24px; right: 28px; }
+.t-flagship.is-elgora .f-title,
+.t-flagship.is-green .f-title { margin-top: 0; }
+.t-flagship.is-elgora > :last-child,
+.t-flagship.is-green > :last-child { margin-bottom: 0; }
+
+/* Green-toned flagship variant (climate block) — inverted, graded wash */
+.t-flagship.is-green {
+  --t-accent: #00ff41;
+  --t-accent-dim: #0f8c33;
+  --f-bg:
+    linear-gradient(115deg,
+      color-mix(in oklch, var(--t-accent), transparent 89%) 0%,
+      transparent 62%),
+    radial-gradient(ellipse at 12% 100%,
+      color-mix(in oklch, var(--t-accent), transparent 85%) 0%,
+      transparent 58%);
+}
+
+/* Compact loop.fun flagship variant — tokens from loop.fun's
+   brand/STYLEGUIDE.md (dark theme):
+   loop-red #f35b44 is the only accent; fd-accent = red at 13% over the
+   fd-card graphite #18191b; fd-accent-foreground #fba193; body #dddfe3,
+   muted #9a9ea7. Card = 12px radius, 1px border, flat fill, no shadow,
+   no gradient. No glows, no fades: the agent dot is a solid red dot.
+   Typeface stays the CV's own mono, same as the other blocks. */
+.t-flagship.is-neutral {
+  --t-accent: #f35b44;
+  --t-accent-dim: #fba193;
+  --t-fg: #dddfe3;
+  --t-fg-dim: #9a9ea7;
+  --t-fg-mute: #9a9ea7;
+  --f-radius: 12px;
+  --f-bg: color-mix(in srgb, #f35b44 13%, #18191b);
+  padding: 14px 28px 16px;
+}
+.t-flagship.is-neutral::before {
+  border-color: color-mix(in srgb, #f35b44 45%, transparent);
+}
+.t-flagship.is-neutral .f-title {
+  font-size: 17px;
+  margin: 8px 0 2px;
+}
+.t-flagship.is-neutral .f-title .f-link { text-shadow: none; }
+.t-flagship.is-neutral .f-narrative {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: var(--t-fg);
+}
+.t-flagship.is-neutral .t-live { color: var(--t-accent-dim); }
+.t-flagship.is-neutral .t-pulse { animation: none; box-shadow: none; opacity: 1; }
+.t-flagship.is-neutral .f-docs { margin-top: 0; }
+.t-flagship.is-neutral .f-docs:hover { text-shadow: none; text-decoration: underline; }
+
+/* the loop.fun mark is the icon tile (rx 15/64): square crop, no shadow */
+.t-flagship.is-neutral .f-mark {
+  height: 44px;
+  width: 44px;
+  border-radius: 10px;
+  box-shadow: none;
+}
 
 /* ── Tech Logo Band ─────────────────────────────────────────────────── */
 
@@ -417,8 +625,9 @@
   width: 36px;
   height: 36px;
   object-fit: contain;
-  /* desaturate mono logos to match terminal palette */
-  filter: grayscale(1) brightness(1.5) contrast(0.9);
+  /* mono logos: flatten to black, then invert to a light gray, so any
+     source fill (black, dark gray, brand color) reads on the dark tiles */
+  filter: brightness(0) invert(0.8);
   transition: filter 0.2s ease;
 }
 
@@ -429,7 +638,7 @@
 }
 
 .t-logo-tile:hover .t-logo-img {
-  filter: grayscale(0.3) brightness(1.6) contrast(1);
+  filter: brightness(0) invert(1);
 }
 
 .t-logo-tile:hover .t-logo-img.colored {
@@ -787,7 +996,25 @@
   .t-sec-head { padding: 12px 12px; gap: 8px; }
   .t-hero { padding: 28px 14px 24px; gap: 24px; }
   .t-values-strip { padding: 12px 14px; }
-  .t-now-strip { padding: 16px 14px; gap: 14px; }
+  .t-flagship { padding: 20px 14px 24px; }
+  .t-flagship { --f-inset: 6px; }
+  .t-flagship .f-cols { grid-template-columns: 1fr; gap: 18px; }
+  .t-flagship .f-wordmark { height: 14px; opacity: 0.75; }
+  .t-flagship .f-mark { height: 44px; width: 44px; }
+  .t-flagship.is-neutral { padding: 12px 14px 14px; }
+  .t-section:not(.t-hero-sec) { margin-top: 24px; }
+  .t-flagship.is-elgora,
+  .t-flagship.is-green { padding: 18px 14px; }
+  .t-flagship.is-elgora .f-head,
+  .t-flagship.is-green .f-head { position: relative; top: auto; right: auto; }
+  .t-flagship.is-elgora .f-title,
+  .t-flagship.is-green .f-title { margin-top: 10px; }
+  .t-flagship.is-elgora .f-photo {
+    opacity: 0.45;
+    -webkit-mask-image: linear-gradient(180deg, transparent 35%, #000 100%);
+    mask-image: linear-gradient(180deg, transparent 35%, #000 100%);
+  }
+  .t-flagship.is-neutral .f-mark { height: 36px; width: 36px; }
   .t-history-row { padding: 22px 14px 22px 18px; gap: 14px; }
   .t-history-row::after { right: 4px; font-size: 80px; }
   .t-quals { padding: 20px 14px; gap: 20px; }

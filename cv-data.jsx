@@ -2,15 +2,65 @@
 const CV = {
   name: 'Stefan Adolf',
   handle: 'elmariachi',
-  tagline: 'Protocol & Agent Systems Engineer. Berlin. Building since Y2K.',
+  tagline: 'Agentic Systems Engineer. Berlin. Building since Y2K.',
   blurb:
-    'Twenty years of shipping production systems across web, backends, distributed protocols and on-chain infrastructure. Now building agent orchestration and on-chain settlement for scientific research, agent-run climate media — and moving into energy-systems software.',
+    'Twenty years of shipping production-grade, resilient and maintainable software. Now building agent orchestration and on-chain settlement for scientific research.',
   location: 'Berlin, DE',
   email: 'elmariachi111+cv@proton.me',
   site: 'stadolf.de',
   birthYear: 1978,
   codingSince: 1998,
   roles: ['developer', 'agent charmer', 'environmentalist', 'protocol gardener'],
+
+  flagships: [
+    {
+      tone: 'elgora',
+      logo: 'elgora-wordmark',
+      image: '/assets/optimized/elgora-hero.jpg',
+      project: 'elgora.ai',
+      org: 'inside Molecule',
+      href: 'https://elgora.ai',
+      docsHref: 'https://docs.elgora.ai',
+      narrative:
+        "Open bounties for AI agents. Rewards sit in USDC escrow, solutions stay time-lock encrypted until the deadline, and a roster of independent Guardian agents judges them on-chain. I own the settlement contracts, the agent infrastructure and the Guardian ops.",
+      stackLabel: 'stack',
+      stack: [
+        'EVM settlement',
+        'time-lock encryption',
+        'EIP-8004 identity',
+        'Hermes agent',
+        'OMP harness',
+        'agent fine-tuning',
+      ],
+    },
+    {
+      tone: 'green',
+      mark: '/assets/logos/good-climate-mark.png',
+      image: '/assets/optimized/good-climate-landscape.jpg',
+      project: 'The Good Climate',
+      href: 'https://thegoodclimate.substack.com/',
+      narrative:
+        "Green tech and climate news, run on an agent pipeline I built: 40,000+ stories screened from 220 sources, 5,600+ climate jobs indexed, and every cited source sealed into a web archive.",
+      stackLabel: 'stack',
+      stack: [
+        'agentic news curation',
+        'prime agent (asset analytics)',
+        'WACZ source archiving',
+        'SQLite',
+        'Substack',
+      ],
+    },
+    {
+      tone: 'neutral',
+      label: 'side quest',
+      mark: '/assets/logos/loop-mark.svg',
+      project: 'loop.fun',
+      href: 'https://loop.fun',
+      docsHref: 'https://loop.fun',
+      narrative:
+        "A field guide to agentic loops: goals, harnesses, state, and the failure modes that still keep a human nearby.",
+    },
+  ],
 
   now: [
     { name: 'The Good Climate', role: 'Editor', href: 'https://thegoodclimate.substack.com/' },
@@ -103,9 +153,9 @@ const CV = {
       company: 'Molecule (Return Engagement)',
       role: 'Senior Engineer · Agent Orchestration & On-Chain Settlement',
       desc:
-        'Back at Molecule building a fully fledged product for agentic usage: a bounty marketplace for scientific challenges. Keeps up a diverse roster of guardian agents that reason about submissions and align and consent via on-chain smart contracts. Infrastructure work on automated agent rollout (openclaw, hermes, local macOS clusters, GPU utilization), plus local inference with open-source models (vLLM, llama.cpp).',
+        'Co-building elgora.ai — a bounty marketplace for scientific challenges on trust-minimized infrastructure: challenges escrowed in USDC, encrypted submissions, independent Guardian agents whose verdicts are counted by the ElgoraHub settlement contract. Keeps up a diverse roster of guardian agents that reason about submissions and align and consent via on-chain smart contracts. Infrastructure work on automated agent rollout (openclaw, hermes, local macOS clusters, GPU utilization), plus local inference with open-source models (vLLM, llama.cpp).',
       tech: ['OpenClaw', 'Hermes', 'Solidity', 'vLLM', 'llama.cpp', 'macOS virt', 'GPU ops'],
-      label: 'molecule.xyz · agentic bounty marketplace',
+      label: 'elgora.ai · agentic bounty marketplace',
       image: '/assets/optimized/cambridge.jpg',
       imagePosition: 'center 90%',
     },

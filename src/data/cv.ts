@@ -33,7 +33,7 @@ export interface HistoryEntry {
   role: string;
   desc: string;
   tech: string[];
-  label: string;
+  label?: string;
   image?: string;
   imagePosition?: string;
 }
@@ -57,6 +57,24 @@ export interface NowEntry {
   href: string;
 }
 
+export interface Flagship {
+  tone: 'accent' | 'elgora' | 'green' | 'neutral';
+  label: string;
+  logo?: string;
+  mark?: string;
+  image?: string;
+  project: string;
+  org?: string;
+  href: string;
+  docsHref?: string;
+  headline?: string;
+  narrative: string;
+  dutiesLabel?: string;
+  duties?: string[];
+  stackLabel?: string;
+  stack?: string[];
+}
+
 export interface CVData {
   name: string;
   handle: string;
@@ -68,6 +86,7 @@ export interface CVData {
   birthYear: number;
   codingSince: number;
   roles: string[];
+  flagships: Flagship[];
   now: NowEntry[];
   skills: SkillCategory[];
   history: HistoryEntry[];

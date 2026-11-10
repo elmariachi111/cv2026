@@ -1,9 +1,11 @@
 import { CV } from '../../../data/cv';
+import { ElgoraWordmark } from './ElgoraWordmark';
+import { SecHead } from './SecHead';
 
 const VALUES = [
   
   { hue: 'var(--t-magenta)', txt: 'privacy' },
-  { hue: 'var(--t-accent)',  txt: 'wagmi' },
+  { hue: 'var(--t-accent)',  txt: 'open protocols' },
   
   { hue: 'var(--t-cyan)',    txt: 'permissionless access' },
   { hue: 'var(--t-violet)',  txt: 'sustainability' },
@@ -14,7 +16,7 @@ export function NowStrip() {
   return (
     <>
       <div className="t-values-strip">
-        <span className="lbl">// cypherpunk guardrails</span>
+        <span className="lbl">// operating principles</span>
         {VALUES.map((v, i) => (
           <span key={v.txt} style={{ display: 'contents' }}>
             <span className="val" style={{ '--vhue': v.hue } as React.CSSProperties}>
@@ -25,25 +27,74 @@ export function NowStrip() {
           </span>
         ))}
       </div>
-      <div className="t-now-strip">
-        <span className="t-live">
-          <span className="t-pulse" />
-          currently shipping
-        </span>
-        <span style={{ color: 'var(--t-fg-mute)' }}>·</span>
-        {CV.now.map((p, i) => (
-          <span key={p.name} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-            <a className="t-proj" href={p.href} target="_blank" rel="noreferrer">
-              <span style={{ color: 'var(--t-fg-dim)' }}>{p.role.toLowerCase()} </span>
-              <span className="arrow">→</span>
-              <span>{p.name}</span>
-            </a>
-            {i < CV.now.length - 1 && (
-              <span style={{ color: 'var(--t-fg-mute)' }}>·</span>
+      <section className="t-section t-now" data-hue="cyan">
+        <SecHead
+          marker="//"
+          title="ls ~/current-work"
+          hint="what I'm building right now"
+        />
+      {CV.flagships.map((f) => (
+        <div className={`t-flagship${f.tone !== 'accent' ? ` is-${f.tone}` : ''}`} key={f.project}>
+          {f.image && (
+            <img className="f-photo" src={f.image} alt="" aria-hidden="true" />
+          )}
+          <div className="f-head">
+            {f.label && (
+              <span className="t-live">
+                <span className="t-pulse" />
+                {f.label}
+              </span>
             )}
-          </span>
-        ))}
-      </div>
+            {f.logo === 'elgora-wordmark' && <ElgoraWordmark className="f-wordmark" />}
+            {f.mark && <img className="f-mark" src={f.mark} alt={`${f.project} mark`} />}
+          </div>
+          <h3 className="f-title">
+            <a className="f-link" href={f.href} target="_blank" rel="noreferrer">
+              {f.project}
+            </a>
+            {f.org && <span className="f-org"> — {f.org}</span>}
+          </h3>
+          {f.headline && <p className="f-headline">{f.headline}</p>}
+          <p className="f-narrative">{f.narrative}</p>
+          {(f.duties?.length || f.stack?.length) && (
+            <div className={`f-cols${f.duties?.length && f.stack?.length ? '' : ' is-single'}`}>
+              {f.duties?.length ? (
+                <div>
+                  <div className="f-label">// {f.dutiesLabel}</div>
+                  <ul className="f-duties">
+                    {f.duties.map((d) => (
+                      <li key={d}>
+                        <span className="pre">─</span>
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              {f.stack?.length ? (
+                <div>
+                  <div className="f-label">// {f.stackLabel}</div>
+                  <div className="f-stack">
+                    {f.stack.map((s) => (
+                      <span className="f-chip" key={s}>
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          )}
+          <div className="f-links">
+            {[...new Set([f.href, f.docsHref].filter(Boolean) as string[])].map((url) => (
+              <a className="f-docs" href={url} target="_blank" rel="noreferrer" key={url}>
+                <span className="arrow">→</span> {url.replace(/^https:\/\//, '').replace(/\/$/, '')}
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+      </section>
     </>
   );
 }

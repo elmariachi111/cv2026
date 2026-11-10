@@ -5,8 +5,8 @@ import { useIsMobile } from './ui/use-mobile';
 const values = [
   {
     icon: Shield,
-    title: 'CYPHERPUNK ETHOS',
-    description: 'I BUILD SYSTEMS THAT EMPOWER INDIVIDUALS THROUGH CRYPTOGRAPHY AND PRIVACY-FIRST DESIGN. CODE IS LAW, ENCRYPTION IS FREEDOM.',
+    title: 'TRUST-MINIMIZED SYSTEMS',
+    description: 'I BUILD SYSTEMS THAT VERIFY INSTEAD OF ASSUME. CRYPTOGRAPHY AS INFRASTRUCTURE, NOT IDEOLOGY.',
     color: 'var(--neon-cyan)',
     bgColor: 'rgba(0, 255, 255, 0.05)',
   },

@@ -16,7 +16,7 @@
 3. Official site (e.g. `https://www.getfoundry.sh/foundry-logo.png`) — PNG is fine, Vite handles it
 4. Text abbreviation badge in the component (no file needed)
 
-**Rendering:** mono SVGs from Simple Icons need `filter: grayscale(1) brightness(1.5)` to look good on dark backgrounds. Brand-colored logos (AWS, GCP, Langfuse) should skip the filter — use a `colored` flag in the data model.
+**Rendering:** mono logos get `filter: brightness(0) invert(0.8)` (flatten, then light gray), so black or dark source fills still read on the dark tiles. Brand-colored logos (AWS, GCP, Langfuse) should skip the filter — use a `colored` flag in the data model.
 
 ## Stack
 
