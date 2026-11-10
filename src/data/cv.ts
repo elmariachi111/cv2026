@@ -58,7 +58,7 @@ export interface NowEntry {
 }
 
 export interface Flagship {
-  tone: 'accent' | 'green' | 'neutral';
+  tone: 'accent' | 'elgora' | 'green' | 'neutral';
   label: string;
   logo?: string;
   mark?: string;

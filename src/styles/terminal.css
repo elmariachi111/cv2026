@@ -324,6 +324,10 @@
 /* The wash is painted by ::after, clipped to the same inset + radius as
    the ::before frame, so it never bleeds past the rounded box corners.
    Variants override --f-bg / --f-radius / --f-inset, not `background`. */
+/* the three flagships sit inside a "~/now" section; the section head
+   already draws the top rule */
+.t-now .t-sec-head + .t-flagship { border-top: 0; }
+
 .t-flagship {
   --f-inset: 10px;
   --f-radius: 6px;
@@ -459,6 +463,33 @@
 }
 .t-flagship .f-docs .arrow { margin-right: 6px; }
 .t-flagship .f-docs:hover { text-shadow: 0 0 12px color-mix(in oklch, var(--t-accent), transparent 55%); }
+
+/* Elgora flagship variant: elgora.ai's own "record" palette (live CSS,
+   Nov 2026) on its dark invert surface: olive #353628 / #484938,
+   lime accent #cbd570, beige ink #fff3cc. The site's Babylon gardens
+   hero fades in from the right so the copy sits on solid olive. */
+.t-flagship.is-elgora {
+  --t-accent: #cbd570;
+  --t-accent-dim: #8f9650;
+  --t-fg: #fff3cc;
+  --t-fg-dim: color-mix(in srgb, #fff3cc 70%, transparent);
+  --t-fg-mute: color-mix(in srgb, #fff3cc 50%, transparent);
+  --t-line-strong: color-mix(in srgb, #fff3cc 22%, transparent);
+  --f-bg: linear-gradient(100deg, #353628 0%, #3d3e2f 45%, #484938 100%);
+}
+.t-flagship.is-elgora .f-photo {
+  opacity: 0.6;
+  filter: saturate(0.85);
+  object-position: 50% 70%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 25%, #000 85%);
+  mask-image: linear-gradient(90deg, transparent 25%, #000 85%);
+}
+.t-flagship.is-elgora .f-wordmark { color: #fff3cc; }
+.t-flagship.is-elgora .f-title .f-link { text-shadow: none; }
+.t-flagship.is-elgora .f-chip {
+  background: color-mix(in srgb, #353628 80%, transparent);
+  border-color: color-mix(in srgb, #cbd570 30%, transparent);
+}
 
 /* Green-toned flagship variant (climate block) — inverted, graded wash */
 .t-flagship.is-green {
@@ -972,6 +1003,11 @@
   .t-flagship .f-wordmark { height: 14px; opacity: 0.75; }
   .t-flagship .f-mark { height: 44px; width: 44px; }
   .t-flagship.is-neutral { padding: 12px 14px 14px; }
+  .t-flagship.is-elgora .f-photo {
+    opacity: 0.45;
+    -webkit-mask-image: linear-gradient(180deg, transparent 35%, #000 100%);
+    mask-image: linear-gradient(180deg, transparent 35%, #000 100%);
+  }
   .t-flagship.is-neutral .f-mark { height: 36px; width: 36px; }
   .t-history-row { padding: 22px 14px 22px 18px; gap: 14px; }
   .t-history-row::after { right: 4px; font-size: 80px; }

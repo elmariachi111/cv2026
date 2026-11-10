@@ -1,5 +1,6 @@
 import { CV } from '../../../data/cv';
 import { ElgoraWordmark } from './ElgoraWordmark';
+import { SecHead } from './SecHead';
 
 const VALUES = [
   
@@ -26,6 +27,12 @@ export function NowStrip() {
           </span>
         ))}
       </div>
+      <section className="t-section t-now" data-hue="cyan">
+        <SecHead
+          marker="//"
+          title="ls ~/current-work"
+          hint="what I'm building right now: two projects and a side quest"
+        />
       {CV.flagships.map((f) => (
         <div className={`t-flagship${f.tone !== 'accent' ? ` is-${f.tone}` : ''}`} key={f.project}>
           {f.image && (
@@ -85,6 +92,7 @@ export function NowStrip() {
           )}
         </div>
       ))}
+      </section>
     </>
   );
 }

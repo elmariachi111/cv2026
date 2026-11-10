@@ -14,9 +14,10 @@ const CV = {
 
   flagships: [
     {
-      tone: 'accent',
+      tone: 'elgora',
       label: 'currently shipping',
       logo: 'elgora-wordmark',
+      image: '/assets/optimized/elgora-hero.jpg',
       project: 'elgora.ai',
       org: 'inside Molecule',
       href: 'https://elgora.ai',
