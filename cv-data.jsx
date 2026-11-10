@@ -70,8 +70,7 @@ const CV = {
     {
       tone: 'neutral',
       label: 'working on',
-      logo: 'loop-mark',
-      steps: ['observe', 'decide', 'act', 'check', 'repeat'],
+      mark: '/assets/logos/loop-mark.svg',
       project: 'loop.fun',
       href: 'https://loop.fun',
       docsHref: 'https://loop.fun',

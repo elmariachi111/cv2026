@@ -1,6 +1,5 @@
 import { CV } from '../../../data/cv';
 import { ElgoraWordmark } from './ElgoraWordmark';
-import { LoopMark } from './LoopMark';
 
 const VALUES = [
   
@@ -38,7 +37,6 @@ export function NowStrip() {
               {f.label}
             </span>
             {f.logo === 'elgora-wordmark' && <ElgoraWordmark className="f-wordmark" />}
-            {f.logo === 'loop-mark' && <LoopMark className="f-loopmark" />}
             {f.mark && <img className="f-mark" src={f.mark} alt={`${f.project} mark`} />}
           </div>
           <h3 className="f-title">
@@ -83,15 +81,6 @@ export function NowStrip() {
               <a className="f-docs" href={f.docsHref} target="_blank" rel="noreferrer">
                 <span className="arrow">→</span> {f.docsHref.replace('https://', '')}
               </a>
-            </div>
-          )}
-          {f.steps && (
-            <div className="f-steps">
-              {f.steps.map((s) => (
-                <span className={`f-step${s === 'repeat' ? ' is-repeat' : ''}`} key={s}>
-                  {s}
-                </span>
-              ))}
             </div>
           )}
         </div>
