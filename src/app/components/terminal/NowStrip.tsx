@@ -85,13 +85,13 @@ export function NowStrip() {
               ) : null}
             </div>
           )}
-          {f.docsHref && (
-            <div>
-              <a className="f-docs" href={f.docsHref} target="_blank" rel="noreferrer">
-                <span className="arrow">→</span> {f.docsHref.replace('https://', '')}
+          <div className="f-links">
+            {[...new Set([f.href, f.docsHref].filter(Boolean) as string[])].map((url) => (
+              <a className="f-docs" href={url} target="_blank" rel="noreferrer" key={url}>
+                <span className="arrow">→</span> {url.replace(/^https:\/\//, '').replace(/\/$/, '')}
               </a>
-            </div>
-          )}
+            ))}
+          </div>
         </div>
       ))}
       </section>

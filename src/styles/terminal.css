@@ -404,10 +404,9 @@
 .t-flagship .f-title .f-link {
   color: var(--t-accent);
   text-decoration: none;
-  border-bottom: 1px dashed var(--t-line-strong);
   text-shadow: 0 0 18px color-mix(in oklch, var(--t-accent), transparent 70%);
 }
-.t-flagship .f-title .f-link:hover { border-bottom-color: var(--t-accent-dim); }
+.t-flagship .f-title .f-link:hover { text-decoration: underline; }
 .t-flagship .f-org { font-size: 13px; color: var(--t-fg-mute); letter-spacing: 0.02em; }
 .t-flagship .f-headline {
   margin: 8px 0 10px;
@@ -464,6 +463,7 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+.t-flagship .f-links { display: flex; flex-wrap: wrap; gap: 6px 28px; }
 .t-flagship .f-docs .arrow { margin-right: 6px; }
 .t-flagship .f-docs:hover { text-shadow: 0 0 12px color-mix(in oklch, var(--t-accent), transparent 55%); }
 
@@ -542,11 +542,7 @@
   font-size: 17px;
   margin: 8px 0 2px;
 }
-.t-flagship.is-neutral .f-title .f-link {
-  text-shadow: none;
-  border-bottom: 1px solid transparent;
-}
-.t-flagship.is-neutral .f-title .f-link:hover { border-bottom-color: var(--t-accent); }
+.t-flagship.is-neutral .f-title .f-link { text-shadow: none; }
 .t-flagship.is-neutral .f-narrative {
   font-size: 13px;
   line-height: 1.6;
