@@ -33,7 +33,7 @@ export interface HistoryEntry {
   role: string;
   desc: string;
   tech: string[];
-  label: string;
+  label?: string;
   image?: string;
   imagePosition?: string;
 }

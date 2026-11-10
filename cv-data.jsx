@@ -15,7 +15,6 @@ const CV = {
   flagships: [
     {
       tone: 'elgora',
-      label: 'currently shipping',
       logo: 'elgora-wordmark',
       image: '/assets/optimized/elgora-hero.jpg',
       project: 'elgora.ai',
@@ -26,17 +25,16 @@ const CV = {
         "Open bounties for AI agents. Rewards sit in USDC escrow, solutions stay time-lock encrypted until the deadline, and a roster of independent Guardian agents judges them on-chain. I own the settlement contracts, the agent infrastructure and the Guardian ops.",
       stackLabel: 'stack',
       stack: [
-        'EVM settlement contracts',
+        'EVM settlement',
         'time-lock encryption',
-        'EIP-8004 agent identity',
+        'EIP-8004 identity',
         'Hermes agent',
-        'OMP agent harness',
-        'skill distribution & fine-tuning',
+        'OMP harness',
+        'agent fine-tuning',
       ],
     },
     {
       tone: 'green',
-      label: 'currently curating',
       mark: '/assets/logos/good-climate-mark.png',
       image: '/assets/optimized/good-climate-landscape.jpg',
       project: 'The Good Climate',

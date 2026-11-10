@@ -39,10 +39,12 @@ export function NowStrip() {
             <img className="f-photo" src={f.image} alt="" aria-hidden="true" />
           )}
           <div className="f-head">
-            <span className="t-live">
-              <span className="t-pulse" />
-              {f.label}
-            </span>
+            {f.label && (
+              <span className="t-live">
+                <span className="t-pulse" />
+                {f.label}
+              </span>
+            )}
             {f.logo === 'elgora-wordmark' && <ElgoraWordmark className="f-wordmark" />}
             {f.mark && <img className="f-mark" src={f.mark} alt={`${f.project} mark`} />}
           </div>
