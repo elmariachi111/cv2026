@@ -625,8 +625,9 @@
   width: 36px;
   height: 36px;
   object-fit: contain;
-  /* desaturate mono logos to match terminal palette */
-  filter: grayscale(1) brightness(1.5) contrast(0.9);
+  /* mono logos: flatten to black, then invert to a light gray, so any
+     source fill (black, dark gray, brand color) reads on the dark tiles */
+  filter: brightness(0) invert(0.8);
   transition: filter 0.2s ease;
 }
 
@@ -637,7 +638,7 @@
 }
 
 .t-logo-tile:hover .t-logo-img {
-  filter: grayscale(0.3) brightness(1.6) contrast(1);
+  filter: brightness(0) invert(1);
 }
 
 .t-logo-tile:hover .t-logo-img.colored {
