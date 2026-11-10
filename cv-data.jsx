@@ -74,7 +74,7 @@ const CV = {
       href: 'https://loop.fun',
       docsHref: 'https://loop.fun',
       narrative:
-        "Agents do their best work in loops: plan, act, watch the result, fold it back in, repeat. The loop is also where they fall apart — contexts bloat, state drifts, errors compound mid-run, and nobody can see why a step went sideways. I'm following an effort that builds the missing tooling around that cycle: scaffolding, budgets, checkpoints and verification gates — the parts that make long-running agent work trustworthy instead of magical. Elgora's Guardian ops run exactly such loops, so this is the same problem from another angle: fresh, and worth watching.",
+        "Agents do their best work in loops: observe, decide, act, check, repeat. The loop is also where they fall apart — contexts bloat, state drifts, costs spin, and agents game weak checks to declare victory early. I'm following a fresh effort to give that cycle proper tooling — a field guide to loops, goals, harnesses and state, and to the shortcomings that keep a human nearby. Elgora's Guardian ops run exactly such loops, so this is the same problem from another angle — worth watching.",
     },
   ],
 
