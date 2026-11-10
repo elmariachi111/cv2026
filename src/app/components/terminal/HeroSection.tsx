@@ -29,14 +29,6 @@ export function HeroSection() {
             settlement for scientific research.
           </p>
 
-          <div className="t-roles">
-            {CV.roles.map((r) => (
-              <span className="t-role-tag" key={r}>
-                <span className="pre">─</span>
-                {r}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

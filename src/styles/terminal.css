@@ -271,18 +271,6 @@
 .t-tagline .acc { color: var(--t-accent); }
 .t-tagline .amb { color: var(--t-amber); }
 
-.t-roles { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; justify-content: flex-end; }
-.t-role-tag {
-  border: 1px solid var(--t-line-strong);
-  padding: 6px 10px;
-  font-size: 12px;
-  color: var(--t-fg-dim);
-  background: var(--t-bg);
-  transition: border-color .15s ease, color .15s ease;
-}
-.t-role-tag:hover { border-color: var(--t-accent-dim); color: var(--t-fg); }
-.t-role-tag .pre { color: var(--t-accent); margin-right: 6px; }
-
 /* ── Values strip ──────────────────────────────────────────────────── */
 
 .t-values-strip {
