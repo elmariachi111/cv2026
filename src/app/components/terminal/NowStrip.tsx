@@ -27,7 +27,7 @@ export function NowStrip() {
         ))}
       </div>
       {CV.flagships.map((f) => (
-        <div className={`t-flagship${f.tone === 'green' ? ' is-green' : ''}`} key={f.project}>
+        <div className={`t-flagship${f.tone !== 'accent' ? ` is-${f.tone}` : ''}`} key={f.project}>
           {f.image && (
             <img className="f-photo" src={f.image} alt="" aria-hidden="true" />
           )}
