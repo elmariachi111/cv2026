@@ -45,31 +45,37 @@ export function NowStrip() {
             </a>
             {f.org && <span className="f-org"> — {f.org}</span>}
           </h3>
-          <p className="f-headline">{f.headline}</p>
+          {f.headline && <p className="f-headline">{f.headline}</p>}
           <p className="f-narrative">{f.narrative}</p>
-          <div className="f-cols">
-            <div>
-              <div className="f-label">// {f.dutiesLabel}</div>
-              <ul className="f-duties">
-                {f.duties.map((d) => (
-                  <li key={d}>
-                    <span className="pre">─</span>
-                    {d}
-                  </li>
-                ))}
-              </ul>
+          {(f.duties?.length || f.stack?.length) && (
+            <div className="f-cols">
+              {f.duties?.length ? (
+                <div>
+                  <div className="f-label">// {f.dutiesLabel}</div>
+                  <ul className="f-duties">
+                    {f.duties.map((d) => (
+                      <li key={d}>
+                        <span className="pre">─</span>
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              {f.stack?.length ? (
+                <div>
+                  <div className="f-label">// {f.stackLabel}</div>
+                  <div className="f-stack">
+                    {f.stack.map((s) => (
+                      <span className="f-chip" key={s}>
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </div>
-            <div>
-              <div className="f-label">// {f.stackLabel}</div>
-              <div className="f-stack">
-                {f.stack.map((s) => (
-                  <span className="f-chip" key={s}>
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+          )}
           {f.docsHref && (
             <div>
               <a className="f-docs" href={f.docsHref} target="_blank" rel="noreferrer">

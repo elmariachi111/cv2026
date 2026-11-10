@@ -457,6 +457,20 @@
       transparent 58%);
 }
 
+/* Compact neutral flagship variant (sidequest block) — quiet, low */
+.t-flagship.is-neutral {
+  --t-accent: var(--t-cyan);
+  --t-accent-dim: #41637a;
+  padding: 14px 28px 16px;
+  background:
+    linear-gradient(115deg,
+      color-mix(in oklch, var(--t-accent), transparent 96%) 0%,
+      transparent 55%);
+}
+.t-flagship.is-neutral .f-title { font-size: 17px; margin: 8px 0 2px; }
+.t-flagship.is-neutral .f-narrative { font-size: 13px; line-height: 1.6; margin-bottom: 10px; }
+.t-flagship.is-neutral .f-docs { margin-top: 0; }
+
 /* ── Tech Logo Band ─────────────────────────────────────────────────── */
 
 @keyframes marquee-fwd {
@@ -908,6 +922,7 @@
   .t-flagship .f-wordmark { height: 14px; opacity: 0.75; }
   .t-flagship .f-mark { height: 44px; width: 44px; }
   .t-flagship .f-photo { inset: 6px; width: calc(100% - 12px); height: calc(100% - 12px); }
+  .t-flagship.is-neutral { padding: 12px 14px 14px; }
   .t-history-row { padding: 22px 14px 22px 18px; gap: 14px; }
   .t-history-row::after { right: 4px; font-size: 80px; }
   .t-quals { padding: 20px 14px; gap: 20px; }

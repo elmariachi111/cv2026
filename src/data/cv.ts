@@ -58,7 +58,7 @@ export interface NowEntry {
 }
 
 export interface Flagship {
-  tone: 'accent' | 'green';
+  tone: 'accent' | 'green' | 'neutral';
   label: string;
   logo?: string;
   mark?: string;
@@ -67,12 +67,12 @@ export interface Flagship {
   org?: string;
   href: string;
   docsHref?: string;
-  headline: string;
+  headline?: string;
   narrative: string;
-  dutiesLabel: string;
-  duties: string[];
-  stackLabel: string;
-  stack: string[];
+  dutiesLabel?: string;
+  duties?: string[];
+  stackLabel?: string;
+  stack?: string[];
 }
 
 export interface CVData {

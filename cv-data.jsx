@@ -67,6 +67,15 @@ const CV = {
         'Substack',
       ],
     },
+    {
+      tone: 'neutral',
+      label: 'working on',
+      project: 'loop.fun',
+      href: 'https://loop.fun',
+      docsHref: 'https://loop.fun',
+      narrative:
+        "Agents do their best work in loops: plan, act, watch the result, fold it back in, repeat. The loop is also where they fall apart — contexts bloat, state drifts, errors compound mid-run, and nobody can see why a step went sideways. I'm following an effort that builds the missing tooling around that cycle: scaffolding, budgets, checkpoints and verification gates — the parts that make long-running agent work trustworthy instead of magical. Elgora's Guardian ops run exactly such loops, so this is the same problem from another angle: fresh, and worth watching.",
+    },
   ],
 
   now: [
